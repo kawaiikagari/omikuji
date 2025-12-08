@@ -7,67 +7,51 @@
 <style>
   body {
     background: #f5fede;
-    font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
     padding: 20px;
-    box-sizing: border-box;
   }
 
+  /* ここを完全に修正！ */
   .omikuji {
     writing-mode: vertical-rl;
     text-orientation: upright;
     background: #fffdf6;
-    padding: 38px 28px;           /* 高さを20%程度縮めた分 */
-    width: 520px;                  /* 150%広げた横長サイズ（旧360px→520px） */
+    padding: 22px 40px;           /* ← 上下を22px（前38px→22px＝約20%減）、左右を40pxに増やして横長に */
+    width: 580px;                 /* さらに横に広げて150%相当の横長に */
     max-width: 95vw;
+    min-height: 680px;            /* 縦は短め固定でスッキリ */
     border: 6px double #c41f1f;
     border-radius: 18px;
-    box-shadow:
-      inset 0 0 25px rgba(200,150,100,0.3),
-      0 12px 40px rgba(0,0,0,0.35);
-    background-image:
-      radial-gradient(circle at 20% 80%, #fffbe6 0%, transparent 50%),
-      linear-gradient(to bottom, #fffdf6, #fff7e0);
+    box-shadow: inset 0 0 25px rgba(200,150,100,0.3), 0 12px 40px rgba(0,0,0,0.35);
+    background-image: radial-gradient(circle at 20% 80%, #fffbe6 0%, transparent 50%),
+                      linear-gradient(to bottom, #fffdf6, #fff7e0);
     position: relative;
-    line-height: 2.3;
-    letter-spacing: 0.12em;
     margin: auto;
+    box-sizing: border-box;
   }
 
-  h1 {
-    font-size: 42px;
-    margin: 0 0 24px 0;
-    color: #b71c1c;
-    font-weight: bold;
-  }
-  h2 {
-    font-size: 24px;
-    margin: 0 0 36px 0;
-    color: #8B0000;
-  }
-  .text-jp {
-    font-size: 18px;
-    margin-bottom: 40px;
-    white-space: pre-line;
-  }
+  h1 { font-size: 44px; margin-bottom: 20px; color: #b71c1c; }
+  h2 { font-size: 25px; margin-bottom: 35px; color: #8B0000; }
+  .text-jp { font-size: 18px; line-height: 2.4; white-space: pre-line; }
 
-  /* 英文：90度時計回り回転で縦に流す（右側に配置） */
+  /* 英文：右側に90度時計回りで縦に流す */
   .text-en {
     writing-mode: vertical-rl;
     text-orientation: upright;
-    transform: rotate(90deg);           /* 90度時計回り */
+    transform: rotate(90deg);
     transform-origin: center;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 13px;
+    font-family: Georgia, serif;
+    font-size: 13.5px;
     color: #444;
-    opacity: 0.88;
-    line-height: 2.2;
-    margin-top: 60px;
-    margin-right: -20px;                /* 回転後の位置微調整 */
+    opacity: 0.9;
+    line-height: 2.3;
+    margin-top: 80px;
+    margin-right: -30px;
     white-space: nowrap;
   }
 
@@ -75,21 +59,20 @@
     writing-mode: horizontal-tb;
     font-size: 12px;
     color: #777;
-    margin-top: 30px;
-    text-align: center;
+    margin-top: 40px;
   }
 
-  /* 朱印風角飾り（少し大きく） */
+  /* 朱印風角飾り */
   .omikuji::before,
   .omikuji::after {
     content: "";
     position: absolute;
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     background: #c41f1f;
   }
-  .omikuji::before { top: -16px; left: -16px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
-  .omikuji::after { bottom: -16px; right: -16px; clip-path: polygon(0 0, 100% 0, 0 100%); }
+  .omikuji::before { top: -17px; left: -17px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+  .omikuji::after  { bottom: -17px; right: -17px; clip-path: polygon(0 0, 100% 0,0 100%); }
 </style>
 </head>
 <body>
@@ -104,33 +87,29 @@ const id = params.get('id');
 const fortuneId = id && id >= 1 && id <= 50 ? id : Math.floor(Math.random() * 50) + 1;
 
 fetch('omikuji.xml')
-  .then(res => {
-    if (!res.ok) throw new Error('XML読み込み失敗');
-    return res.text();
-  })
+  .then(res => { if (!res.ok) throw new Error(); return res.text(); })
   .then(str => {
     const xml = new DOMParser().parseFromString(str, "text/xml");
     const item = xml.querySelector(`omikuji[id="${fortuneId}"]`);
-    if (!item) throw new Error('該当なし');
+    if (!item) throw new Error();
 
     const rankJp = item.querySelector('rank').getAttribute('jp');
     const rankEn = item.querySelector('rank').textContent.trim();
     const titleJp = item.querySelector('title_jp').textContent;
     const titleEn = item.querySelector('title_en').textContent;
-    const textJp   = item.querySelector('text_jp').textContent;
-    const textEn   = item.querySelector('text_en').textContent;
+    const textJp  = item.querySelector('text_jp').textContent;
+    const textEn  = item.querySelector('text_en').textContent;
 
     document.getElementById('result').innerHTML = `
       <h1>${rankJp}</h1>
       <h2>${titleJp}</h2>
       <div class="text-jp">${textJp}</div>
       <div class="text-en">${rankEn} — ${titleEn}<br><br>${textEn}</div>
-      <div class="footer">第 ${fortuneId} 番 おみくじ</div>
+      <div class="footer">第 ${fortuneId} 番</div>
     `;
   })
-  .catch(err => {
-    document.getElementById('result').innerHTML = '<p style="color:#900">おみくじの読み込みに失敗しました</p>';
-    console.error(err);
+  .catch(() => {
+    document.getElementById('result').innerHTML = '<p style="color:#900">読み込み失敗</p>';
   });
 </script>
 

@@ -32,43 +32,34 @@
     border-spacing: 0;
   }
 
-  .jp-area {
-    height: 64%;
-    padding: 38px 40px 28px 48px;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    font-size: 17.6px;
-    line-height: 2.7;
-  }
-  .jp-area h1 { font-size: 49.6px; margin-bottom: 18px; color: #b71c1c; }
-  .jp-area h2 { font-size: 27.2px; margin-bottom: 42px; color: #900; }
+  .jp-area { height:64%; padding:38px 40px 28px 48px; writing-mode:vertical-rl; text-orientation:upright; font-size:17.6px; line-height:2.7; }
+  .jp-area h1 { font-size:49.6px; margin-bottom:18px; color:#b71c1c; }
+  .jp-area h2 { font-size:27.2px; margin-bottom:42px; color:#900; }
 
-  .en-area {
-    height: 36%;
-    padding: 28px 48px 38px;
-    background: rgba(249,246,240,0.94);
-    font-family: Georgia, serif;
-    font-size: 13.6px;
-    line-height: 1.9;
-  }
-  .en-area strong { font-size: 20.8px; color: #b71c1c; }
-
-  /* ←←← 第○番の位置を元に戻しました！（枠内・右下・朱印の左寄り）→→→ */
-  .footer {
-    position: absolute;
-    bottom: 32px;     /* 枠内ギリギリではなく、ゆったり */
-    right: 68px;      /* 朱印と被らない位置 */
-    font-size: 14.5px;
-    color: #888;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-  }
+  .en-area { height:36%; padding:28px 48px 38px; background:rgba(249,246,240,0.94); font-family:Georgia,serif; font-size:13.6px; line-height:1.9; }
+  .en-area strong { font-size:20.8px; color:#b71c1c; }
 
   table.omikuji::before, table.omikuji::after {
-    content: ""; position: absolute; width: 41.6px; height: 41.6px; background: #c62828;
+    content:""; position:absolute; width:41.6px; height:41.6px; background:#c62828;
   }
-  table.omikuji::before  { top: -20.8px; left: -20.8px; clip-path: polygon(0 0,100% 0,100% 100%); }
-  table.omikuji::after   { bottom: -20.8px; right: -20.8px; clip-path: polygon(0 0 0,100% 0,0 100%); }
+  table.omikuji::before  { top:-20.8px; left:-20.8px; clip-path:polygon(0 0,100% 0,100% 100%); }
+  table.omikuji::after   { bottom:-20.8px; right:-20.8px; clip-path:polygon(0 0,100% 0,0 100%); }
+
+  /* ←←← ここが本当の「元の位置」！！ →→ */
+  .footer {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    font-size: 16px;
+    color: #555;
+    background: rgba(255,255,255,0.7);
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 10;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
 </style>
 </head>
 <body>
@@ -85,7 +76,7 @@
   </td></tr>
 </table>
 
-<!-- 枠内右下に控えめに配置（これが一番自然で美しかった頃の位置に戻しました） -->
+<!-- 画面右下右に小さく控えめに（これがあなたが好きだった位置！） -->
 <div class="footer">第 <span id="num">?</span> 番 おみくじ</div>
 
 <script>

@@ -13,18 +13,18 @@
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    padding: 12px;
+    padding: 12px;               /* スマホのアドレスバー対策 */
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: hidden;            /* 絶対にスクロールバーを出さない */
   }
 
+  /* 1920×1080の実画面でも確実に収まる安全サイズ */
   table.omikuji {
-    /* ご希望どおり：幅 +100px、高さ -100px */
-    width: 1020px;           /* ← 920px → 1020px (+100px) */
-    height: 580px;           /* ← 680px → 580px (-100px) */
-    max-width: 96vw;
-    max-height: 92vh;        /* タスクバー考慮で余裕あり */
-    min-width: 340px;
+    width: 88vw;                 /* 横幅は画面幅の88% */
+    height: 92vh;                /* 高さは画面高さの92% → タスクバー・タブがあっても確実に収まる */
+    max-width: 920px;            /* 横長モニターでも変になりすぎない上限 */
+    max-height: 680px;           /* 縦長スマホでも崩れない上限 */
+    min-width: 320px;            /* スマホでも小さすぎない */
     border: 9px double #c62828;
     border-radius: 28px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
@@ -37,9 +37,96 @@
 
   .jp-area {
     height: 65%;
-    padding: 60px 55px 40px 65px;     /* 少しゆったり調整 */
+    padding: 6% 5% 4% 6%;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    font-size: 29px;                 /* ← 文字サイズ変更なし */
+    font-size: 2.8vw;            /* 画面幅に応じて自動調整 */
     line-height: 2.7;
-    background: linear-gradient
+    background: linear-gradient(to bottom, #fffdf9, #fff9e9);
+  }
+  .jp-area h1 { font-size: 7.5vw; margin-bottom: 2vw; color: #b71c1c; }
+  .jp-area h2 { font-size: 4.2vw; margin-bottom: 5vw; color: #900; }
+
+  .en-area {
+    height: 35%;
+    padding: 4% 6%;
+    background: #f9f6f0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.9vw;
+    line-height: 2.0;
+    color: #333;
+  }
+  .en-area strong { font-size: 3.2vw; color: #b71c1c; }
+
+  .footer {
+    position: absolute;
+    bottom: 2.5vh;
+    right: 5vw;
+    font-size: 2.2vw;
+    color: #777;
+  }
+
+  /* 朱印風四隅（画面サイズに応じて自動調整） */
+  table.omikuji::before,
+  table.omikuji::after {
+    content: ""; 
+    position: absolute; 
+    width: 6vw; 
+    height: 6vw; 
+    max-width: 60px;
+    max-height: 60px;
+    background: #c62828;
+  }
+  table.omikuji::before  { top: -3vw; left: -3vw; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+  table.omikuji::after   { bottom: -3vw; right: -3vw; clip-path: polygon(0 0, 100% 0, 0 100%); }
+</style>
+</head>
+<body>
+
+<table class="omikuji" id="result">
+  <tr>
+    <td class="jp-area">
+      <h1 id="rankJp">読み込み中…</h1>
+      <h2 id="titleJp"></h2>
+      <div id="textJp"></div>
+    </td>
+  </tr>
+  <tr>
+    <td class="en-area">
+      <strong id="rankEn"></strong> — <span id="titleEn"></span><br><br>
+      <span id="textEn">Loading...</span>
+    </td>
+  </tr>
+</table>
+
+<div class="footer">第 <span id="num">?</span> 番 おみくじ</div>
+
+<script>
+const params = new URLSearchParams(location.search);
+const id = params.get('id');
+const fortuneId = id && id >= 1 && id <= 50 ? parseInt(id) : Math.floor(Math.random() * 50) + 1;
+
+fetch('omikuji.xml')
+  .then(r => r.ok ? r.text() : Promise.reject())
+  .then(str => {
+    const xml = new DOMParser().parseFromString(str, "text/xml");
+    const item = xml.querySelector(`omikuji[id="${fortuneId}"]`);
+    if (!item) throw '';
+
+    document.getElementById('rankJp').textContent = item.querySelector('rank').getAttribute('jp');
+    document.getElementById('titleJp').textContent = item.querySelector('title_jp').textContent;
+    document.getElementById('textJp').textContent = item.querySelector('text_jp').textContent;
+
+    document.getElementById('rankEn').textContent = item.querySelector('rank').textContent.trim();
+    document.getElementById('titleEn').textContent = item.querySelector('title_en').textContent;
+    document.getElementById('textEn').textContent = item.querySelector('text_en').textContent;
+
+    document.getElementById('num').textContent = fortuneId;
+  })
+  .catch(() => {
+    document.getElementById('rankJp').textContent = '読み込み失敗';
+  });
+</script>
+
+</body>
+</html>

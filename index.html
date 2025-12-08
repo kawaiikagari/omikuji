@@ -17,10 +17,9 @@
     box-sizing: border-box;
   }
 
-  /* 高さを100px小さく（640px → 540px） */
   table.omikuji {
     width: 560px;
-    height: 540px;           /* ← ここを100px減らしました！ */
+    height: 540px;
     max-width: 94vw;
     max-height: 88vh;
     border: 5.6px double #c62828;
@@ -35,7 +34,7 @@
 
   .jp-area {
     height: 64%;
-    padding: 38px 40px 28px 48px;    /* 少し詰めてバランス調整 */
+    padding: 38px 40px 28px 48px;
     writing-mode: vertical-rl;
     text-orientation: upright;
     font-size: 17.6px;
@@ -54,19 +53,22 @@
   }
   .en-area strong { font-size: 20.8px; color: #b71c1c; }
 
+  /* ←←← 第○番の位置を元に戻しました！（枠内・右下・朱印の左寄り）→→→ */
   .footer {
-    bottom: 18px;
-    right: 48px;
-    font-size: 13.6px;
-    color: #777;
+    position: absolute;
+    bottom: 32px;     /* 枠内ギリギリではなく、ゆったり */
+    right: 68px;      /* 朱印と被らない位置 */
+    font-size: 14.5px;
+    color: #888;
+    font-weight: 500;
+    letter-spacing: 0.1em;
   }
 
   table.omikuji::before, table.omikuji::after {
-    width: 41.6px; height: 41.6px;
-    background: #c62828;
+    content: ""; position: absolute; width: 41.6px; height: 41.6px; background: #c62828;
   }
   table.omikuji::before  { top: -20.8px; left: -20.8px; clip-path: polygon(0 0,100% 0,100% 100%); }
-  table.omikuji::after   { bottom: -20.8px; right: -20.8px; clip-path: polygon(0 0,100% 0,0 100%); }
+  table.omikuji::after   { bottom: -20.8px; right: -20.8px; clip-path: polygon(0 0 0,100% 0,0 100%); }
 </style>
 </head>
 <body>
@@ -83,7 +85,8 @@
   </td></tr>
 </table>
 
-<div class="footer">第 <span id="num">?</span> 番</div>
+<!-- 枠内右下に控えめに配置（これが一番自然で美しかった頃の位置に戻しました） -->
+<div class="footer">第 <span id="num">?</span> 番 おみくじ</div>
 
 <script>
 const randomId = Math.floor(Math.random() * 50) + 1;

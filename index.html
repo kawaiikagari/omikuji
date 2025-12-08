@@ -17,14 +17,15 @@
     box-sizing: border-box;
   }
 
+  /* ←←← 全体を80％に縮小した完璧サイズ →→→ */
   table.omikuji {
-    width: 700px;
-    height: 640px;
+    width: 560px;          /* 700px × 80% */
+    height: 512px;         /* 640px × 80% */
     max-width: 94vw;
     max-height: 88vh;
-    border: 7px double #c62828;
-    border-radius: 26px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    border: 5.6px double #c62828;   /* 7px → 5.6px */
+    border-radius: 21px;           /* 26px → 21px */
+    box-shadow: 0 16px 48px rgba(0,0,0,0.35);
     background: #fffdf9 url('WASHI.PNG') center center / 100% 100% no-repeat;
     position: relative;
     overflow: hidden;
@@ -34,38 +35,39 @@
 
   .jp-area {
     height: 64%;
-    padding: 55px 50px 40px 60px;
+    padding: 44px 40px 32px 48px;   /* 55px等 → 80% */
     writing-mode: vertical-rl;
     text-orientation: upright;
-    font-size: 22px;
+    font-size: 17.6px;     /* 22px → 17.6px */
     line-height: 2.8;
   }
-  .jp-area h1 { font-size: 62px; margin-bottom: 26px; color: #b71c1c; }
-  .jp-area h2 { font-size: 34px; margin-bottom: 60px; color: #900; }
+  .jp-area h1 { font-size: 49.6px; margin-bottom: 21px; color: #b71c1c; }   /* 62→49.6 */
+  .jp-area h2 { font-size: 27.2px; margin-bottom: 48px; color: #900; }     /* 34→27.2 */
 
   .en-area {
     height: 36%;
-    padding: 42px 60px 55px;
-    background: rgba(249,246,240,0.92);
+    padding: 33.6px 48px 44px;     /* 42px等 → 80% */
+    background: rgba(249,246,240,0.94);
     font-family: Georgia, serif;
-    font-size: 17px;
+    font-size: 13.6px;     /* 17px → 13.6px */
     line-height: 2;
   }
-  .en-area strong { font-size: 26px; color: #b71c1c; }
+  .en-area strong { font-size: 20.8px; color: #b71c1c; }   /* 26→20.8 */
 
   .footer {
-    position: absolute;
-    bottom: 28px;
-    right: 60px;
-    font-size: 17px;
+    bottom: 22.4px;       /* 28px → 22.4px */
+    right: 48px;
+    font-size: 13.6px;     /* 17px → 13.6px */
     color: #777;
   }
 
+  /* 朱印も80％サイズ */
   table.omikuji::before, table.omikuji::after {
-    content: ""; position: absolute; width: 52px; height: 52px; background: #c62828;
+    width: 41.6px; height: 41.6px;   /* 52px → 41.6px */
+    background: #c62828;
   }
-  table.omikuji::before  { top: -26px; left: -26px; clip-path: polygon(0 0,100% 0,100% 100%); }
-  table.omikuji::after   { bottom: -26px; right: -26px; clip-path: polygon(0 0,100% 0,0 100%); }
+  table.omikuji::before  { top: -20.8px; left: -20.8px; }
+  table.omikuji::after   { bottom: -20.8px; right: -20.8px; }
 </style>
 </head>
 <body>
@@ -104,6 +106,5 @@ fetch('omikuji.xml')
     document.getElementById('num').textContent = randomId;
   });
 </script>
-
 </body>
 </html>

@@ -33,7 +33,7 @@ p { line-height: 1.8; font-size: 14px; }
 <script>
 const params = new URLSearchParams(location.search);
 const id = params.get('id') || '1';
-fetch('omikuji_1-50.xml')
+fetch('omikuji.xml')
   .then(response => response.text())
   .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
   .then(data => {

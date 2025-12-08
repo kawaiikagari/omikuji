@@ -6,31 +6,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body {
-    background: #fdf9f0;
+    background: #fdf9f0 url('HAIKEI.png') center center / 100% auto no-repeat fixed;
     font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 95vh;
+    min-height: 100vh;
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
   }
 
-  /* 1920x1080でも確実に収まる黄金サイズ */
   table.omikuji {
-    width: 800px;
-    height: 600px;
-    max-width: 90vw;
-    max-height: 70vh;
+    width: 700px;
+    height: 640px;
+    max-width: 94vw;
+    max-height: 88vh;
     border: 7px double #c62828;
     border-radius: 26px;
-    box-shadow: 0 0 22px 70px rgba(0,0,0,0.3);
-    background: #fffdf9;
-    border-collapse: separate;
-    border-spacing: 0;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    background: #fffdf9 url('WASHI.PNG') center center / 100% 100% no-repeat;
     position: relative;
     overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
   }
 
   .jp-area {
@@ -47,7 +46,7 @@
   .en-area {
     height: 36%;
     padding: 42px 60px 55px;
-    background: #f9f6f0;
+    background: rgba(249,246,240,0.92);
     font-family: Georgia, serif;
     font-size: 17px;
     line-height: 2;
@@ -62,12 +61,11 @@
     color: #777;
   }
 
-  table.omikuji::before,
-  table.omikuji::after {
+  table.omikuji::before, table.omikuji::after {
     content: ""; position: absolute; width: 52px; height: 52px; background: #c62828;
   }
-  table.omikuji::before  { top: -26px; left: -26px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
-  table.omikuji::after   { bottom: -26px; right: -26px; clip-path: polygon(0 0, 100% 0, 0 100%); }
+  table.omikuji::before  { top: -26px; left: -26px; clip-path: polygon(0 0,100% 0,100% 100%); }
+  table.omikuji::after   { bottom: -26px; right: -26px; clip-path: polygon(0 0,100% 0,0 100%); }
 </style>
 </head>
 <body>
@@ -84,10 +82,9 @@
   </td></tr>
 </table>
 
-<div class="footer">第 <span id="num">?</span> 番 おみくじ</div>
+<div class="footer">第 <span id="num">?</span> 番</div>
 
 <script>
-// ページを開くたびに1～50のランダムなIDでおみくじを引く
 const randomId = Math.floor(Math.random() * 50) + 1;
 
 fetch('omikuji.xml')

@@ -26,81 +26,17 @@
     border-radius: 26px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     background: #fffdf9;
+    position: relative;
+    overflow: hidden;
     border-collapse: separate;
     border-spacing: 0;
-    position: relative;          /* ← ここ大事！ */
-    overflow: hidden;
   }
 
-  /* ★★★ ここから追加（和紙風背景） ★★★ */
-  table.omikuji {
-    background:
-      radial-gradient(circle at 20% 50%, rgba(220,200,160,0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(240,220,180,0.06) 0%, transparent 60%),
-      radial-gradient(circle at 50% 30%, rgba(200,180,140,0.05) 0%, transparent 70%),
-      #fffdf9;
-  }
+  /* 本物の和紙テクスチャ（オリジナル・ライセンスフリー） */
   table.omikuji::before {
     content: "";
     position: absolute;
     inset: 0;
-    background:
-      repeating-linear-gradient(45deg,  transparent, transparent 10px, rgba(180,150,100,0.02) 10px, rgba(180,150,100,0.02) 20px),
-      repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(200,170,120,0.02) 10px, rgba(200,170,120,0.02) 20px);
+    opacity: 0.7;
     pointer-events: none;
-    opacity: 0.65;
-  }
-  /* ★★★ ここまで追加 ★★★ */
-
-  .jp-area { height:64%; padding:55px 50px 40px 60px; writing-mode:vertical-rl; text-orientation:upright; font-size:22px; line-height:2.8; }
-  .jp-area h1 { font-size:62px; margin-bottom:26px; color:#b71c1c; }
-  .jp-area h2 { font-size:34px; margin-bottom:60px; color:#900; }
-
-  .en-area { height:36%; padding:42px 60px 55px; background:#f9f6f0; font-family:Georgia,serif; font-size:17px; line-height:2; }
-  .en-area strong { font-size:26px; color:#b71c1c; }
-
-  .footer { position:absolute; bottom:28px; right:60px; font-size:17px; color:#777; }
-
-  table.omikuji::before, table.omikuji::after { content:""; position:absolute; width:52px; height:52px; background:#c62828; }
-  table.omikuji::before  { top:-26px; left:-26px; clip-path:polygon(0 0,100% 0,100% 100%); }
-  table.omikuji::after   { bottom:-26px; right:-26px; clip-path:polygon(0 0,100% 0,0 100%); }
-</style>
-</head>
-<body>
-
-<!-- 以下は今までのままでOKです -->
-<table class="omikuji">
-  <tr><td class="jp-area">
-    <h1 id="rank">読み込み中…</h1>
-    <h2 id="title"></h2>
-    <div id="jp"></div>
-  </td></tr>
-  <tr><td class="en-area">
-    <strong id="enRank"></strong> — <span id="enTitle"></span><br><br>
-    <span id="enText"></span>
-  </td></tr>
-</table>
-
-<div class="footer">第 <span id="num">?</span> 番</div>
-
-<script>
-const randomId = Math.floor(Math.random() * 50) + 1;
-fetch('omikuji.xml')
-  .then(r => r.text())
-  .then(str => {
-    const xml = new DOMParser().parseFromString(str, "text/xml");
-    const item = xml.querySelector(`omikuji[id="${randomId}"]`);
-
-    document.getElementById('rank').textContent = item.querySelector('rank').getAttribute('jp');
-    document.getElementById('title').textContent = item.querySelector('title_jp').textContent;
-    document.getElementById('jp').textContent = item.querySelector('text_jp').textContent;
-
-    document.getElementById('enRank').textContent = item.querySelector('rank').textContent.trim();
-    document.getElementById('enTitle').textContent = item.querySelector('title_en').textContent;
-    document.getElementById('enText').textContent = item.querySelector('text_en').textContent;
-
-    document.getElementById('num').textContent = randomId;
-  });
-</script>
-</body>
-</html>
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAIACAYAAAC+Ln2fAAAACXBIWXMAAAsTAAALEwEAmpwYAAAQdklEQVR4nOzde5hV1f7/8feKFAhCUUqhoiAIgqA0pVCoKCgWRSxatKgoFkFELFrstKgoFkWrsNMiWlQsWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWqRFixYFWrQoWq

@@ -17,14 +17,14 @@
     box-sizing: border-box;
   }
 
-  /* ←←← 全体を80％に縮小した完璧サイズ →→→ */
+  /* 高さを100px小さく（640px → 540px） */
   table.omikuji {
-    width: 560px;          /* 700px × 80% */
-    height: 512px;         /* 640px × 80% */
+    width: 560px;
+    height: 540px;           /* ← ここを100px減らしました！ */
     max-width: 94vw;
     max-height: 88vh;
-    border: 5.6px double #c62828;   /* 7px → 5.6px */
-    border-radius: 21px;           /* 26px → 21px */
+    border: 5.6px double #c62828;
+    border-radius: 21px;
     box-shadow: 0 16px 48px rgba(0,0,0,0.35);
     background: #fffdf9 url('WASHI.PNG') center center / 100% 100% no-repeat;
     position: relative;
@@ -35,39 +35,38 @@
 
   .jp-area {
     height: 64%;
-    padding: 44px 40px 32px 48px;   /* 55px等 → 80% */
+    padding: 38px 40px 28px 48px;    /* 少し詰めてバランス調整 */
     writing-mode: vertical-rl;
     text-orientation: upright;
-    font-size: 17.6px;     /* 22px → 17.6px */
-    line-height: 2.8;
+    font-size: 17.6px;
+    line-height: 2.7;
   }
-  .jp-area h1 { font-size: 49.6px; margin-bottom: 21px; color: #b71c1c; }   /* 62→49.6 */
-  .jp-area h2 { font-size: 27.2px; margin-bottom: 48px; color: #900; }     /* 34→27.2 */
+  .jp-area h1 { font-size: 49.6px; margin-bottom: 18px; color: #b71c1c; }
+  .jp-area h2 { font-size: 27.2px; margin-bottom: 42px; color: #900; }
 
   .en-area {
     height: 36%;
-    padding: 33.6px 48px 44px;     /* 42px等 → 80% */
+    padding: 28px 48px 38px;
     background: rgba(249,246,240,0.94);
     font-family: Georgia, serif;
-    font-size: 13.6px;     /* 17px → 13.6px */
-    line-height: 2;
+    font-size: 13.6px;
+    line-height: 1.9;
   }
-  .en-area strong { font-size: 20.8px; color: #b71c1c; }   /* 26→20.8 */
+  .en-area strong { font-size: 20.8px; color: #b71c1c; }
 
   .footer {
-    bottom: 22.4px;       /* 28px → 22.4px */
+    bottom: 18px;
     right: 48px;
-    font-size: 13.6px;     /* 17px → 13.6px */
+    font-size: 13.6px;
     color: #777;
   }
 
-  /* 朱印も80％サイズ */
   table.omikuji::before, table.omikuji::after {
-    width: 41.6px; height: 41.6px;   /* 52px → 41.6px */
+    width: 41.6px; height: 41.6px;
     background: #c62828;
   }
-  table.omikuji::before  { top: -20.8px; left: -20.8px; }
-  table.omikuji::after   { bottom: -20.8px; right: -20.8px; }
+  table.omikuji::before  { top: -20.8px; left: -20.8px; clip-path: polygon(0 0,100% 0,100% 100%); }
+  table.omikuji::after   { bottom: -20.8px; right: -20.8px; clip-path: polygon(0 0,100% 0,0 100%); }
 </style>
 </head>
 <body>

@@ -7,7 +7,7 @@
 <style>
   body {
     background: #f5fede;
-    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,76 +21,75 @@
     writing-mode: vertical-rl;
     text-orientation: upright;
     background: #fffdf6;
-    padding: 36px 28px;
-    max-width: 380px;
-    max-height: 720px;           /* ← ここで縦を約15%短く制限 */
-    overflow: hidden;
-    border: 5px double #c41f1f;
-    border-radius: 16px;
-    box-shadow: 
-      inset 0 0 20px rgba(200,150,100,0.25),
-      0 12px 35px rgba(0,0,0,0.3);
-    background-image: 
-      radial-gradient(circle at 30% 70%, #fffbe6 0%, transparent 50%),
-      linear-gradient(to bottom, #fffdf6, #fff8e1);
+    padding: 38px 28px;           /* 高さを20%程度縮めた分 */
+    width: 520px;                  /* 150%広げた横長サイズ（旧360px→520px） */
+    max-width: 95vw;
+    border: 6px double #c41f1f;
+    border-radius: 18px;
+    box-shadow:
+      inset 0 0 25px rgba(200,150,100,0.3),
+      0 12px 40px rgba(0,0,0,0.35);
+    background-image:
+      radial-gradient(circle at 20% 80%, #fffbe6 0%, transparent 50%),
+      linear-gradient(to bottom, #fffdf6, #fff7e0);
     position: relative;
     line-height: 2.3;
     letter-spacing: 0.12em;
+    margin: auto;
   }
 
   h1 {
-    font-size: 38px;
-    margin: 0 0 20px 0;
+    font-size: 42px;
+    margin: 0 0 24px 0;
     color: #b71c1c;
+    font-weight: bold;
   }
   h2 {
-    font-size: 23px;
-    margin: 0 0 32px 0;
+    font-size: 24px;
+    margin: 0 0 36px 0;
     color: #8B0000;
   }
   .text-jp {
-    font-size: 17px;
-    margin-bottom: 30px;
+    font-size: 18px;
+    margin-bottom: 40px;
     white-space: pre-line;
   }
 
-  /* 英語は右端に沿って90度時計回りで縦に流す */
+  /* 英文：90度時計回り回転で縦に流す（右側に配置） */
   .text-en {
     writing-mode: vertical-rl;
-    text-orientation: mixed;
+    text-orientation: upright;
     transform: rotate(90deg);           /* 90度時計回り */
-    transform-origin: top right;
-    position: absolute;
-    top: 40px;
-    right: -20px;                       /* 右端にピッタリ寄せる */
+    transform-origin: center;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 13px;
-    color: #555;
-    opacity: 0.8;
-    line-height: 1.8;
+    color: #444;
+    opacity: 0.88;
+    line-height: 2.2;
+    margin-top: 60px;
+    margin-right: -20px;                /* 回転後の位置微調整 */
     white-space: nowrap;
-    letter-spacing: 0.05em;
   }
 
   .footer {
     writing-mode: horizontal-tb;
-    font-size: 11px;
-    color: #999;
-    margin-top: 20px;
+    font-size: 12px;
+    color: #777;
+    margin-top: 30px;
     text-align: center;
   }
 
-  /* 朱印風角飾り */
+  /* 朱印風角飾り（少し大きく） */
   .omikuji::before,
   .omikuji::after {
     content: "";
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     background: #c41f1f;
   }
-  .omikuji::before { top: -15px; left: -15px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
-  .omikuji::after  { bottom: -15px; right: -15px; clip-path: polygon(0 0, 100% 0, 0 100%); }
+  .omikuji::before { top: -16px; left: -16px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+  .omikuji::after { bottom: -16px; right: -16px; clip-path: polygon(0 0, 100% 0, 0 100%); }
 </style>
 </head>
 <body>
@@ -105,32 +104,32 @@ const id = params.get('id');
 const fortuneId = id && id >= 1 && id <= 50 ? id : Math.floor(Math.random() * 50) + 1;
 
 fetch('omikuji.xml')
-  .then(res => { if (!res.ok) throw new Error('XML not found'); return res.text(); })
+  .then(res => {
+    if (!res.ok) throw new Error('XML読み込み失敗');
+    return res.text();
+  })
   .then(str => {
     const xml = new DOMParser().parseFromString(str, "text/xml");
     const item = xml.querySelector(`omikuji[id="${fortuneId}"]`);
-    if (!item) throw new Error('No omikuji found');
+    if (!item) throw new Error('該当なし');
 
     const rankJp = item.querySelector('rank').getAttribute('jp');
     const rankEn = item.querySelector('rank').textContent.trim();
     const titleJp = item.querySelector('title_jp').textContent;
     const titleEn = item.querySelector('title_en').textContent;
-    const textJp = item.querySelector('text_jp').textContent;
-    const textEn = item.querySelector('text_en').textContent;
+    const textJp   = item.querySelector('text_jp').textContent;
+    const textEn   = item.querySelector('text_en').textContent;
 
     document.getElementById('result').innerHTML = `
       <h1>${rankJp}</h1>
       <h2>${titleJp}</h2>
       <div class="text-jp">${textJp}</div>
-      <div class="text-en">
-        <strong>${rankEn} — ${titleEn}</strong><br>
-        ${textEn}
-      </div>
-      <div class="footer">第 ${fortuneId} 番</div>
+      <div class="text-en">${rankEn} — ${titleEn}<br><br>${textEn}</div>
+      <div class="footer">第 ${fortuneId} 番 おみくじ</div>
     `;
   })
   .catch(err => {
-    document.getElementById('result').innerHTML = '<p style="color:#900">読み込み失敗…</p>';
+    document.getElementById('result').innerHTML = '<p style="color:#900">おみくじの読み込みに失敗しました</p>';
     console.error(err);
   });
 </script>

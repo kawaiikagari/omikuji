@@ -13,19 +13,19 @@
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    padding: 20px 10px;
+    padding: 15px;
     box-sizing: border-box;
   }
 
-  /* 1920×1080 画面でも絶対に収まる安全サイズ */
+  /* 全体を70%サイズに縮小（860×820 → 602×574） */
   table.omikuji {
-    width: 720px;
-    height: 540px;           /* 720×540 = 4:3 → 1080pでも上下左右に余裕あり */
-    max-width: 94vw;
-    max-height: 88vh;
+    width: 602px;
+    height: 574px;
+    max-width: 96vw;
+    max-height: 92vh;
     border: 6px double #c62828;
     border-radius: 20px;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.25);
     background: #fffdf9;
     border-collapse: separate;
     border-spacing: 0;
@@ -34,39 +34,41 @@
   }
 
   .jp-area {
-    height: 63%;
-    padding: 38px 35px 30px 42px;
+    height: 65%;
+    padding: 45px 38px 30px 45px;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    font-size: 18px;
+    font-size: 19px;        /* 27px → 19px (約70%) */
     line-height: 2.6;
-    background: linear-gradient(to bottom, #fffdf9, #fff9eb);
+    background: linear-gradient(to bottom, #fffdf9, #fff9e9);
   }
-  .jp-area h1 { font-size: 44px; margin-bottom: 16px; color: #b71c1c; }
-  .jp-area h2 { font-size: 26px; margin-bottom: 38px; color: #900; }
+  .jp-area h1 { font-size: 50px;  margin-bottom: 20px; color: #b71c1c; }   /* 72→50 */
+  .jp-area h2 { font-size: 28px;  margin-bottom: 45px; color: #900; }      /* 40→28 */
 
   .en-area {
-    height: 37%;
-    padding: 28px 42px 38px;
-    background: #f9f7f2;
+    height: 35%;
+    padding: 30px 45px 40px;
+    background: #f9f6f0;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 14.5px;
-    line-height: 1.85;
+    font-size: 14px;        /* 20px → 14px (70%) */
+    line-height: 1.9;
     color: #333;
   }
-  .en-area strong { font-size: 20px; color: #b71c1c; }
+  .en-area strong { font-size: 21px; color: #b71c1c; }  /* 30→21 */
 
   .footer {
     position: absolute;
-    bottom: 18px;
-    right: 42px;
-    font-size: 14px;
+    bottom: 20px;
+    right: 45px;
+    font-size: 14px;        /* 20px → 14px */
     color: #777;
   }
 
+  /* 朱印風四隅も70%サイズ */
   table.omikuji::before,
   table.omikuji::after {
     content: ""; position: absolute; width: 40px; height: 40px; background: #c62828;
+ 40px;
   }
   table.omikuji::before  { top: -20px; left: -20px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
   table.omikuji::after   { bottom: -20px; right: -20px; clip-path: polygon(0 0, 100% 0, 0 100%); }
@@ -75,15 +77,19 @@
 <body>
 
 <table class="omikuji" id="result">
-  <tr><td class="jp-area">
-    <h1 id="rankJp">読み込み中…</h1>
-    <h2 id="titleJp"></h2>
-    <div id="textJp"></div>
-  </td></tr>
-  <tr><td class="en-area">
-    <strong id="rankEn"></strong> — <span id="titleEn"></span><br><br>
-    <span id="textEn">Loading...</span>
-  </td></tr>
+  <tr>
+    <td class="jp-area">
+      <h1 id="rankJp">読み込み中…</h1>
+      <h2 id="titleJp"></h2>
+      <div id="textJp"></div>
+    </td>
+  </tr>
+  <tr>
+    <td class="en-area">
+      <strong id="rankEn"></strong> — <span id="titleEn"></span><br><br>
+      <span id="textEn">Loading...</span>
+    </td>
+  </tr>
 </table>
 
 <div class="footer">第 <span id="num">?</span> 番 おみくじ</div>
@@ -98,7 +104,7 @@ fetch('omikuji.xml')
   .then(str => {
     const xml = new DOMParser().parseFromString(str, "text/xml");
     const item = xml.querySelector(`omikuji[id="${fortuneId}"]`);
-    if (!item) { document.getElementById('rankJp').textContent = '該当なし'; return; }
+    if (!item) throw '';
 
     document.getElementById('rankJp').textContent = item.querySelector('rank').getAttribute('jp');
     document.getElementById('titleJp').textContent = item.querySelector('title_jp').textContent;
@@ -111,7 +117,7 @@ fetch('omikuji.xml')
     document.getElementById('num').textContent = fortuneId;
   })
   .catch(() => {
-    document.getElementById('rankJp').textContent = '読み込み失敗';
+    document.querySelector('.jp-area h1').textContent = '読み込み失敗';
   });
 </script>
 

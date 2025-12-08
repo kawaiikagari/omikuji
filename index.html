@@ -7,7 +7,7 @@
 <style>
   body {
     background: #fdf9f0;
-    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,86 +17,62 @@
     box-sizing: border-box;
   }
 
-  /* 全体を2倍サイズに！ */
   table.omikuji {
-    width: 960px;           /* 従来の2倍 */
-    height: 720px;          /* 3:4 比率を維持 */
+    width: 960px;
+    height: 720px;
     max-width: 96vw;
     max-height: 95vh;
     border: 9px double #c62828;
-    border-radius: 26px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    background: #fffdf8;
+    border-radius: 28px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+    background: #fffdf9;
     border-collapse: separate;
     border-spacing: 0;
+    position: relative;
     overflow: hidden;
-    table-layout: fixed;
   }
 
   /* 上段：和文（縦書き） */
   .jp-area {
     height: 65%;
-    padding: 60px 50px 40px;
+    padding: 70px 60px 50px 70px;
     writing-mode: vertical-rl;
     text-orientation: upright;
+    font-size: 29px;
+    line-height: 2.7;
     text-align: right;
-    vertical-align: top;
-    line-height: 2.6;
-    font-size: 28px;
-    color: #000;
-    background: linear-gradient(to bottom, #fffdf8, #fff9e8);
+    background: linear-gradient(to bottom, #fffdf9, #fff8e6);
   }
+  .jp-area h1 { font-size: 78px; margin-bottom: 30px; color: #b71c1c; }
+  .jp-area h2 { font-size: 42px; margin-bottom: 70px; color: #900; }
 
-  .jp-area h1 {
-    font-size: 72px;
-    margin: 0 0 30px 0;
-    color: #b71c1c;
-    font-weight: bold;
-  }
-  .jp-area h2 {
-    font-size: 40px;
-    margin: 0 0 60px 0;
-    color: #900;
-  }
-  .jp-area .text { font-size: 29px; }
-
-  /* 下段：英文（横書き） */
+  /* 下段：英文（普通の横書き） */
   .en-area {
     height: 35%;
-    padding: 40px 60px;
-    background: #faf8f0;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 19px;
+    padding: 50px 70px 60px;
+    background: #f8f5f0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 21px;
     line-height: 1.9;
     color: #333;
-    vertical-align: top;
-    border-top: 3px double #c62828;   /* 和文・英文の間だけ細い罫線 */
   }
-
-  .en-area strong {
-    font-size: 28px;
-    color: #b71c1c;
-  }
+  .en-area strong { font-size: 32px; color: #b71c1c; }
 
   .footer {
     position: absolute;
-    bottom: 30px;
-    right: 60px;
-    font-size: 20px;
-    color: #888;
+    bottom: 32px;
+    right: 70px;
+    font-size: 22px;
+    color: #777;
   }
 
-  /* 朱印風の四隅装飾 */
+  /* 朱印風四隅 */
   table.omikuji::before,
   table.omikuji::after {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background: #c62828;
+    content: ""; position: absolute; width: 64px; height: 64px; background: #c62828;
   }
-  table.omikuji::before  { top: -30px; left: -30px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
-  table.omikuji::after   { bottom: -30px; right: -30px; clip-path: polygon(0 0, 100% 0, 0 100%); }
+  table.omikuji::before  { top: -32px; left: -32px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+  table.omikuji::after   { bottom: -32px; right: -32px; clip-path: polygon(0 0, 100% 0, 0 100%); }
 </style>
 </head>
 <body>
@@ -104,14 +80,14 @@
 <table class="omikuji" id="result">
   <tr>
     <td class="jp-area">
-      <h1 id="rankJp">大吉</h1>
-      <h2 id="titleJp">天の恵み</h2>
-      <div class="text" id="textJp">読み込み中…</div>
+      <h1 id="rankJp">読み込み中…</h1>
+      <h2 id="titleJp"></h2>
+      <div id="textJp"></div>
     </td>
   </tr>
   <tr>
     <td class="en-area">
-      <strong id="rankEn">Daikichi</strong> — <span id="titleEn">Heaven's Favor</span><br><br>
+      <strong id="rankEn"></strong> — <span id="titleEn"></span><br><br>
       <span id="textEn">Loading...</span>
     </td>
   </tr>
@@ -129,25 +105,20 @@ fetch('omikuji.xml')
   .then(str => {
     const xml = new DOMParser().parseFromString(str, "text/xml");
     const item = xml.querySelector(`omikuji[id="${fortuneId}"]`);
-    if (!item) throw new Error();
+    if (!item) throw '';
 
-    const rankJp = item.querySelector('rank').getAttribute('jp');
-    const rankEn = item.querySelector('rank').textContent.trim();
-    const titleJp = item.querySelector('title_jp').textContent;
-    const titleEn = item.querySelector('title_en').textContent;
-    const textJp  = item.querySelector('text_jp').textContent;
-    const textEn  = item.querySelector('text_en').textContent;
+    document.getElementById('rankJp').textContent = item.querySelector('rank').getAttribute('jp');
+    document.getElementById('titleJp').textContent = item.querySelector('title_jp').textContent;
+    document.getElementById('textJp').textContent = item.querySelector('text_jp').textContent;
 
-    document.getElementById('rankJp').textContent = rankJp;
-    document.getElementById('titleJp').textContent = titleJp;
-    document.getElementById('textJp').textContent = textJp;
-    document.getElementById('rankEn').textContent = rankEn;
-    document.getElementById('titleEn').textContent = titleEn;
-    document.getElementById('textEn').textContent = textEn;
+    document.getElementById('rankEn').textContent = item.querySelector('rank').textContent.trim();
+    document.getElementById('titleEn').textContent = item.querySelector('title_en').textContent;
+    document.getElementById('textEn').textContent = item.querySelector('text_en').textContent;
+
     document.getElementById('num').textContent = fortuneId;
   })
   .catch(() => {
-    document.querySelector('.jp-area').innerHTML = '<h1 style="color:#c62828">読み込み失敗</h1>';
+    document.querySelector('.jp-area h1').textContent = '読み込み失敗';
   });
 </script>
 

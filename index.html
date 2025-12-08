@@ -5,120 +5,124 @@
 <title>おみくじ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  body{
-    background:#fdf9f0;
-    font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    margin:0;
-    padding:10px;
-    box-sizing:border-box;
-    overflow:hidden;
+  body {
+    background: #fdf9f0;
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 12px;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
-  table.omikuji{
-    /* 高さ-100px、幅+100px → 実質 1020×580px 相当 */
-    width: calc(88vw + 100px);     /* 幅を100px増やす */
-    height: calc(92vh - 100px);    /* 高さを100px減らす */
-    max-width: 1080px;             /* 超横長モニターでも崩れない上限 */
-    max-height: 680px;
+  table.omikuji {
+    /* 高さ -100px、幅 +100px した理想サイズ */
+    width: 1020px;          /* +100px */
+    height: 580px;          /* -100px（680→580） */
+    
+    /* でも画面からは絶対はみ出さない！ */
+    max-width: 96vw;
+    max-height: 88vh;
     min-width: 340px;
-    border:9px double #c62828;
-    border-radius:28px;
-    box-shadow:0 22px 70px rgba(0,0,0,0.32);
-    background:#fffdf9;
-    border-collapse:separate;
-    border-spacing:0;
-    position:relative;
-    table-layout:fixed;
+    
+    border: 9px double #c62828;
+    border-radius: 28px;
+    box-shadow: 0 22px 70px rgba(0,0,0,0.32);
+    background: #fffdf9;
+    border-collapse: separate;
+    border-spacing: 0;
+    position: relative;
+    table-layout: fixed;
   }
 
-  .jp-area{
-    height:65%;
-    padding:6% 5.5% 4% 6.5%;
-    writing-mode:vertical-rl;
-    text-orientation:upright;
-    font-size:2.9vw;
-    line-height:2.7;
-    background:linear-gradient(to bottom,#fffdf9,#fff9e9);
+  .jp-area {
+    height: 65%;
+    padding: 55px 55px 40px 65px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 29px;
+    line-height: 2.7;
+    background: linear-gradient(to bottom, #fffdf9, #fff9e9);
   }
-  .jp-area h1{font-size:7.8vw; margin-bottom:2vw; color:#b71c1c;}
-  .jp-area h2{font-size:4.4vw; margin-bottom:5vw; color:#900;}
+  .jp-area h1 { font-size: 76px; margin-bottom: 25px; color: #b71c1c; }
+  .jp-area h2 { font-size: 40px; margin-bottom: 60px; color: #900; }
 
-  .en-area{
-    height:35%;
-    padding:4.5% 6.5%;
-    background:#f9f6f0;
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:2.0vw;
-    line-height:2.0;
-    color:#333;
+  .en-area {
+    height: 35%;
+    padding: 40px 65px 50px;
+    background: #f9f6f0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    line-height: 2.0;
+    color: #333;
   }
-  .en-area strong{font-size:3.4vw; color:#b71c1c;}
+  .en-area strong { font-size: 30px; color: #b71c1c; }
 
-  .footer{
-    position:absolute;
-    bottom:2.8vh;
-    right:5.5vw;
-    font-size:2.3vw;
-    color:#777;
+  .footer {
+    position: absolute;
+    bottom: 28px;
+    right: 65px;
+    font-size: 21px;
+    color: #777;
   }
 
+  /* 朱印風四隅（少し大きめ） */
   table.omikuji::before,
-  table.omikuji::after{
-    content:"";
-    position:absolute;
-    width:6.5vw;
-    height:6.5vw;
-    max-width:68px;
-    max-height:68px;
-    background:#c62828;
+  table.omikuji::after {
+    content: ""; position: absolute; width: 64px; height: 64px; background: #c62828;
   }
-  table.omikuji::before  {top:-3.2vw; left:-3.2vw; clip-path:polygon(0 0,100% 0,100% 100%);}
-  table.omikuji::after   {bottom:-3.2vw; right:-3.2vw; clip-path:polygon(0 0,100% 0,0 100%);}
+  table.omikuji::before  { top: -32px; left: -32px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+  table.omikuji::after   { bottom: -32px; right: -32px; clip-path: polygon(0 0, 100% 0, 0 100%); }
 </style>
 </head>
 <body>
 
 <table class="omikuji" id="result">
-  <tr><td class="jp-area">
-    <h1 id="rankJp">読み込み中…</h1>
-    <h2 id="titleJp"></h2>
-    <div id="textJp"></div>
-  </td></tr>
-  <tr><td class="en-area">
-    <strong id="rankEn"></strong> — <span id="titleEn"></span><br><br>
-    <span id="textEn">Loading...</span>
-  </td></tr>
+  <tr>
+    <td class="jp-area">
+      <h1 id="rankJp">読み込み中…</h1>
+      <h2 id="titleJp"></h2>
+      <div id="textJp"></div>
+    </td>
+  </tr>
+  <tr>
+    <td class="en-area">
+      <strong id="rankEn"></strong> — <span id="titleEn"></span><br><br>
+      <span id="textEn">Loading...</span>
+    </td>
+  </tr>
 </table>
 
 <div class="footer">第 <span id="num">?</span> 番 おみくじ</div>
 
 <script>
-const params=new URLSearchParams(location.search);
-const id=params.get('id');
-const fortuneId=id&&id>=1&&id<=50?parseInt(id):Math.floor(Math.random()*50)+1;
+const params = new URLSearchParams(location.search);
+const id = params.get('id');
+const fortuneId = id && id >= 1 && id <= 50 ? parseInt(id) : Math.floor(Math.random() * 50) + 1;
 
 fetch('omikuji.xml')
-  .then(r=>r.ok?r.text():Promise.reject())
-  .then(str=>{
-    const xml=new DOMParser().parseFromString(str,"text/xml");
-    const item=xml.querySelector(`omikuji[id="${fortuneId}"]`);
-    if(!item) throw '';
+  .then(r => r.ok ? r.text() : Promise.reject())
+  .then(str => {
+    const xml = new DOMParser().parseFromString(str, "text/xml");
+    const item = xml.querySelector(`omikuji[id="${fortuneId}"]`);
+    if (!item) throw '';
 
-    document.getElementById('rankJp').textContent=item.querySelector('rank').getAttribute('jp');
-    document.getElementById('titleJp').textContent=item.querySelector('title_jp').textContent;
-    document.getElementById('textJp').textContent=item.querySelector('text_jp').textContent;
+    document.getElementById('rankJp').textContent = item.querySelector('rank').getAttribute('jp');
+    document.getElementById('titleJp').textContent = item.querySelector('title_jp').textContent;
+    document.getElementById('textJp').textContent = item.querySelector('text_jp').textContent;
 
-    document.getElementById('rankEn').textContent=item.querySelector('rank').textContent.trim();
-    document.getElementById('titleEn').textContent=item.querySelector('title_en').textContent;
-    document.getElementById('textEn').textContent=item.querySelector('text_en').textContent;
+    document.getElementById('rankEn').textContent = item.querySelector('rank').textContent.trim();
+    document.getElementById('titleEn').textContent = item.querySelector('title_en').textContent;
+    document.getElementById('textEn').textContent = item.querySelector('text_en').textContent;
 
-    document.getElementById('num').textContent=fortuneId;
+    document.getElementById('num').textContent = fortuneId;
   })
-  .catch(()=>{document.getElementById('rankJp').textContent='読み込み失敗';});
+  .catch(() => {
+    document.getElementById('rankJp').textContent = '読み込み失敗';
+  });
 </script>
 
 </body>

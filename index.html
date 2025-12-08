@@ -7,7 +7,7 @@
 <style>
   body {
     background: #fdf9f0;
-    font-family: "HiraKakuPro-W3", "YuKyokasho", "Yu Mincho", serif; /* 教科書体を優先 */
+    font-family: "YuMincho", "Hiragino Mincho ProN", serif; /* 教科書体（YuMincho）を優先 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,16 +18,15 @@
     overflow: hidden;
   }
 
-  /* 枠サイズ調整：幅+100px、高さ-100px */
   table.omikuji {
-    width: 1020px;              /* 920px → 1020px */
-    height: 580px;              /* 約680px → 580px */
-    max-width: 96vw;
-    max-height: 90vh;           /* スクロール不要を維持 */
+    width: calc(88vw + 100px);  /* 幅をさらに100px増やしつつvwでレスポンシブ */
+    height: calc(92vh - 100px); /* 高さをさらに100px減らして縦短く */
+    max-width: 1020px;          /* 横長上限を調整（+100px分） */
+    max-height: 580px;          /* 縦上限を調整（-100px分） */
     min-width: 320px;
-    border: 7px double #c62828;
-    border-radius: 22px;
-    box-shadow: 0 18px 50px rgba(0,0,0,0.28);
+    border: 9px double #c62828;
+    border-radius: 28px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     background: #fffdf9;
     border-collapse: separate;
     border-spacing: 0;
@@ -40,7 +39,7 @@
     padding: 6% 5% 4% 6%;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    font-size: 2.8vw;           /* 文字サイズそのまま */
+    font-size: 2.8vw;            /* 文字サイズ変更なし */
     line-height: 2.7;
     background: linear-gradient(to bottom, #fffdf9, #fff9e9);
   }
@@ -52,7 +51,7 @@
     padding: 4% 6%;
     background: #f9f6f0;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.9vw;           /* 文字サイズそのまま */
+    font-size: 1.9vw;            /* 文字サイズ変更なし */
     line-height: 2.0;
     color: #333;
   }
@@ -62,11 +61,11 @@
     position: absolute;
     bottom: 2.5vh;
     right: 5vw;
-    font-size: 2.2vw;           /* 文字サイズそのまま */
+    font-size: 2.2vw;
     color: #777;
   }
 
-  /* 朱印風四隅（サイズそのまま） */
+  /* 朱印風四隅 */
   table.omikuji::before,
   table.omikuji::after {
     content: ""; 

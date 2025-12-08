@@ -2,12 +2,12 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>おみくじ | 運試し</title>
+<title>おみくじ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body {
     background: #f5fede;
-    font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,33 +16,36 @@
     padding: 20px;
     box-sizing: border-box;
   }
+
   .omikuji {
     writing-mode: vertical-rl;
     text-orientation: upright;
     background: #fffdf6;
-    padding: 40px 30px;
-    max-width: 420px;
+    padding: 36px 28px;
+    max-width: 380px;
+    max-height: 720px;           /* ← ここで縦を約15%短く制限 */
+    overflow: hidden;
     border: 5px double #c41f1f;
     border-radius: 16px;
     box-shadow: 
       inset 0 0 20px rgba(200,150,100,0.25),
-      0 10px 30px rgba(0,0,0,0.3);
+      0 12px 35px rgba(0,0,0,0.3);
     background-image: 
       radial-gradient(circle at 30% 70%, #fffbe6 0%, transparent 50%),
       linear-gradient(to bottom, #fffdf6, #fff8e1);
     position: relative;
-    line-height: 2.2;
-    letter-spacing: 0.1em;
+    line-height: 2.3;
+    letter-spacing: 0.12em;
   }
+
   h1 {
-    font-size: 36px;
+    font-size: 38px;
     margin: 0 0 20px 0;
     color: #b71c1c;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
   h2 {
-    font-size: 22px;
-    margin: 0 0 30px 0;
+    font-size: 23px;
+    margin: 0 0 32px 0;
     color: #8B0000;
   }
   .text-jp {
@@ -50,16 +53,25 @@
     margin-bottom: 30px;
     white-space: pre-line;
   }
+
+  /* 英語は右端に沿って90度時計回りで縦に流す */
   .text-en {
-    writing-mode: horizontal-tb;
+    writing-mode: vertical-rl;
     text-orientation: mixed;
+    transform: rotate(90deg);           /* 90度時計回り */
+    transform-origin: top right;
+    position: absolute;
+    top: 40px;
+    right: -20px;                       /* 右端にピッタリ寄せる */
     font-family: Georgia, "Times New Roman", serif;
     font-size: 13px;
     color: #555;
-    margin-top: 30px;
-    opacity: 0.9;
-    line-height: 1.6;
+    opacity: 0.8;
+    line-height: 1.8;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
   }
+
   .footer {
     writing-mode: horizontal-tb;
     font-size: 11px;
@@ -68,25 +80,17 @@
     text-align: center;
   }
 
-  /* 朱印風の角飾り */
+  /* 朱印風角飾り */
   .omikuji::before,
   .omikuji::after {
     content: "";
     position: absolute;
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     background: #c41f1f;
   }
-  .omikuji::before {
-    top: -14px;
-    left: -14px;
-    clip-path: polygon(0 0, 100% 0, 100% 100%);
-  }
-  .omikuji::after {
-    bottom: -14px;
-    right: -14px;
-    clip-path: polygon(0 0, 100% 0, 0 100%);
-  }
+  .omikuji::before { top: -15px; left: -15px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+  .omikuji::after  { bottom: -15px; right: -15px; clip-path: polygon(0 0, 100% 0, 0 100%); }
 </style>
 </head>
 <body>
@@ -98,27 +102,17 @@
 <script>
 const params = new URLSearchParams(location.search);
 const id = params.get('id');
-
-// 1～50の間でランダムに選ぶ（id指定がなければ）
 const fortuneId = id && id >= 1 && id <= 50 ? id : Math.floor(Math.random() * 50) + 1;
 
-fetch('omikuji.xml')  // ← ここに正しいパスを入れてください（同じフォルダならそのままOK）
-  .then(res => {
-    if (!res.ok) throw new Error('XML読み込み失敗');
-    return res.text();
-  })
+fetch('omikuji.xml')
+  .then(res => { if (!res.ok) throw new Error('XML not found'); return res.text(); })
   .then(str => {
-    const parser = new DOMParser();
-    const xml = parser.parseFromString(str, "text/xml");
+    const xml = new DOMParser().parseFromString(str, "text/xml");
     const item = xml.querySelector(`omikuji[id="${fortuneId}"]`);
+    if (!item) throw new Error('No omikuji found');
 
-    if (!item) {
-      document.getElementById('result').innerHTML = '<p style="color:red;">おみくじが見つかりません…</p>';
-      return;
-    }
-
-    const rank = item.querySelector('rank').textContent.trim();
     const rankJp = item.querySelector('rank').getAttribute('jp');
+    const rankEn = item.querySelector('rank').textContent.trim();
     const titleJp = item.querySelector('title_jp').textContent;
     const titleEn = item.querySelector('title_en').textContent;
     const textJp = item.querySelector('text_jp').textContent;
@@ -129,14 +123,14 @@ fetch('omikuji.xml')  // ← ここに正しいパスを入れてください（
       <h2>${titleJp}</h2>
       <div class="text-jp">${textJp}</div>
       <div class="text-en">
-        <strong>${rank} — ${titleEn}</strong><br><br>
+        <strong>${rankEn} — ${titleEn}</strong><br>
         ${textEn}
       </div>
       <div class="footer">第 ${fortuneId} 番</div>
     `;
   })
   .catch(err => {
-    document.getElementById('result').innerHTML = '<p style="color:red;">読み込みエラー</p>';
+    document.getElementById('result').innerHTML = '<p style="color:#900">読み込み失敗…</p>';
     console.error(err);
   });
 </script>

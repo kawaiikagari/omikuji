@@ -37,7 +37,7 @@
   .jp-area h2 { font-size:27.2px; margin-bottom:42px; color:#900; }
 
   .en-area { height:36%; padding:28px 48px 38px; background:rgba(249,246,240,0.94); font-family:Georgia,serif; font-size:13.6px; line-height:1.9; }
-  .en-area strong { font-size:20.8px; color:#b71c1c; }
+  .en strong { font-size:20.8px; color:#b71c1c; }
 
   table.omikuji::before, table.omikuji::after {
     content:""; position:absolute; width:41.6px; height:41.6px; background:#c62828;
@@ -58,6 +58,7 @@
     z-index: 10;
     font-weight: 600;
     letter-spacing: 0.1em;
+ 0.1em;
   }
 </style>
 </head>
@@ -78,8 +79,8 @@
 <div class="footer">第 <span id="num">?</span> 番 おみくじ</div>
 
 <script>
-// ==================== 30分間投禁止（testは無視） ====================
-const isTestMode = location.search.includes('test');   // ?test や ?xxx=test があれば無制限
+// ==================== 30分制限：和英併記バージョン ====================
+const isTestMode = location.search.includes('test');
 
 if (!isTestMode) {
   const lastTime = localStorage.getItem('omikuji_last');
@@ -88,14 +89,30 @@ if (!isTestMode) {
 
   if (lastTime && (now - lastTime) < cooldown) {
     const wait = Math.ceil((cooldown - (now - lastTime)) / 60000);
-    document.body.innerHTML = `<div style="text-align:center;margin-top:100px;font-size:24px;color:#c62828;">
-      30分に1回しか引けません<br><br>
-      あと ${wait} 分お待ちください
-    </div>`;
-    throw new Error("30分間禁止");
+
+    document.body.innerHTML = `
+      <div style="
+        text-align:center;
+        margin-top:150px;
+        font-family:'Hiragino Mincho ProN','Yu Mincho',Georgia,serif;
+        color:#c62828;
+        line-height:2.2;
+      ">
+        <p style="font-size:32px; margin:0;">30分に1回しか引けません</p>
+        <p style="font-size:52px; font-weight:bold; margin:20px 0 40px;">
+          あと ${wait} 分 お待ちください
+        </p>
+        <hr style="border:0; border-top:4px double #c62828; width:260px; margin:40px auto;">
+        <p style="font-size:24px; margin:10px 0;">You can draw Omikuji only once every 30 minutes</p>
+        <p style="font-size:44px; font-weight:bold; color:#b71c1c; margin:0;">
+          Please wait ${wait} more minute${wait > 1 ? 's' : ''}
+        </p>
+      </div>`;
+    throw new Error("Cooldown");
   }
 }
 
+// ランダムでおみくじを引く
 const randomId = Math.floor(Math.random() * 50) + 1;
 
 fetch('omikuji.xml')
@@ -104,23 +121,23 @@ fetch('omikuji.xml')
     const xml = new DOMParser().parseFromString(str, "text/xml");
     const item = xml.querySelector(`omikuji[id="${randomId}"]`);
 
-    document.getElementById('rank').textContent = item.querySelector('rank').getAttribute('jp');
-    document.getElementById('title').textContent = item.querySelector('title_jp').textContent;
-    document.getElementById('jp').textContent = item.querySelector('text_jp').textContent;
+    document.getElementById('rank').textContent   = item.querySelector('rank').getAttribute('jp');
+    document.getElementById('title').textContent  = item.querySelector('title_jp').textContent;
+    document.getElementById('jp').textContent    = item.querySelector('text_jp').textContent;
 
     document.getElementById('enRank').textContent = item.querySelector('rank').textContent.trim();
-    document.getElementById('enTitle').textContent = item.querySelector('title_en').textContent;
+    document.getElementById('enTitle').textContent= item.querySelector('title_en').textContent;
     document.getElementById('enText').textContent = item.querySelector('text_en').textContent;
 
     document.getElementById('num').textContent = randomId;
 
-    // 引いた時刻を記録（testモード以外）
+    // 記録（テストモード以外）
     if (!isTestMode) {
       localStorage.setItem('omikuji_last', Date.now());
     }
   })
   .catch(() => {
-    document.getElementById('rank').textContent = '読み込み失敗';
+    document.getElementById('rank').textContent = '読み込み失敗 / Loading failed';
   });
 </script>
 

@@ -1,85 +1,61 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<title>おみくじ</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  body {
-    background: #fdf9f0 url('HAIKEI.png') center center / 100% auto no-repeat fixed;
-    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  table.omikuji {
-    width: 560px;
-    height: 540px;
-    max-width: 94vw;
-    max-height: 88vh;
-    border: 5.6px double #c62828;
-    border-radius: 21px;
-    box-shadow: 0 16px 48px rgba(0,0,0,0.35);
-    background: #fffdf9 url('WASHI.PNG') center center / 100% 100% no-repeat;
-    position: relative;
-    overflow: hidden;
-    border-collapse: separate;
-    border-spacing: 0;
-  }
-
-  .jp-area { height:64%; padding:38px 40px 28px 48px; writing-mode:vertical-rl; text-orientation:upright; font-size:17.6px; line-height:2.7; }
-  .jp-area h1 { font-size:49.6px; margin-bottom:18px; color:#b71c1c; }
-  .jp-area h2 { font-size:27.2px; margin-bottom:42px; color:#900; }
-
-  .en-area { height:36%; padding:28px 48px 38px; background:rgba(249,246,240,0.94); font-family:Georgia,serif; font-size:13.6px; line-height:1.9; }
-  .en-area strong { font-size:20.8px; color:#b71c1c; }
-
-  table.omikuji::before, table.omikuji::after {
-    content:""; position:absolute; width:41.6px; height:41.6px; background:#c62828;
-  }
-  table.omikuji::before  { top:-20.8px; left:-20.8px; clip-path:polygon(0 0,100% 0,100% 100%); }
-  table.omikuji::after   { bottom:-20.8px; right:-20.8px; clip-path:polygon(0 0,100% 0,0 100%); }
-
-  /* ←←← ここが本当の「元の位置」！！ →→ */
-  .footer {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    font-size: 16px;
-    color: #555;
-    background: rgba(255,255,255,0.7);
-    padding: 8px 16px;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    z-index: 10;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-  }
-</style>
-</head>
-<body>
-
-<table class="omikuji">
-  <tr><td class="jp-area">
-    <h1 id="rank">読み込み中…</h1>
-    <h2 id="title"></h2>
-    <div id="jp"></div>
-  </td></tr>
-  <tr><td class="en-area">
-    <strong id="enRank"></strong> — <span id="enTitle"></span><br><br>
-    <span id="enText"></span>
-  </td></tr>
-</table>
-
-<!-- 画面右下右に小さく控えめに（これがあなたが好きだった位置！） -->
-<div class="footer">第 <span id="num">?</span> 番 おみくじ</div>
-
 <script>
+/* ========== おみくじリロード制限（30分に1回） ========== */
+const LOCK_KEY = 'omikuji_last_draw';
+const LOCK_DURATION = 30 * 60 * 1002;  // 30分（秒）
+
+function isTestMode() {
+  return location.search.includes('test') || location.hash.includes('test');
+}
+
+function getStoredDraw() {
+  if (isTestMode()) return null;
+  const data = localStorage.getItem(LOCK_KEY);
+  if (!data) return null;
+  try {
+    return JSON.parse(data);
+  } catch(e) {
+    return null;
+  }
+}
+
+function saveDraw(id) {
+  if (isTestMode()) return;
+  const data = {
+    id: id,
+    timestamp: Date.now()
+  };
+  localStorage.setItem(LOCK_KEY, JSON.stringify(data));
+}
+
+/* ========== メイン処理 ========== */
+if (!isTestMode()) {
+  const stored = getStoredDraw();
+  if (stored && (Date.now() - stored.timestamp) < LOCK_DURATION * 1000) {
+    // 30分以内 → 前回の結果を強制的に表示（XMLは読み込まない）
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('rank').textContent = '前回と同じおみくじ';
+      document.getElementById('num').textContent = stored.id;
+
+      fetch('omikuji.xml')
+        .then(r => r.text())
+        .then(str => {
+          const xml = new DOMParser().parseFromString(str, "text/xml");
+          const item = xml.querySelector(`omikuji[id="${stored.id}"]`);
+          if (item) {
+            document.getElementById('rank').textContent   = item.querySelector('rank').getAttribute('jp');
+            document.getElementById('title').textContent  = item.querySelector('title_jp').textContent;
+            document.getElementById('jp').textContent     = item.querySelector('text_jp').textContent;
+            document.getElementById('enRank').textContent = item.querySelector('rank').textContent.trim();
+            document.getElementById('enTitle').textContent= item.querySelector('title_en').textContent;
+            document.getElementById('enText').textContent = item.queryQuerySelector('text_en').textContent;
+          }
+        });
+      return;
+    });
+  }
+}
+
+// 通常のランダム抽選（テストモード or 制限時間外）
 const randomId = Math.floor(Math.random() * 50) + 1;
 
 fetch('omikuji.xml')
@@ -88,16 +64,26 @@ fetch('omikuji.xml')
     const xml = new DOMParser().parseFromString(str, "text/xml");
     const item = xml.querySelector(`omikuji[id="${randomId}"]`);
 
-    document.getElementById('rank').textContent = item.querySelector('rank').getAttribute('jp');
-    document.getElementById('title').textContent = item.querySelector('title_jp').textContent;
-    document.getElementById('jp').textContent = item.querySelector('text_jp').textContent;
+    if (!item) {
+      document.body.innerHTML = '<h1 style="text-align:center;margin-top:100px;">おみくじデータがありません</h1>';
+      return;
+    }
+
+    document.getElementById('rank').textContent   = item.querySelector('rank').getAttribute('jp');
+    document.getElementById('title').textContent  = item.querySelector('title_jp').textContent;
+    document.getElementById('jp').textContent     = item.querySelector('text_jp').textContent;
 
     document.getElementById('enRank').textContent = item.querySelector('rank').textContent.trim();
-    document.getElementById('enTitle').textContent = item.querySelector('title_en').textContent;
+    document.getElementById('enTitle').textContent= item.querySelector('title_en').textContent;
     document.getElementById('enText').textContent = item.querySelector('text_en').textContent;
 
     document.getElementById('num').textContent = randomId;
+
+    // 今回引いたことを記録（テストモードは除外）
+    saveDraw(randomId);
+  })
+  .catch(err => {
+    console.error(err);
+    document.body.innerHTML = '<h1 style="text-align:center;margin-top:100px;color:red;">読み込みエラー</h1>';
   });
 </script>
-</body>
-</html>

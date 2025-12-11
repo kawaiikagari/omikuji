@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
+            /* 画像エラー時はフォールバック背景 */
             background: #fdf9f0 url('HAIKEI.png') center center / 100% auto no-repeat fixed;
+            background-color: #fdf9f0; /* 画像なし時の代替 */
             font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
             display: flex;
             justify-content: center;
@@ -24,7 +26,9 @@
             border: 5.6px double #c62828;
             border-radius: 21px;
             box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+            /* 画像エラー時はフォールバック */
             background: #fffdf9 url('WASHI.PNG') center center / 100% 100% no-repeat;
+            background-color: #fffdf9; /* 画像なし時の代替 */
             position: relative;
             overflow: hidden;
             border-collapse: separate;
@@ -138,10 +142,10 @@
     // ==================== おみくじ読み込み ====================
     const randomId = Math.floor(Math.random() * 50) + 1;
 
-    fetch('./omikuji.xml')
+    fetch('omikuji.xml')
         .then(response => {
             if (!response.ok) {
-                throw new Error(`XMLファイルの読み込みに失敗しました (HTTP ${response.status})`);
+                throw new Error(`XMLファイルの読み込みに失敗しました (HTTP ${response.status})。リポジトリにomikuji.xmlを配置してください。`);
             }
             return response.text();
         })
@@ -152,21 +156,31 @@
             // XML解析エラーのチェック
             const parserError = xml.querySelector('parsererror');
             if (parserError) {
-                throw new Error('XMLファイルの形式が不正です');
+                throw new Error('XMLファイルの形式が不正です。omikuji.xmlを確認してください。');
             }
 
             const item = xml.querySelector(`omikuji[id="${randomId}"]`);
             if (!item) {
-                throw new Error(`ID ${randomId} のおみくじが見つかりません`);
+                throw new Error(`ID ${randomId} のおみくじが見つかりません。XMLに50件あるか確認を。`);
             }
 
-            // 内容を反映
-            document.getElementById('rank').textContent = item.querySelector('rank').getAttribute('jp');
-            document.getElementById('title').textContent = item.querySelector('title_jp').textContent;
-            document.getElementById('jp').textContent = item.querySelector('text_jp').textContent;
-            document.getElementById('enRank').textContent = item.querySelector('rank').textContent.trim();
-            document.getElementById('enTitle').textContent = item.querySelector('title_en').textContent;
-            document.getElementById('enText').textContent = item.querySelector('text_en').textContent;
+            // 修正: rankのjp属性を優先（XML構造に合わせ）
+            const rankElement = item.querySelector('rank');
+            const rankJp = rankElement ? rankElement.getAttribute('jp') || rankElement.textContent.trim() : '不明';
+            const rankEn = rankElement ? rankElement.textContent.trim() : 'Unknown';
+
+            // 内容を反映（nullチェック追加）
+            const titleJp = item.querySelector('title_jp')?.textContent || 'タイトルなし';
+            const jpText = item.querySelector('text_jp')?.textContent || '本文なし';
+            const titleEn = item.querySelector('title_en')?.textContent || 'No Title';
+            const enText = item.querySelector('text_en')?.textContent || 'No Text';
+
+            document.getElementById('rank').textContent = rankJp;
+            document.getElementById('title').textContent = titleJp;
+            document.getElementById('jp').textContent = jpText;
+            document.getElementById('enRank').textContent = rankEn;
+            document.getElementById('enTitle').textContent = titleEn;
+            document.getElementById('enText').textContent = enText;
             document.getElementById('num').textContent = randomId;
 
             // 最終引いた時間を保存
@@ -175,20 +189,26 @@
             }
         })
         .catch(err => {
-            console.error(err);
+            console.error('おみくじエラー詳細:', err);
             document.getElementById('rank').textContent = '読み込み失敗';
             document.getElementById('title').textContent = 'エラー';
             document.getElementById('jp').innerHTML = 
-                'おみくじデータの読み込みに失敗しました。<br><br>' +
-                '【よくある原因】<br>' +
-                '・Firefoxでローカルファイル（file://）として開いている<br>' +
-                '→ GitHub PagesのURL（https://）からアクセスしてください<br><br>' +
-                '・omikuji.xml が正しく配置されていない';
-            document.getElementById('enText').textContent = 
-                'Failed to load Omikuji data.\n\n' +
-                'Common cause:\n' +
-                '- Opening this file locally in Firefox (file:// protocol)\n' +
-                '→ Please access via GitHub Pages URL (https://)';
+                'おみくじデータの読み込み/解析に失敗しました。<br><br>' +
+                '【原因と対処】<br>' +
+                '・XML構造の不一致: rank要素の属性/テキスト順序を確認（jp属性=日本語）。<br>' +
+                '・画像未配置: HAIKEI.png / WASHI.PNG をリポジトリルートにアップロード。<br>' +
+                '→ https://github.com/kawaiikagari/omikuji にファイルを追加/コミット。<br><br>' +
+                'コンソール(F12)で詳細エラーを確認してください。';
+            document.getElementById('enText').innerHTML = 
+                'Failed to load/parse Omikuji data.<br><br>' +
+                '【Causes & Fixes】<br>' +
+                '・XML structure mismatch: Check rank element (jp attr=Japanese).<br>' +
+                '・Missing images: Upload HAIKEI.png / WASHI.PNG to repo root.<br>' +
+                '→ Commit to https://github.com/kawaiikagari/omikuji.<br><br>' +
+                'Check console (F12) for details.';
+            document.getElementById('enRank').textContent = 'Error';
+            document.getElementById('enTitle').textContent = '';
+            document.getElementById('num').textContent = '?';
         });
 </script>
 

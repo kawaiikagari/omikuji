@@ -31,15 +31,16 @@
             overflow: hidden;
             border-collapse: separate;
             border-spacing: 0;
+            background-size: calc(100% + 5.6px * 2) calc(100% + 5.6px * 2);
+            background-clip: border-box;
+        }
+        table.omikuji tr:first-child td {
+            height: 60%;
         }
 
-        /* ★ この位置で正しい！ */
-table.omikuji tr:first-child td {
-    height: 60%;
-}
-table.omikuji tr:last-child td {
-    height: 40%;
-}
+        table.omikuji tr:last-child td {
+            height: 40%;
+        }
         
         .jp-area { height:64%; padding:38px 40px 28px 48px; writing-mode:vertical-rl; text-orientation:upright; font-size:17.6px; line-height:2.7; }
         .jp-area h1 { font-size:49.6px; margin-bottom:18px; color:#b71c1c; }

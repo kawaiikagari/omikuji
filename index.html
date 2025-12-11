@@ -138,7 +138,7 @@
     // ==================== おみくじ読み込み ====================
     const randomId = Math.floor(Math.random() * 50) + 1;
 
-    fetch('omikuji.xml')
+    fetch('./omikuji.xml')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`XMLファイルの読み込みに失敗しました (HTTP ${response.status})`);

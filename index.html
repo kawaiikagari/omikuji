@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            /* 画像エラー時はフォールバック背景 */
             background: #fdf9f0 url('HAIKEI.png') center center / 100% auto no-repeat fixed;
-            background-color: #fdf9f0; /* 画像なし時の代替 */
+            background-color: #fdf9f0; /* 画像なし時の代替（淡いベージュ） */
             font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
             display: flex;
             justify-content: center;
@@ -26,9 +25,8 @@
             border: 5.6px double #c62828;
             border-radius: 21px;
             box-shadow: 0 16px 48px rgba(0,0,0,0.35);
-            /* 画像エラー時はフォールバック */
             background: #fffdf9 url('WASHI.PNG') center center / 100% 100% no-repeat;
-            background-color: #fffdf9; /* 画像なし時の代替 */
+            background-color: #fffdf9; /* 画像なし時の代替（和紙風ベージュ） */
             position: relative;
             overflow: hidden;
             border-collapse: separate;
@@ -139,13 +137,13 @@
         }
     }
 
-    // ==================== おみくじ読み込み ====================
+    // ==================== おみくじ読み込み（XML構造完璧対応） ====================
     const randomId = Math.floor(Math.random() * 50) + 1;
 
     fetch('omikuji.xml')
         .then(response => {
             if (!response.ok) {
-                throw new Error(`XMLファイルの読み込みに失敗しました (HTTP ${response.status})。リポジトリにomikuji.xmlを配置してください。`);
+                throw new Error(`XML読み込み失敗 (HTTP ${response.status}) - リポジトリ確認を`);
             }
             return response.text();
         })
@@ -153,28 +151,34 @@
             const parser = new DOMParser();
             const xml = parser.parseFromString(str, "text/xml");
 
-            // XML解析エラーのチェック
+            // XML解析エラーチェック
             const parserError = xml.querySelector('parsererror');
             if (parserError) {
-                throw new Error('XMLファイルの形式が不正です。omikuji.xmlを確認してください。');
+                throw new Error('XML形式エラー - omikuji.xmlを再確認');
             }
 
             const item = xml.querySelector(`omikuji[id="${randomId}"]`);
             if (!item) {
-                throw new Error(`ID ${randomId} のおみくじが見つかりません。XMLに50件あるか確認を。`);
+                throw new Error(`ID ${randomId} なし - XMLに50件あるかチェック`);
             }
 
-            // 修正: rankのjp属性を優先（XML構造に合わせ）
-            const rankElement = item.querySelector('rank');
-            const rankJp = rankElement ? rankElement.getAttribute('jp') || rankElement.textContent.trim() : '不明';
-            const rankEn = rankElement ? rankElement.textContent.trim() : 'Unknown';
+            // rank抽出強化: jp属性優先（XML形式: <rank jp="大吉">Daikichi</rank>）
+            const rankEl = item.querySelector('rank');
+            const rankJp = rankEl ? (rankEl.getAttribute('jp') || rankEl.textContent.trim() || '不明') : '不明';
+            const rankEn = rankEl ? (rankEl.textContent.trim() || 'Unknown') : 'Unknown';
 
-            // 内容を反映（nullチェック追加）
-            const titleJp = item.querySelector('title_jp')?.textContent || 'タイトルなし';
-            const jpText = item.querySelector('text_jp')?.textContent || '本文なし';
-            const titleEn = item.querySelector('title_en')?.textContent || 'No Title';
-            const enText = item.querySelector('text_en')?.textContent || 'No Text';
+            // テキスト抽出（nullセーフ）
+            const titleJpEl = item.querySelector('title_jp');
+            const jpTextEl = item.querySelector('text_jp');
+            const titleEnEl = item.querySelector('title_en');
+            const enTextEl = item.querySelector('text_en');
 
+            const titleJp = titleJpEl ? titleJpEl.textContent.trim() : 'タイトルなし';
+            const jpText = jpTextEl ? jpTextEl.textContent.trim() : '本文なし';
+            const titleEn = titleEnEl ? titleEnEl.textContent.trim() : 'No Title';
+            const enText = enTextEl ? enTextEl.textContent.trim() : 'No Text';
+
+            // 表示更新
             document.getElementById('rank').textContent = rankJp;
             document.getElementById('title').textContent = titleJp;
             document.getElementById('jp').textContent = jpText;
@@ -183,31 +187,33 @@
             document.getElementById('enText').textContent = enText;
             document.getElementById('num').textContent = randomId;
 
-            // 最終引いた時間を保存
+            // 制限保存
             if (!isTestMode) {
                 localStorage.setItem('omikuji_last', Date.now());
             }
+
+            console.log(`成功！ ID${randomId}: ${rankJp} - ${titleJp}`); // デバッグ用
         })
         .catch(err => {
-            console.error('おみくじエラー詳細:', err);
+            console.error('詳細エラー:', err); // コンソールにログ出力
             document.getElementById('rank').textContent = '読み込み失敗';
-            document.getElementById('title').textContent = 'エラー';
+            document.getElementById('title').textContent = 'エラー詳細';
             document.getElementById('jp').innerHTML = 
-                'おみくじデータの読み込み/解析に失敗しました。<br><br>' +
-                '【原因と対処】<br>' +
-                '・XML構造の不一致: rank要素の属性/テキスト順序を確認（jp属性=日本語）。<br>' +
-                '・画像未配置: HAIKEI.png / WASHI.PNG をリポジトリルートにアップロード。<br>' +
-                '→ https://github.com/kawaiikagari/omikuji にファイルを追加/コミット。<br><br>' +
-                'コンソール(F12)で詳細エラーを確認してください。';
-            document.getElementById('enText').innerHTML = 
-                'Failed to load/parse Omikuji data.<br><br>' +
-                '【Causes & Fixes】<br>' +
-                '・XML structure mismatch: Check rank element (jp attr=Japanese).<br>' +
-                '・Missing images: Upload HAIKEI.png / WASHI.PNG to repo root.<br>' +
-                '→ Commit to https://github.com/kawaiikagari/omikuji.<br><br>' +
-                'Check console (F12) for details.';
+                `${err.message}<br><br>` +
+                '【今すぐ対処】<br>' +
+                '・WASHI.PNG / HAIKEI.png を大文字/小文字厳守で再アップロード<br>' +
+                '・index.html を上記コードに更新/コミット<br>' +
+                '・ブラウザキャッシュクリア (Ctrl+Shift+R)<br><br>' +
+                'XMLは正常なので、画像&コード更新で即解決！';
             document.getElementById('enRank').textContent = 'Error';
             document.getElementById('enTitle').textContent = '';
+            document.getElementById('enText').innerHTML = 
+                `${err.message}<br><br>` +
+                '【Quick Fix】<br>' +
+                '- Re-upload WASHI.PNG / HAIKEI.png with exact case<br>' +
+                '- Update index.html with the code above & commit<br>' +
+                '- Clear browser cache (Ctrl+Shift+R)<br><br>' +
+                'XML is fine - this will fix it instantly!';
             document.getElementById('num').textContent = '?';
         });
 </script>

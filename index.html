@@ -32,6 +32,15 @@
             border-collapse: separate;
             border-spacing: 0;
         }
+
+        /* ★ この位置で正しい！ */
+table.omikuji tr:first-child td {
+    height: 64%;
+}
+table.omikuji tr:last-child td {
+    height: 36%;
+}
+        
         .jp-area { height:64%; padding:38px 40px 28px 48px; writing-mode:vertical-rl; text-orientation:upright; font-size:17.6px; line-height:2.7; }
         .jp-area h1 { font-size:49.6px; margin-bottom:18px; color:#b71c1c; }
         .jp-area h2 { font-size:27.2px; margin-bottom:42px; color:#900; }

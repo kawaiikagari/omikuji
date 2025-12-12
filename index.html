@@ -5,7 +5,6 @@
     <title>おみくじ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* 正しいファイル名に完全対応！ */
         @font-face {
             font-family: 'Kouzan';
             src: url('衡山毛筆フォント.ttf') format('truetype');
@@ -45,28 +44,32 @@
         
         .jp-area {
             height: 64%;
-            padding: 38px 40px 28px 48px;
+            padding: 38px 45px 28px 50px;
             writing-mode: vertical-rl;
             text-orientation: upright;
             background: transparent;
             font-family: 'Kouzan', "Hiragino Mincho ProN", serif;
-            font-size: 18.5px;
-            line-height: 3.1;
-            letter-spacing: 0.08em;
         }
-        .jp-area h1 { 
-            font-size: 60px; 
-            margin-bottom: 18px; 
-            color: #b71c1c; 
-            font-family: 'Kouzan', serif;
-            letter-spacing: 0.25em;
-        }
-        .jp-area h2 { 
-            font-size: 36px; 
-            margin-bottom: 42px; 
-            color: #900; 
-            font-family: 'Kouzan', serif;
+        .jp-area h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+            color: #b71c1c;
             letter-spacing: 0.3em;
+            font-weight: bold;
+        }
+        .jp-area h2 {
+            font-size: 40px;
+            margin-bottom: 48px;
+            color: #900;
+            letter-spacing: 0.35em;
+            font-weight: bold;
+        }
+        .jp-area > div {
+            font-size: 29px;           /* 詳細部分を大幅アップ */
+            line-height: 4.0;          /* 行間ゆったりで読みやすい */
+            letter-spacing: 0.22em;    /* 文字間も広め */
+            font-weight: 900;          /* 最大太字で線を強調 */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* 軽い影でクッキリ */
         }
 
         .en-area {
@@ -74,10 +77,10 @@
             padding: 28px 48px 38px;
             background: rgba(249,246,240,0.65);
             font-family: Georgia, serif;
-            font-size: 13.6px;
-            line-height: 1.9;
+            font-size: 15px;
+            line-height: 2.1;
         }
-        .en strong { font-size:20.8px; color:#b71c1c; }
+        .en strong { font-size:24px; color:#b71c1c; }
 
         table.omikuji::before,
         table.omikuji::after {
@@ -90,6 +93,13 @@
             position: fixed; right: 30px; bottom: 30px; font-size: 16px; color: #555;
             background: rgba(255,255,255,0.7); padding: 8px 16px; border-radius: 20px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 10; font-weight: 600; letter-spacing: 0.1em;
+        }
+
+        /* スマホでも確実に読める調整 */
+        @media (max-width: 600px) {
+            .jp-area > div { font-size: 25px; line-height: 3.6; }
+            .jp-area h1 { font-size: 56px; }
+            .jp-area h2 { font-size: 34px; }
         }
     </style>
 </head>

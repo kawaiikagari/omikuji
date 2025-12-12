@@ -5,10 +5,10 @@
     <title>おみくじ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* 衡山毛筆フォント（あなたがアップした kouzanfont.ttf だけ） */
+        /* 正しいファイル名に完全対応！ */
         @font-face {
             font-family: 'Kouzan';
-            src: url('kouzanfont.ttf') format('truetype');
+            src: url('衡山毛筆フォント.ttf') format('truetype');
             font-display: swap;
         }
 
@@ -49,24 +49,24 @@
             writing-mode: vertical-rl;
             text-orientation: upright;
             background: transparent;
-            font-family: 'Kouzan', "Hiragino Mincho ProN", serif; /* ← ここで毛筆適用 */
+            font-family: 'Kouzan', "Hiragino Mincho ProN", serif;
             font-size: 18.5px;
             line-height: 3.1;
             letter-spacing: 0.08em;
         }
         .jp-area h1 { 
-            font-size: 58px; 
+            font-size: 60px; 
             margin-bottom: 18px; 
             color: #b71c1c; 
             font-family: 'Kouzan', serif;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.25em;
         }
         .jp-area h2 { 
-            font-size: 34px; 
+            font-size: 36px; 
             margin-bottom: 42px; 
             color: #900; 
             font-family: 'Kouzan', serif;
-            letter-spacing: 0.25em;
+            letter-spacing: 0.3em;
         }
 
         .en-area {
@@ -107,7 +107,6 @@
 </table>
 <div class="footer">第 <span id="num">?</span> 番 おみくじ</div>
 
-<!-- 以下スクリプトは変更なし -->
 <script>
     const isTestMode = location.search.includes('test');
     if (!isTestMode) {

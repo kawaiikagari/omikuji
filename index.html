@@ -5,6 +5,18 @@
     <title>おみくじ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        /* 衡山毛筆フォントの読み込み（KouzanGyousho.ttf と KouzanSousho.ttf をリポジトリにアップロード済み前提） */
+        @font-face {
+            font-family: 'KouzanGyousho';
+            src: url('KouzanGyousho.ttf') format('truetype');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'KouzanSousho';
+            src: url('KouzanSousho.ttf') format('truetype');
+            font-display: swap;
+        }
+
         body {
             background: #fdf9f0 url('HAIKEI.png') center center / 100% auto no-repeat fixed;
             background-color: #fdf9f0;
@@ -43,15 +55,34 @@
             text-orientation: upright;
             font-size: 17.6px;
             line-height: 2.7;
-            background: transparent; /* 縦書きエリアは和紙が直に見える */
+            background: transparent; /* 和紙が直に見える */
+            font-family: 'KouzanGyousho', 'KouzanSousho', "Hiragino Mincho ProN", serif; /* 毛筆フォント適用 */
         }
-        .jp-area h1 { font-size:49.6px; margin-bottom:18px; color:#b71c1c; }
-        .jp-area h2 { font-size:27.2px; margin-bottom:42px; color:#900; }
+        .jp-area h1 { 
+            font-size: 56px; 
+            margin-bottom: 18px; 
+            color: #b71c1c; 
+            font-family: 'KouzanGyousho', serif; /* 大吉などは行書体で迫力 */
+            letter-spacing: 0.15em;
+        }
+        .jp-area h2 { 
+            font-size: 32px; 
+            margin-bottom: 42px; 
+            color: #900; 
+            font-family: 'KouzanSousho', serif; /* タイトルは草書体で流麗 */
+            letter-spacing: 0.2em;
+        }
+        .jp-area > div {
+            font-family: 'KouzanSousho', serif; /* 本文は草書体で本格毛筆風 */
+            font-size: 18.5px;
+            line-height: 3.1;
+            letter-spacing: 0.05em;
+        }
 
         .en-area {
             height: 36%;
             padding: 28px 48px 38px;
-            background: rgba(249,246,240,0.72); /* ← ここを 0.72 に薄くして和紙がしっかり透ける */
+            background: rgba(249,246,240,0.65); /* 和紙が透ける薄さ */
             font-family: Georgia, serif;
             font-size: 13.6px;
             line-height: 1.9;
@@ -146,7 +177,7 @@
         })
         .catch(err => {
             document.getElementById('rank').textContent = '読み込み失敗';
-            document.getElementById('jp').innerHTML = 'エラー: ' + err.message + '<br>WASHI.PNG と omikuji.xml が正しくアップロードされているか確認してください。';
+            document.getElementById('jp').innerHTML = 'エラー: ' + err.message + '<br>フォントファイル/画像/XMLを確認してください。';
             console.error(err);
         });
 </script>

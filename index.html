@@ -51,25 +51,25 @@
             font-family: 'Kouzan', "Hiragino Mincho ProN", serif;
         }
         .jp-area h1 {
-            font-size: 72px;
-            margin-bottom: 20px;
+            font-size: 90px;        /* 1.25倍（72→90） */
+            margin-bottom: 8px;     /* 行間詰めて自然に */
             color: #b71c1c;
-            letter-spacing: 0.3em;
+            letter-spacing: 0.28em;
             font-weight: bold;
         }
         .jp-area h2 {
-            font-size: 40px;
-            margin-bottom: 48px;
+            font-size: 50px;        /* 1.25倍（40→50） */
+            margin-bottom: 32px;    /* 少し詰めつつ余裕あり */
             color: #900;
-            letter-spacing: 0.35em;
+            letter-spacing: 0.32em;
             font-weight: bold;
         }
         .jp-area > div {
-            font-size: 29px;           /* 詳細部分を大幅アップ */
-            line-height: 4.0;          /* 行間ゆったりで読みやすい */
-            letter-spacing: 0.22em;    /* 文字間も広め */
-            font-weight: 900;          /* 最大太字で線を強調 */
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* 軽い影でクッキリ */
+            font-size: 36px;        /* 1.25倍（29→36）← 詳細が激クッキリ！ */
+            line-height: 2.9;       /* 4.0→2.9に詰めて美しく（でも読みやすい） */
+            letter-spacing: 0.24em;
+            font-weight: 900;
+            text-shadow: 1.2px 1.2px 2.5px rgba(0,0,0,0.22);
         }
 
         .en-area {
@@ -77,10 +77,10 @@
             padding: 28px 48px 38px;
             background: rgba(249,246,240,0.65);
             font-family: Georgia, serif;
-            font-size: 15px;
-            line-height: 2.1;
+            font-size: 16px;
+            line-height: 2.2;
         }
-        .en strong { font-size:24px; color:#b71c1c; }
+        .en strong { font-size: 26px; color:#b71c1c; }
 
         table.omikuji::before,
         table.omikuji::after {
@@ -95,11 +95,10 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 10; font-weight: 600; letter-spacing: 0.1em;
         }
 
-        /* スマホでも確実に読める調整 */
         @media (max-width: 600px) {
-            .jp-area > div { font-size: 25px; line-height: 3.6; }
-            .jp-area h1 { font-size: 56px; }
-            .jp-area h2 { font-size: 34px; }
+            .jp-area h1 { font-size: 68px; margin-bottom: 6px; }
+            .jp-area h2 { font-size: 38px; margin-bottom: 25px; }
+            .jp-area > div { font-size: 31px; line-height: 2.7; }
         }
     </style>
 </head>

@@ -29,11 +29,13 @@ body {
   color: #1e1e1e;
 }
 
-/* --- レイアウト --- */
+/* --- レイアウト + 半透明背景 --- */
 .wrapper {
   max-width: 900px;
   margin: 0 auto;
   padding: 32px;
+  background-color: rgba(255, 255, 255, 0.85); /* 文字を見やすくする半透明背景 */
+  box-sizing: border-box;
 }
 
 /* --- h1 タイトル --- */
@@ -44,21 +46,21 @@ h1.main-title {
 }
 
 h1.main-title .jp {
-  font-size: 0.85; /* 和文サイズ調整 */
+  font-size: 1.0em; /* 和文サイズ調整 */
 }
 
 h1.main-title .en {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: normal;
-  font-size: 0.55em; /* 英文サイズ調整 */
-  line-height: 0.60em;
+  font-size: 0.80em; /* 英文サイズ調整 */
+  line-height: 0.80em;
   color: #444;
 }
 
 /* --- h2 --- */
 h2 {
-  font-size: 1.2em;
+  font-size: 1.3365em; /* 適正サイズ */
   border-bottom: 1px solid rgba(0,0,0,0.3);
   padding-bottom: 6px;
   margin-top: 2.42em;
@@ -78,9 +80,9 @@ h2 {
 
 /* --- サブタイトル（和文） --- */
 .subtitle {
-  font-size: 1.05em;
+  font-size: 1.2375em; /* 適正サイズ */
   margin-bottom: 2em;
-  line-height: 1.05em;
+  line-height: 1.11375em; /* フォントサイズの90% */
 }
 </style>
 </head>
@@ -90,7 +92,7 @@ h2 {
 
 <!-- h1 修正版 -->
 <h1 class="main-title">
-  <span class="jp">神社神社（かみやしろじんじゃ）</span><span class="en"> / Kamiyashiro Shrine</span>
+  <span class="jp">神社神社（かみやしろじんじゃ）</span> / <span class="en">Kamiyashiro Shrine</span>
 </h1>
 
 <!-- サブタイトル -->

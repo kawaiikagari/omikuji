@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  omikuji_1-50.xml
+  - 50 authentic-style Shinto shrine omikuji entries (Japanese + English)
+  - Intended to be hosted on GitHub (raw URL) and called from Second Life objects.
+  - URL patterns recommended in README below.
+
+  NOTE: This single file contains three sections:
+    1) /omikujis root XML with 50 <omikuji> entries
+    2) XSD schema in a CDATA block for validation
+    3) README in a CDATA block with deployment & SL usage examples
+-->
+<omikujis xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="omikuji.xsd">
+
+  <!-- Distribution of ranks mirrors traditional omikuji style. 50 items total. -->
+
+  <!-- 1 -->
+  <omikuji id="1">
+    <rank jp="大吉">Daikichi</rank>
+    <title_jp>大吉 — 天の恵み</title_jp>
+    <title_en>Great Blessing — Heaven's Favor</title_en>
+    <text_jp>望み事：叶う。努力を怠らず、時来れば成就す。待人：来る。失せ物：出る。旅立ち：吉。商売：利あり。学問：精進せよ。病気：回復する。</text_jp>
+    <text_en>Wish: It will come true. Keep working diligently; when the time comes it will be fulfilled. Visitor: will arrive. Lost item: will be found. Travel: auspicious. Business: profitable. Studies: persevere. Illness: recovery.</text_en>
+  </omikuji>
+
+  <!-- 2 -->
+  <omikuji id="2">
+    <rank jp="大吉">Daikichi</rank>
+    <title_jp>大吉 — 福寿増す</title_jp>
+    <title_en>Great Blessing — Growing Fortune</title_en>
+    <text_jp>総合運：吉事多し。家庭円満、交際運良好。新しきこと始めよ。困難はやがて消ゆ。</text_jp>
+    <text_en>Overall: Many auspicious events. Family harmony and favorable relationships. Begin something new. Difficulties will soon disappear.</text_en>
+  </omikuji>
+
+  <!-- 3 -->
+  <omikuji id="3">
+    <rank jp="大吉">Daikichi</rank>
+    <title_jp>大吉 — 心願成就</title_jp>
+    <title_en>Great Blessing — Heart's Desire Fulfilled</title_en>
+    <text_jp>願望：叶うが、己の心の準備を忘れずに。恋愛：誠実ならば実る。金運：臨時の幸運有り。</text_jp>
+    <text_en>Desire: Will be granted, but don't forget to prepare your heart. Love: will bear fruit if sincere. Finances: unexpected luck may come.</text_en>
+  </omikuji>
+
+  <!-- 4 -->
+  <omikuji id="4">
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉 — 穏やかなる進み</title_jp>
+    <title_en>Middle Blessing — Steady Progress</title_en>
+    <text_jp>物事はゆっくり進むが確実。争いを避け、和を重んじよ。転居・転職は慎重に。</text_jp>
+    <text_en>Things progress slowly but surely. Avoid conflict and value harmony. Be cautious about moving or changing jobs.</text_en>
+  </omikuji>
+
+  <!-- 5 -->
+  <omikuji id="5">
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉 — 恩恵を受く</title_jp>
+    <title_en>Middle Blessing — Receiving Favor</title_en>
+    <text_jp>他人の助けあり。感謝の心を忘れずに。急がず腐らず。健康は良好。</text_jp>
+    <text_en>Help from others will come. Do not forget gratitude. Don't rush or despair. Health is good.</text_en>
+  </omikuji>
+
+  <!-- 6 -->
+  <omikuji id="6">
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉 — 小さな幸運</title_jp>
+    <title_en>Middle Blessing — Small Fortunes</title_en>
+    <text_jp>小さな幸運が積み重なる。用心深く振る舞え。投資はほどほどに。</text_jp>
+    <text_en>Small fortunes will accumulate. Act prudently. Keep investments moderate.</text_en>
+  </omikuji>
+
+  <!-- 7 -->
+  <omikuji id="7">
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉 — つつましき光</title_jp>
+    <title_en>Small Blessing — Modest Light</title_en>
+    <text_jp>急がば回れ。慎重さが功を奏す。恋は慎み、相手を思いやれ。</text_jp>
+    <text_en>If in haste, take a detour. Caution will be rewarded. In love, be reserved and considerate of your partner.</text_en>
+  </omikuji>
+
+  <!-- 8 -->
+  <omikuji id="8">
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉 — 努力の芽</title_jp>
+    <title_en>Small Blessing — Seeds of Effort</title_en>
+    <text_jp>今の努力は将来の実になる。焦らず種を育てよ。学びは吉。</text_jp>
+    <text_en>Your current efforts will become future results. Nurture the seeds without hurry. Study is auspicious.</text_en>
+  </omikuji>
+
+  <!-- 9 -->
+  <omikuji id="9">
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉 — 隠れた福</title_jp>
+    <title_en>Small Blessing — Hidden Blessings</title_en>
+    <text_jp>気づかなかった幸運あり。周囲に目を向けよ。商いは徐々に良くなる。</text_jp>
+    <text_en>There is luck you hadn't noticed. Look around you. Business will gradually improve.</text_en>
+  </omikuji>
+
+  <!-- 10 -->
+  <omikuji id="10">
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉 — 日々の和</title_jp>
+    <title_en>Blessing — Daily Harmony</title_en>
+    <text_jp>平穏な運気。家族と友情を大切にせよ。小さな喜びが訪れる。</text_jp>
+    <text_en>Calm fortune. Cherish family and friendships. Small joys will come.</text_en>
+  </omikuji>
+
+  <!-- 11 -->
+  <omikuji id="11">
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉 — 心安し</title_jp>
+    <title_en>Blessing — Peace of Mind</title_en>
+    <text_jp>悩みは軽くなる。相談は吉。遠方より便りあり。金運は平凡。</text_jp>
+    <text_en>Worries will lighten. Consulting others is good. News from afar. Finances are average.</text_en>
+  </omikuji>
+
+  <!-- 12 -->
+  <omikuji id="12">
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉 — 正道を行け</title_jp>
+    <title_en>Blessing — Walk the Right Path</title_en>
+    <text_jp>正直と節度が鍵。迷わず誠実に。争いは避けるべし。</text_jp>
+    <text_en>Honesty and moderation are key. Act sincerely. Avoid conflicts.</text_en>
+  </omikuji>
+
+  <!-- 13 -->
+  <omikuji id="13">
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉 — 変化は吉</title_jp>
+    <title_en>Blessing — Change Is Auspicious</title_en>
+    <text_jp>変化を恐れず挑め。環境を変えることで道が開ける。</text_jp>
+    <text_en>Don't fear change; take on challenges. Changing your environment will open paths.</text_en>
+  </omikuji>
+
+  <!-- 14 -->
+  <omikuji id="14">
+    <rank jp="末吉">Suekichi</rank>
+    <title_jp>末吉 — 先は良し</title_jp>
+    <title_en>Future Blessing — Good Ahead</title_en>
+    <text_jp>今は忍耐を要すが、終わり良ければすべて良し。待て。慌てるな。</text_jp>
+    <text_en>Now requires patience, but all will be well in the end. Wait. Do not rush.</text_en>
+  </omikuji>
+
+  <!-- 15 -->
+  <omikuji id="15">
+    <rank jp="末吉">Suekichi</rank>
+    <title_jp>末吉 — 小さな収穫</title_jp>
+    <title_en>Future Blessing — Small Harvest</title_en>
+    <text_jp>少しずつ吉。蓄えと節約を心がけよ。恋は時間が必要。</text_jp>
+    <text_en>Small gains gradually. Practice saving and frugality. Love needs time.</text_en>
+  </omikuji>
+
+  <!-- 16 -->
+  <omikuji id="16">
+    <rank jp="末吉">Suekichi</rank>
+    <title_jp>末吉 — 気を整えよ</title_jp>
+    <title_en>Future Blessing — Steady Your Mind</title_en>
+    <text_jp>心身の調和を大切に。焦りは失策の元。身辺整理を進めよ。</text_jp>
+    <text_en>Value harmony of mind and body. Hurry leads to mistakes. Tidy your surroundings.</text_en>
+  </omikuji>
+
+  <!-- 17 -->
+  <omikuji id="17">
+    <rank jp="凶">Kyo</rank>
+    <title_jp>凶 — 用心の時</title_jp>
+    <title_en>Curse — Time for Caution</title_en>
+    <text_jp>思わぬ災いあり。無理をせず用心深く。争いは大いに損あり。</text_jp>
+    <text_en>Unexpected misfortune may occur. Don't overreach; be cautious. Conflicts bring great loss.</text_en>
+  </omikuji>
+
+  <!-- 18 -->
+  <omikuji id="18">
+    <rank jp="凶">Kyo</rank>
+    <title_jp>凶 — 停滞と反省</title_jp>
+    <title_en>Curse — Stagnation and Reflection</title_en>
+    <text_jp>物事行き詰まる。行いを顧みて改めよ。小さなことも軽んずるな。</text_jp>
+    <text_en>Things will stagnate. Reflect on your actions and correct them. Don't dismiss small matters.</text_en>
+  </omikuji>
+
+  <!-- 19 -->
+  <omikuji id="19">
+    <rank jp="凶">Kyo</rank>
+    <title_jp>凶 — 注意深く在れ</title_jp>
+    <title_en>Curse — Be Vigilant</title_en>
+    <text_jp>人間関係に注意。言葉の行き違いに注意せよ。金銭の貸借は避けるべし。</text_jp>
+    <text_en>Be careful in relationships. Watch out for misunderstandings. Avoid lending or borrowing money.</text_en>
+  </omikuji>
+
+  <!-- 20 -->
+  <omikuji id="20">
+    <rank jp="凶">Kyo</rank>
+    <title_jp>凶 — 慎重に行動</title_jp>
+    <title_en>Curse — Act Carefully</title_en>
+    <text_jp>無理をすれば損す。健康を第一に。重要な決断は延期せよ。</text_jp>
+    <text_en>Overreaching brings loss. Prioritize health. Postpone major decisions.</text_en>
+  </omikuji>
+
+  <!-- 21 -->
+  <omikuji id="21">
+    <rank jp="大吉">Daikichi</rank>
+    <title_jp>大吉 — 光明来たる</title_jp>
+    <title_en>Great Blessing — Light Arrives</title_en>
+    <text_jp>暗雲の後に光あり。努力は必ず報われる。恋も仕事も吉。</text_jp>
+    <text_en>Light follows dark clouds. Effort will surely be rewarded. Love and work are favored.</text_en>
+  </omikuji>
+
+  <!-- 22 -->
+  <omikuji id="22">
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉 — 慎ましき幸い</title_jp>
+    <title_en>Middle Blessing — Modest Good</title_en>
+    <text_jp>誠実に振る舞えば運は向く。小さな選択を大切にせよ。</text_jp>
+    <text_en>Act sincerely and fortune will turn. Cherish small choices.</text_en>
+  </omikuji>
+
+  <!-- 23 -->
+  <omikuji id="23">
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉 — 継続の果</title_jp>
+    <title_en>Small Blessing — Fruits of Continuity</title_en>
+    <text_jp>日々の積み重ねが道を拓く。諦めずに続けよ。交渉は辛抱強く。</text_jp>
+    <text_en>Daily accumulation opens the way. Continue without giving up. Be patient in negotiations.</text_en>
+  </omikuji>
+
+  <!-- 24 -->
+  <omikuji id="24">
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉 — 人の縁</title_jp>
+    <title_en>Blessing — Human Bonds</title_en>
+    <text_jp>縁に恵まれる。新しい出会いは吉。恩返しを怠るな。</text_jp>
+    <text_en>You will be blessed with connections. New encounters are auspicious. Do not forget to repay kindness.</text_en>
+  </omikuji>
+
+  <!-- 25 -->
+  <omikuji id="25">
+    <rank jp="末吉">Suekichi</rank>
+    <title_jp>末吉 — 慎ましき治まり</title_jp>
+    <title_en>Future Blessing — Modest Resolution</title_en>
+    <text_jp>小さな問題は時間とともに治まる。平常心を保て。</text_jp>
+    <text_en>Small troubles will settle with time. Keep calm.</text_en>
+  </omikuji>
+
+  <!-- 26 -->
+  <omikuji id="26">
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉 — 助力あり</title_jp>
+    <title_en>Blessing — Support Will Come</title_en>
+    <text_jp>信頼できる助けあり。相談すれば道が拓ける。金運は持ち直す。</text_jp>
+    <text_en>Reliable help will come. Consulting will open the way. Finances will recover.</text_en>
+  </omikuji>
+
+  <!-- 27 -->
+  <omikuji id="27">
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉 — 心の糧</title_jp>
+    <title_en>Small Blessing — Nourishment for the Heart</title_en>
+    <text_jp>精神面の成長が大切。学びと読書が吉。新しい趣味を持て。</text_jp>
+    <text_en>Mental growth is important. Study and reading are auspicious. Take up a new hobby.</text_en>
+  </omikuji>
+
+  <!-- 28 -->
+  <omikuji id="28">
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉 — 未来の兆し</title_jp>
+    <title_en>Middle Blessing — Signs of the Future</title_en>
+    <text_jp>小さな兆しを見落とすな。準備が運を呼ぶ。健康維持を心がけよ。</text_jp>
+    <text_en>Don't overlook small signs. Preparation attracts fortune. Maintain your health.</text_en>
+  </omikuji>
+
+  <!-- 29 -->
+  <omikuji id="29">
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉 — 家庭安泰</title_jp>
+    <title_en>Blessing — Family Peace</title_en>
+    <text_jp>家庭運良し。身内との相談が物事を好転させる。旅行は楽しめる。</text_jp>
+    <text_en>Good family luck. Consult with relatives to improve matters. Travel will be enjoyable.</text_en>
+  </omikuji>
+
+  <!-- 30 -->
+  <omikuji id="30">
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉 — 忍耐の実</title_jp>
+    <title_en>Small Blessing — Fruit of Patience</title_en>
+    <text_jp>忍耐が次の幸福を呼ぶ。今はじっと耐えよ。無駄な争いは避けること。</text_jp>
+    <text_en>Patience will bring future happiness. Endure quietly now. Avoid pointless conflicts.</text_en>
+  </omikuji>
+
+  <!-- 31 -->
+  <omikuji id="31">
+    <rank jp="末吉">Suekichi</rank>
+    <title_jp>末吉 — 時を待て</title_jp>
+    <title_en>Future Blessing — Wait for the Time</title_en>
+    <text_jp>時節が来るのを待て。無理に事を進めるな。金銭は計画的に。</text_jp>
+    <text_en>Wait for the season to come. Don't force matters. Manage finances carefully.</text_en>
+  </omikuji>
+
+  <!-- 32 -->
+  <omikuji id="32">
+    <rank jp="大吉">Daikichi</rank>
+    <title_jp>大吉 — 縁結び吉</title_jp>
+    <title_en>Great Blessing — Favorable Match</title_en>
+    <text_jp>恋愛・縁結びに特に吉。誠実な心が幸福を呼ぶ。急ぐな、しかし積極的に。</text_jp>
+    <text_en>Particularly auspicious for love and matches. A sincere heart brings happiness. Don't rush, but be proactive.</text_en>
+  </omikuji>
+
+  <!-- 33 -->
+  <omikuji id="33">
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉 — 学業成就</title_jp>
+    <title_en>Blessing — Academic Success</title_en>
+    <text_jp>学問に吉。継続は力なり。試験は準備が肝心。</text_jp>
+    <text_en>Auspicious for studies. Consistency is strength. Preparation is key for exams.</text_en>
+  </omikuji>
+
+  <!-- 34 -->
+  <omikuji id="34">
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉 — 小心の吉</title_jp>
+    <title_en>Small Blessing — Cautious Fortune</title_en>
+    <text_jp>用心深さが幸いする。約束は守れ。手続きを怠らずに。</text_jp>
+    <text_en>Caution will bring luck. Keep promises. Don't neglect paperwork.</text_en>
+  </omikuji>
+
+  <!-- 35 -->
+  <omikuji id="35">
+    <rank jp="凶">Kyo</rank>
+    <title_jp>凶 — 休息を取れ</title_jp>
+    <title_en>Curse — Take Rest</title_en>
+    <text_jp>心身の疲れが出やすい。無理は禁物。回復には休息が必要。</text_jp>
+    <text_en>Mind and body fatigue may surface. Do not overdo it. Rest is needed for recovery.</text_en>
+  </omikuji>
+
+  <!-- 36 -->
+  <omikuji id="36">
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉 — 商い順調</title_jp>
+    <title_en>Blessing — Business Prosperity</title_en>
+    <text_jp>商売は順調。誠実な取引が信用を呼ぶ。無駄遣いは控えよ。</text_jp>
+    <text_en>Business is going well. Honest transactions build trust. Refrain from wasteful spending.</text_en>
+  </omikuji>
+
+  <!-- 37 -->
+  <omikuji id="37">
+    <rank jp="末吉">Suekichi</rank>
+    <title_jp>末吉 — 微笑む未来</title_jp>
+    <title_en>Future Blessing — Smiling Future</title_en>
+    <text_jp>今は苦しくとも春は来る。希望を失うな。小さな工夫が効く。</text_jp>
+    <text_en>Though hard now, spring will come. Do not lose hope. Small ingenuity helps.</text_en>
+  </omikuji>
+
+  <!-- 38 -->
+  <omikuji id="38">
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉 — 新しき扉</title_jp>
+    <title_en>Small Blessing — New Door</title_en>
+    <text_jp>新しいことに手を出すのは吉。ただし準備を怠るな。</text_jp>
+    <text_en>It's auspicious to try something new, but do not neglect preparation.</text_en>
+  </omikuji>
+
+  <!-- 39 -->
+  <omikuji id="39">
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉 — 健やかなる日々</title_jp>
+    <title_en>Blessing — Healthy Days</title_en>
+    <text_jp>健康運良し。規則正しい生活が吉。軽い運動を続けよ。</text_jp>
+    <text_en>Good health luck. Regular lifestyle is auspicious. Continue light exercise.</text_en>
+  </omikuji>
+
+  <!-- 40 -->
+  <omikuji id="40">
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉 — 人の和</title_jp>
+    <title_en>Middle Blessing — Harmony Among People</title_en>
+    <text_jp>協調性が運を呼ぶ。職場や団体での立場向上あり。争いは避けよ。</text_jp>
+    <text_en>Cooperation brings fortune. Your standing at work or groups will improve. Avoid quarrels.</text_en>
+  </omikuji>
+
+  <!-- 41 -->
+  <omikuji id="41">
+    <rank jp="凶">Kyo</rank>
+    <title_jp>凶 — 言葉に気をつけよ</title_jp>
+    <title_en>Curse — Mind Your Words</title_en>
+    <text_jp>不用意な発言が争いを生む。沈黙も時には良し。謝罪は早めに。</text_jp>
+    <text_en>Careless words spawn conflict. Silence can be good at times. Apologize promptly.</text_en>
+  </omikuji>
+
+  <!-- 42 -->
+  <omikuji id="42">
+    <rank jp="末吉">Suekichi</rank>
+    <title_jp>末吉 — 小さき守り</title_jp>
+    <title_en>Future Blessing — Small Protection</title_en>
+    <text_jp>細心の注意が吉を招く。夜道や金銭には気をつけよ。</text_jp>
+    <text_en>Carefulness invites luck. Be careful on night roads and with money.</text_en>
+  </omikuji>
+
+  <!-- 43 -->
+  <omikuji id="43">
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉 — 助け合いの運</title_jp>
+    <title_en>Small Blessing — Mutual Aid</title_en>
+    <text_jp>助け合いが運を開く。困っている者に手を差し伸べよ。</text_jp>
+    <text_en>Mutual help opens fortune. Lend a hand to those in need.</text_en>
+  </omikuji>
+
+  <!-- 44 -->
+  <omikuji id="44">
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉 — 技術の道</title_jp>
+    <title_en>Blessing — Path of Skill</title_en>
+    <text_jp>技術や手仕事に吉。習得には時間を要すが後に大きな実を結ぶ。</text_jp>
+    <text_en>Good for technical skills and crafts. It takes time to master, but will yield great results later.</text_en>
+  </omikuji>
+
+  <!-- 45 -->
+  <omikuji id="45">
+    <rank jp="大吉">Daikichi</rank>
+    <title_jp>大吉 — 平和の祝福</title_jp>
+    <title_en>Great Blessing — Blessing of Peace</title_en>
+    <text_jp>心安らかに日々を過ごせ。対人運、金運ともに良好。家族の幸せが最優先。</text_jp>
+    <text_en>Spend your days peacefully. Good interpersonal and financial fortune. Family happiness is paramount.</text_en>
+  </omikuji>
+
+  <!-- 46 -->
+  <omikuji id="46">
+    <rank jp="末吉">Suekichi</rank>
+    <title_jp>末吉 — 変化の兆し</title_jp>
+    <title_en>Future Blessing — Signs of Change</title_en>
+    <text_jp>変化は小さく始まる。心の準備をしておけ。焦らず徐々に。</text_jp>
+    <text_en>Change begins small. Prepare your heart. Gradually, without haste.</text_en>
+  </omikuji>
+
+  <!-- 47 -->
+  <omikuji id="47">
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉 — 慎ましき愛</title_jp>
+    <title_en>Small Blessing — Modest Love</title_en>
+    <text_jp>恋愛は控えめが吉。相手を尊重すれば関係は深まる。</text_jp>
+    <text_en>Modesty in love is auspicious. Respecting your partner deepens the relationship.</text_en>
+  </omikuji>
+
+  <!-- 48 -->
+  <omikuji id="48">
+    <rank jp="凶">Kyo</rank>
+    <title_jp>凶 — 故きを温ね新しきを知れ</title_jp>
+    <title_en>Curse — Revisit the Old, Learn the New</title_en>
+    <text_jp>過去の教訓を忘れるな。新しい手法も取り入れよ。油断大敵。</text_jp>
+    <text_en>Don't forget lessons from the past. Also adopt new methods. Do not be complacent.</text_en>
+  </omikuji>
+
+  <!-- 49 -->
+  <omikuji id="49">
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉 — 実直の功</title_jp>
+    <title_en>Blessing — Merit of Integrity</title_en>
+    <text_jp>実直な行いが信頼を築く。小さな善行を積み重ねよ。出会いは良好。</text_jp>
+    <text_en>Honest actions build trust. Accumulate small good deeds. Encounters are favorable.</text_en>
+  </omikuji>
+
+  <!-- 50 -->
+  <omikuji id="50">
+    <rank jp="大凶">Daikyo</rank>
+    <title_jp>大凶 — 警鐘を忘れるな</title_jp>
+    <title_en>Great Curse — Do Not Forget the Alarm</title_en>
+    <text_jp>重大な用心を要す。無理をせず、身の回りを整えよ。特に金銭と人間関係に注意。</text_jp>
+    <text_en>Serious caution required. Do not overextend; put your affairs in order. Pay particular attention to finances and relationships.</text_en>
+  </omikuji>
+
+</omikujis>
+
+<!--
+  Embedded XSD (save as omikuji.xsd alongside the XML for validation)
+  The following block is included for convenience — paste into omikuji.xsd when deploying.
+-->
+<![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="omikujis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="omikuji" maxOccurs="unbounded" minOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="rank" type="xs:string"/>
+              <xs:element name="title_jp" type="xs:string"/>
+              <xs:element name="title_en" type="xs:string"/>
+              <xs:element name="text_jp" type="xs:string"/>
+              <xs:element name="text_en" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+]]>
+
+<!--
+  README (deployment & Second Life usage)
+  Save this file in your GitHub repository (e.g., /omikuji/omikuji_1-50.xml) and also add omikuji.xsd.
+
+  Recommended hosting:
+    - Host raw XML on GitHub Pages or GitHub raw URL (https://raw.githubusercontent.com/<user>/<repo>/main/omikuji/omikuji_1-50.xml)
+    - For Sitegoogle embed, you can use a tiny JavaScript that fetches the XML and displays a styled "omikuji paper" on the page.
+
+  URL patterns (two options):
+    1) Single-file query by id:
+       https://<host>/omikuji_1-50.xml?id=NN  (your server-side script can read query param and return the specific entry)
+    2) Direct per-id file (easiest for SL raw URL use):
+       https://<host>/omikuji/omikuji_01.xml  ... omikuji_50.xml
+       (In this case split the entries into 50 files; or provide an index that maps id->anchor)
+
+  Simple Second Life LSL example (open raw URL in user's browser using llLoadURL):
+
+    // Example: object randomly chooses 1..50 and calls llLoadURL
+    integer max = 50;
+    integer n = (integer)llFrand((float)max) + 1; // 1..50
+    string host = "https://raw.githubusercontent.com/YourUser/YourRepo/main/omikuji/omikuji_";
+    string idstr = (n < 10) ? "0" + (string)n : (string)n; // zero-pad if using 01..09 files
+    string url = host + idstr + ".xml"; // or host + "?id=" + (string)n if using single file with query
+
+    list buttons = ["Open Omikuji"];
+    llDialog(llGetOwner(), "おみくじを開きます。", buttons, llGetKey());
+    // Or directly open URL in browser (note: llLoadURL requires a URL and a button label shown to user)
+    llLoadURL(llGetOwner(), "おみくじを開く", url);
+
+  If you must use single XML file with query param, you need a simple server-side script (PHP/Node/Python) to parse ?id=NN and serve only that <omikuji> element as an HTML page that renders like shrine paper.
+
+  Sitegoogle embed hint:
+    - Fetch the XML via fetch/XHR, find the <omikuji id="NN"> element, then render HTML that mimics folded shrine paper: textured background, vertical Japanese text, English below.
+    - Include a "Print" and "Share" button.
+
+  Styling tip for "shrine paper" authenticity:
+    - Use off-white paper texture, subtle fiber noise background
+    - Vertical Japanese text (writing-mode: vertical-rl) for the Japanese part
+    - Red stamp graphic (hanko) with shrine name
+    - Handwritten-style font for Japanese (but choose web-safe/Google Font)
+
+  Accessibility:
+    - Provide the English translation as selectable text
+    - Provide aria-labels and lang attributes (lang="ja" for Japanese text)
+
+  End of README
+-->

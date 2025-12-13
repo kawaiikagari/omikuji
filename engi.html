@@ -36,11 +36,21 @@ body {
   padding: 32px;
 }
 
-/* --- 見出し --- */
-h1 {
+/* --- h1 --- */
+h1.main-title {
   border-bottom: 2px solid #000;
   padding-bottom: 0.2em;
   margin-bottom: 0.5em;
+  font-size: 1em; /* 和文基準サイズ */
+}
+
+h1.main-title .en {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.935em; /* 和文より少し小さく */
+  line-height: 0.8415em;
+  color: #444;
 }
 
 /* --- h2 --- */
@@ -51,16 +61,16 @@ h2 {
   margin-top: 2.42em;
 }
 
-/* --- 英文（衡山不使用・和文より小さく固定） --- */
+/* --- 英文（衡山不使用・固定） --- */
 .en {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: normal;
-  font-size: 0.935em; /* h1 英文もここに統一 */
+  font-size: 0.8415em; /* サブタイトルやh2英文サイズ */
   color: #444;
   margin-top: 0.18em;
   margin-bottom: 1.1em;
-  line-height: 0.8415em; /* フォントサイズの90% */
+  line-height: 0.75735em; /* フォントサイズの90% */
 }
 
 /* --- サブタイトル（和文） --- */
@@ -75,12 +85,12 @@ h2 {
 <body>
 <div class="wrapper">
 
-<!-- h1 修正版：英文を30％縮小前の大きさに戻す -->
-<h1>
-  <span style="font-size:70%;">神社神社（かみやしろじんじゃ）</span> / 
-  <span class="en" style="font-size:0.935em; line-height:0.8415em;">Kamiyashiro Shrine</span>
+<!-- h1 修正版 -->
+<h1 class="main-title">
+  神社神社（かみやしろじんじゃ） / <span class="en">Kamiyashiro Shrine</span>
 </h1>
 
+<!-- サブタイトル -->
 <p class="subtitle" style="font-size:1.2375em; line-height:1.11375em;">
 影向の湖を御神体とする古の神社<br>
 <span class="en" style="font-size:0.8415em; line-height:0.75735em;">

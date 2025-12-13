@@ -23,7 +23,6 @@
             padding: 20px;
             box-sizing: border-box;
         }
-
         table.omikuji {
             width: 560px;
             height: 800px;
@@ -40,10 +39,9 @@
             background-size: calc(100% + 5.6px * 2) calc(100% + 5.6px * 2);
             background-clip: border-box;
         }
-
         table.omikuji tr:first-child td { height: 60%; }
         table.omikuji tr:last-child td { height: 40%; }
-
+        
         .jp-area {
             height: 70%;
             padding: 38px 45px 28px 50px;
@@ -52,7 +50,6 @@
             background: transparent;
             font-family: 'Kouzan', "Hiragino Mincho ProN", serif;
         }
-
         .jp-area h1 {
             font-size: 60px;
             margin-bottom: 4px;
@@ -60,7 +57,6 @@
             letter-spacing: 0.2em;
             font-weight: bold;
         }
-
         .jp-area h2 {
             font-size: 40px;
             margin-bottom: 16px;
@@ -68,7 +64,6 @@
             letter-spacing: 0.3em;
             font-weight: bold;
         }
-
         .jp-area > div {
             font-size: 25px;
             line-height: 1.55;
@@ -85,14 +80,12 @@
             font-size: 16px;
             line-height: 2.2;
         }
-
         .en strong { font-size: 26px; color:#b71c1c; }
 
         table.omikuji::before,
         table.omikuji::after {
             content: ""; position: absolute; width: 41.6px; height: 41.6px; background: #c62828;
         }
-
         table.omikuji::before { top:-20.8px; left:-20.8px; clip-path: polygon(0 0,100% 0,100% 100%); }
         table.omikuji::after  { bottom:-20.8px; right:-20.8px; clip-path: polygon(0 0,100% 0,0 100%); }
 
@@ -102,34 +95,36 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 10; font-weight: 600; letter-spacing: 0.1em;
         }
 
-        /* 左下リンクボタン追加 */
-        .link-button {
+        /* 左下リンクボタン */
+        .link-btn {
             position: fixed;
             left: 30px;
             bottom: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;           /* 御神籤番号と同じ形に合わせる */
-            height: 160px;         /* 御神籤番号と同じ形に合わせる */
+            font-family: 'Kouzan', "Hiragino Mincho ProN", serif;
+            font-size: 28px;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            text-decoration: none;
+            color: #b71c1c;
             background: #fffdf9;
             border: 5.6px double #c62828;
             border-radius: 21px;
+            padding: 10px 14px;
             box-shadow: 0 16px 48px rgba(0,0,0,0.35);
-            text-decoration: none;
-            color: #b71c1c;
-            font-family: 'Kouzan', "Hiragino Mincho ProN", serif;
-            font-size: 24px;
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             z-index: 20;
+        }
+        .link-btn:hover {
+            background: #fef7ef;
         }
 
         @media (max-width: 600px) {
             .jp-area h1 { font-size: 68px; margin-bottom: 3px; }
             .jp-area h2 { font-size: 38px; margin-bottom: 12px; }
             .jp-area > div { font-size: 31px; line-height: 1.5; }
+            .link-btn { font-size: 24px; padding: 8px 12px; }
         }
     </style>
 </head>
@@ -146,10 +141,11 @@
     </td></tr>
 </table>
 
+<!-- 御神籤番号表示 -->
 <div class="footer">第 <span id="num">?</span> 番 おみくじ</div>
 
 <!-- 左下リンクボタン -->
-<a class="link-button" href="https://kawaiikagari.github.io/omikuji/engi.html" target="_blank">かみやしろ神社</a>
+<a class="link-btn" href="https://kawaiikagari.github.io/omikuji/engi.html" target="_blank">かみやしろ神社</a>
 
 <script>
     const isTestMode = location.search.includes('test');

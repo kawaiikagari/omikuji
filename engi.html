@@ -25,8 +25,8 @@ html, body {
 body {
   font-family: "Kouzan", serif;
   font-weight: bold;
-  font-size: 1.375em; /* 1.25em → 1.25*1.10 */
-  line-height: 1.2375em; /* フォントサイズの90% */
+  font-size: 1.375em; /* 和文110% */
+  line-height: 1.2375em; /* 文字サイズの90% */
   color: #1e1e1e;
 }
 
@@ -39,12 +39,13 @@ body {
 
 /* --- 和文 見出し --- */
 h1 {
-  font-size: 2.2em; /* 2.0em → 2.2em */
+  font-size: 2.2em; /* 和文110% */
   margin-bottom: 0.09em;
 }
 
+/* --- 和文 小見出し --- */
 h2 {
-  font-size: 1.485em; /* 1.35em → 1.485em */
+  font-size: 1.485em; /* 和文110% */
   border-bottom: 1px solid rgba(0,0,0,0.3);
   padding-bottom: 6px;
   margin-top: 2.42em;
@@ -64,7 +65,7 @@ h2 {
 
 /* --- サブタイトル（和文） --- */
 .subtitle {
-  font-size: 1.375em; /* 和文125%→110%反映 */
+  font-size: 1.375em; /* 和文110% */
   margin-bottom: 2em;
   line-height: 1.2375em;
 }
@@ -74,8 +75,8 @@ h2 {
 <body>
 <div class="wrapper">
 
-<h1>神社神社（かみやしろじんじゃ）</h1>
-<p class="en">Kamiyashiro Shrine</p>
+<!-- h1に英文追加 -->
+<h1>神社神社（かみやしろじんじゃ） / <span class="en" style="font-size:0.935em; line-height:0.8415em;">Kamiyashiro Shrine</span></h1>
 
 <p class="subtitle">
 影向の湖を御神体とする古の神社<br>

@@ -52,6 +52,8 @@ h1.main-title {
 
 h1.main-title .jp {
   font-family: "Kouzan", serif; /* 和文フォント適用 */
+  /* サイズ固定なので1.0emのまま */
+  font-size: 1em;
 }
 
 h1.main-title .en {
@@ -59,15 +61,16 @@ h1.main-title .en {
   font-style: italic;
   font-weight: normal;
   color: #444;
+  font-size: 1em; /* 固定 */
 }
 
-/* --- h2 --- */
+/* --- h2 和文 --- */
 h2 {
-  font-size: 1.3365em;
+  font-size: 1.3365em * 1.1; /* 1.1倍 */
   border-bottom: 1px solid rgba(0,0,0,0.3);
   padding-bottom: 6px;
   margin-top: 2.42em;
-  font-family: "Kouzan", serif; /* 和文フォント */
+  font-family: "Kouzan", serif;
 }
 
 h2 .en {
@@ -75,7 +78,7 @@ h2 .en {
   font-style: italic;
   font-weight: normal;
   color: #444;
-  font-size: 90%; /* 前回指示通り少し小さめ */
+  font-size: 0.9em * 1.1; /* 1.1倍 */
 }
 
 /* --- 英文 --- */
@@ -83,26 +86,26 @@ h2 .en {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: normal;
-  font-size: 0.8415em;
+  font-size: 0.8415em * 1.1; /* 1.1倍 */
   color: #444;
   margin-top: 0.18em;
   margin-bottom: 1.1em;
-  line-height: 0.75735em;
+  line-height: 0.75735em * 1.1;
 }
 
 /* --- サブタイトル --- */
 .subtitle {
   font-family: "Kouzan", serif; /* 和文フォント適用 */
-  font-size: 1.2375em;
+  font-size: 1.2375em * 1.1; /* 1.1倍 */
   margin-bottom: 2em;
-  line-height: 1.11375em;
+  line-height: 1.11375em * 1.1;
 }
 
 /* --- 段落和文 --- */
 p:not(.en) {
-  font-family: "Kouzan", serif; /* 和文フォント適用 */
-  font-size: 1em;
-  line-height: 1.5em;
+  font-family: "Kouzan", serif;
+  font-size: 1em * 1.1; /* 1.1倍 */
+  line-height: 1.5em * 1.1;
 }
 </style>
 </head>

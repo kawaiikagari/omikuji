@@ -23,6 +23,7 @@
             padding: 20px;
             box-sizing: border-box;
         }
+
         table.omikuji {
             width: 560px;
             height: 800px;
@@ -39,9 +40,10 @@
             background-size: calc(100% + 5.6px * 2) calc(100% + 5.6px * 2);
             background-clip: border-box;
         }
+
         table.omikuji tr:first-child td { height: 60%; }
         table.omikuji tr:last-child td { height: 40%; }
-        
+
         .jp-area {
             height: 70%;
             padding: 38px 45px 28px 50px;
@@ -50,23 +52,26 @@
             background: transparent;
             font-family: 'Kouzan', "Hiragino Mincho ProN", serif;
         }
+
         .jp-area h1 {
             font-size: 60px;
-            margin-bottom: 4px;      /* ← 半分に！（8px→4px） */
+            margin-bottom: 4px;
             color: #b71c1c;
             letter-spacing: 0.2em;
             font-weight: bold;
         }
+
         .jp-area h2 {
             font-size: 40px;
-            margin-bottom: 16px;     /* ← 半分近くに！（32px→16px） */
+            margin-bottom: 16px;
             color: #900;
             letter-spacing: 0.3em;
             font-weight: bold;
         }
+
         .jp-area > div {
             font-size: 25px;
-            line-height: 1.55;       /* ← 約半分に詰めて美しく（2.9→1.55） */
+            line-height: 1.55;
             letter-spacing: 0.2em;
             font-weight: 700;
             text-shadow: 1.2px 1.2px 2.5px rgba(0,0,0,0.22);
@@ -80,6 +85,7 @@
             font-size: 16px;
             line-height: 2.2;
         }
+
         .en strong { font-size: 26px; color:#b71c1c; }
 
         table.omikuji::before,
@@ -90,9 +96,41 @@
         table.omikuji::after  { bottom:-20.8px; right:-20.8px; clip-path: polygon(0 0,100% 0,0 100%); }
 
         .footer {
-            position: fixed; right: 30px; bottom: 30px; font-size: 16px; color: #555;
-            background: rgba(255,255,255,0.7); padding: 8px 16px; border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 10; font-weight: 600; letter-spacing: 0.1em;
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            font-size: 16px;
+            color: #555;
+            background: rgba(255,255,255,0.7);
+            padding: 8px 16px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 10;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .engi-button {
+            display: inline-block;
+            background: #fffdf9 url('WASHI.png') center center / cover no-repeat;
+            border: 5.6px double #c62828;
+            border-radius: 21px;
+            padding: 6px 12px;
+            font-family: 'Kouzan', "Hiragino Mincho ProN", serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #b71c1c;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .engi-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.35);
         }
 
         @media (max-width: 600px) {
@@ -104,17 +142,27 @@
 </head>
 <body>
 <table class="omikuji">
-    <tr><td class="jp-area">
-        <h1 id="rank">読み込み中…</h1>
-        <h2 id="title"></h2>
-        <div id="jp"></div>
-    </td></tr>
-    <tr><td class="en-area">
-        <strong id="enRank"></strong> — <span id="enTitle"></span><br><br>
-        <span id="enText"></span>
-    </td></tr>
+    <tr>
+        <td class="jp-area">
+            <h1 id="rank">読み込み中…</h1>
+            <h2 id="title"></h2>
+            <div id="jp"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="en-area">
+            <strong id="enRank"></strong> — <span id="enTitle"></span><br><br>
+            <span id="enText"></span>
+        </td>
+    </tr>
 </table>
-<div class="footer">第 <span id="num">?</span> 番 おみくじ</div>
+
+<div class="footer">
+    第 <span id="num">?</span> 番 おみくじ
+    <a href="https://kawaiikagari.github.io/omikuji/engi.html" target="_blank" class="engi-button">
+        [かみやしろ神社縁起/Foundation]
+    </a>
+</div>
 
 <script>
     const isTestMode = location.search.includes('test');

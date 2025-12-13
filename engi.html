@@ -2,7 +2,9 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>神社神社（かみやしろじんじゃ） / Kamiyashiro Shrine｜影向の湖 / Lake Yōgō_</title> <!-- アンダーバー追加 -->
+<title>神社神社（かみやしろじんじゃ） / Kamiyashiro Shrine｜影向の湖 / Lake Yōgō</title>
+<!-- タイトルにアンダーバー -->
+<title>神社神社（かみやしろじんじゃ） / Kamiyashiro Shrine｜影向の湖 / Lake Yōgō_</title>
 
 <style>
 /* --- 衡山毛筆フォント --- */
@@ -20,12 +22,12 @@ html, body {
   background-attachment: scroll;
 }
 
-/* --- 全体文字サイズ105%、行間75% --- */
+/* --- 全体文字サイズ110% --- */
 body {
   font-family: "Kouzan", serif;
   font-weight: bold;
-  font-size: 1.05em; /* サイズ105% */
-  line-height: 0.75em; /* 行間 = フォントサイズの75% */
+  font-size: 1.375em; /* 1.25em → 1.25 * 1.10 = 1.375em */
+  line-height: 1.2375em; /* 改行幅 = フォントサイズの90% */
   color: #1e1e1e;
 }
 
@@ -38,32 +40,34 @@ body {
 
 /* --- 和文 見出し --- */
 h1 {
-  font-size: 1.05em; /* 全体サイズ105%に統一 */
-  margin-bottom: 0.1em;
+  font-size: 2.2em; /* 2.0em → 2.0 * 1.10 = 2.2em */
+  margin-bottom: 0.09em; /* line-heightに合わせ微調整 */
 }
 
 h2 {
-  font-size: 1.05em; /* 全体サイズ105%に統一 */
+  font-size: 1.485em; /* 1.35em → 1.35 * 1.10 = 1.485em */
   border-bottom: 1px solid rgba(0,0,0,0.3);
   padding-bottom: 6px;
-  margin-top: 2.2em;
+  margin-top: 2.42em; /* 微調整済み */
 }
 
-/* --- 英文（衡山不使用） --- */
+/* --- 英文（衡山不使用・和文より小さく） --- */
 .en {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: normal;
-  font-size: 1.05em; /* サイズ105% */
+  font-size: 0.935em; /* 0.85em → 0.85 * 1.10 = 0.935em */
   color: #444;
-  margin-top: 0.2em;
-  margin-bottom: 1.2em;
+  margin-top: 0.18em;
+  margin-bottom: 1.1em;
+  line-height: 0.8415em; /* フォントサイズの90% */
 }
 
 /* --- サブタイトル（和文） --- */
 .subtitle {
-  font-size: 1.05em; /* サイズ105% */
+  font-size: 1.375em; /* 1.25em → 1.25 * 1.10 = 1.375em */
   margin-bottom: 2em;
+  line-height: 1.2375em; /* フォントサイズの90% */
 }
 </style>
 </head>

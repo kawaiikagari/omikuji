@@ -5,24 +5,35 @@
 <title>神社神社（かみやしろじんじゃ）｜影向の湖</title>
 
 <style>
+/* --- 衝山フォント --- */
 @font-face {
   font-family: "Shuzan";
-  src: url("衝山.ttf") format("truetype");
+  src: url("./衝山.ttf") format("truetype");
 }
 
-body {
-  font-family: "Shuzan", serif;
-  line-height: 1.9;
-  color: #1e1e1e;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 32px;
-
-  background-image: url("WASHI.png");
+/* --- 背景 和紙 --- */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-image: url("./WASHI.png");
   background-repeat: repeat;
   background-attachment: scroll;
 }
 
+/* --- 本文全体（和文）--- */
+body {
+  font-family: "Shuzan", serif;
+  line-height: 1.9;
+  color: #1e1e1e;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+/* --- 見出し --- */
 h1 {
   font-size: 2.0em;
   margin-bottom: 0.3em;
@@ -35,22 +46,24 @@ h2 {
   margin-top: 2.2em;
 }
 
-.subtitle {
-  font-size: 0.95em;
-  margin-bottom: 2em;
-}
-
+/* --- 英文のみ例外指定 --- */
 .en {
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   color: #444;
   margin-top: 0.2em;
   margin-bottom: 1.2em;
 }
+
+.subtitle {
+  font-size: 0.95em;
+  margin-bottom: 2em;
+}
 </style>
 </head>
 
 <body>
+<div class="wrapper">
 
 <h1>神社神社（かみやしろじんじゃ）</h1>
 <p class="subtitle">
@@ -112,7 +125,7 @@ Sacred Object: Lake Yōgō, the central sacred rock, and the spring water.
 Today, Kamiyashiro Shrine and Lake Yōgō continue to exist as an ancient sacred place within Second Life.
 </p>
 
-<!-- ▼▼▼ ここから「追加」部分（既存本文は不変更） ▼▼▼ -->
+<!-- ▼ 追加のみ ▼ -->
 
 <h2>影向の湖（ようごうのみずうみ） ― 名称の意味</h2>
 <p>
@@ -136,5 +149,6 @@ Lake Yōgō refers to a place where the presence of the deity appears as signs o
 Ripples, reflections of light, and subtle changes upon the lake have long been regarded as signs of divine manifestation.
 </p>
 
+</div>
 </body>
 </html>

@@ -34,25 +34,16 @@ body::before {
   pointer-events: none;
 }
 
-/* --- 全体文字サイズ110% --- */
-body {
-  font-family: "Kouzan", serif;
-  font-weight: bold;
-  font-size: 1.375em;
-  line-height: 1.2375em;
-  color: #1e1e1e;
-}
-
 /* --- レイアウト --- */
 .wrapper {
   max-width: 900px;
   margin: 0 auto;
   padding: 32px;
   position: relative;
-  z-index: 1; /* 背景レイヤーより手前に表示 */
+  z-index: 1; /* 背景レイヤーより前に表示 */
 }
 
-/* --- h1 タイトル --- */
+/* --- h1 タイトル（サイズ変更なし） --- */
 h1.main-title {
   border-bottom: 2px solid #000;
   padding-bottom: 0.2em;
@@ -60,20 +51,20 @@ h1.main-title {
 }
 
 h1.main-title .jp {
-  /* タイトル文字サイズ固定（変更なし） */
+  /* 既存サイズ維持 */
 }
 
 h1.main-title .en {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: normal;
-  /* サイズは変更せず既存のまま */
   color: #444;
+  /* サイズは既存のまま */
 }
 
 /* --- h2 --- */
 h2 {
-  font-size: 1.3365em; /* 前回調整済み */
+  font-size: 1.3365em;
   border-bottom: 1px solid rgba(0,0,0,0.3);
   padding-bottom: 6px;
   margin-top: 2.42em;
@@ -84,18 +75,18 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: normal;
-  font-size: 0.8415em; /* サブタイトルやh2英文サイズ */
+  font-size: 0.8415em;
   color: #444;
   margin-top: 0.18em;
   margin-bottom: 1.1em;
-  line-height: 0.75735em; /* フォントサイズの90% */
+  line-height: 0.75735em;
 }
 
 /* --- サブタイトル（和文） --- */
 .subtitle {
-  font-size: 1.2375em; /* 前回調整済み */
+  font-size: 1.2375em;
   margin-bottom: 2em;
-  line-height: 1.11375em; /* フォントサイズの90% */
+  line-height: 1.11375em;
 }
 </style>
 </head>
@@ -103,7 +94,7 @@ h2 {
 <body>
 <div class="wrapper">
 
-<!-- h1 修正版（サイズ変更なし） -->
+<!-- h1 修正版（サイズ絶対固定） -->
 <h1 class="main-title">
   <span class="jp">神社神社（かみやしろじんじゃ）</span> / <span class="en">Kamiyashiro Shrine</span>
 </h1>

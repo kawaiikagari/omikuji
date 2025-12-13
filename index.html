@@ -23,6 +23,7 @@
             padding: 20px;
             box-sizing: border-box;
         }
+
         table.omikuji {
             width: 560px;
             height: 800px;
@@ -41,7 +42,7 @@
         }
         table.omikuji tr:first-child td { height: 60%; }
         table.omikuji tr:last-child td { height: 40%; }
-        
+
         .jp-area {
             height: 70%;
             padding: 38px 45px 28px 50px;
@@ -110,6 +111,9 @@
             border: 5.6px double #c62828;
             border-radius: 21px;
             padding: 10px 14px;
+            height: calc(28px * 6 + 10px * 2); /* 縦文字6文字分＋上下パディング */
+            line-height: 1.25em;
+            white-space: nowrap;
             box-shadow: 0 16px 48px rgba(0,0,0,0.35);
             display: flex;
             justify-content: center;
@@ -124,7 +128,7 @@
             .jp-area h1 { font-size: 68px; margin-bottom: 3px; }
             .jp-area h2 { font-size: 38px; margin-bottom: 12px; }
             .jp-area > div { font-size: 31px; line-height: 1.5; }
-            .link-btn { font-size: 24px; padding: 8px 12px; }
+            .link-btn { font-size: 24px; padding: 8px 12px; height: calc(24px * 6 + 8px*2); }
         }
     </style>
 </head>

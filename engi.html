@@ -24,7 +24,7 @@ html, body {
 body {
   font-family: "Kouzan", serif;
   font-weight: bold;
-  font-size: 1.375em; /* 1.25em → 110% */
+  font-size: 1.375em; /* 和文110% */
   line-height: 1.2375em; /* フォントサイズの90% */
   color: #1e1e1e;
 }
@@ -38,12 +38,14 @@ body {
 
 /* --- 和文 見出し --- */
 h1 {
-  font-size: 2.2em; /* 2.0em → 110% */
-  margin-bottom: 0.09em;
+  font-size: 1.633em; /* h2 1.485emの1.1倍 */
+  border-bottom: 2px solid #000; /* アンダーバー */
+  padding-bottom: 0.2em; /* 文字と線の間隔 */
+  margin-bottom: 0.5em;
 }
 
 h2 {
-  font-size: 1.485em; /* 1.35em → 110% */
+  font-size: 1.485em; /* 和文110% */
   border-bottom: 1px solid rgba(0,0,0,0.3);
   padding-bottom: 6px;
   margin-top: 2.42em;
@@ -73,7 +75,7 @@ h2 {
 <body>
 <div class="wrapper">
 
-<!-- h1を修正：和文と英文を「/」で結合 -->
+<!-- h1 修正版 -->
 <h1>
 神社神社（かみやしろじんじゃ） / <span class="en" style="font-size:0.935em; line-height:0.8415em;">Kamiyashiro Shrine</span>
 </h1>

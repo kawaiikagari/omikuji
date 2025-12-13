@@ -18,6 +18,20 @@ html, body {
   background-image: url("./WASHI.png");
   background-repeat: repeat;
   background-attachment: scroll;
+  position: relative;
+}
+
+/* --- 背景薄化レイヤー --- */
+body::before {
+  content: "";
+  position: fixed;       /* ページ全体を覆う */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.25); /* 透明度25% */
+  z-index: 0;            /* 文字の後ろに配置 */
+  pointer-events: none;  /* 文字操作に影響なし */
 }
 
 /* --- 全体文字サイズ110% --- */
@@ -29,13 +43,13 @@ body {
   color: #1e1e1e;
 }
 
-/* --- レイアウト + 半透明背景 --- */
+/* --- レイアウト --- */
 .wrapper {
   max-width: 900px;
   margin: 0 auto;
   padding: 32px;
-  background-color: rgba(255, 255, 255, 0.85); /* 文字を見やすくする半透明背景 */
-  box-sizing: border-box;
+  position: relative;
+  z-index: 1; /* 背景レイヤーより手前に表示 */
 }
 
 /* --- h1 タイトル --- */
@@ -60,7 +74,7 @@ h1.main-title .en {
 
 /* --- h2 --- */
 h2 {
-  font-size: 1.3365em; /* 適正サイズ */
+  font-size: 1.3365em; /* 前回の0.9倍調整済 */
   border-bottom: 1px solid rgba(0,0,0,0.3);
   padding-bottom: 6px;
   margin-top: 2.42em;
@@ -80,7 +94,7 @@ h2 {
 
 /* --- サブタイトル（和文） --- */
 .subtitle {
-  font-size: 1.2375em; /* 適正サイズ */
+  font-size: 1.2375em; /* 1.375emの0.9倍 */
   margin-bottom: 2em;
   line-height: 1.11375em; /* フォントサイズの90% */
 }

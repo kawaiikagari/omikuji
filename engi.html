@@ -50,7 +50,7 @@ h1.main-title {
   margin-bottom: 0.5em;
   font-weight: bold;
   font-size: 37.3px; /* 28pt */
-  white-space: nowrap; /* 改行防止 */
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -107,37 +107,39 @@ h2 .en {
 }
 
 /* --- 本文和文 --- */
-p:not(.en) {
+p:not(.en):not(.notice-jp) {
   font-family: "Kouzan", serif;
   font-size: 24px; /* 18pt */
   font-weight: bold;
   line-height: 1.5em;
 }
 
-/* --- 注意書き（衝山以外） --- */
+/* --- 区切り線 --- */
+.divider {
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  border: none;
+  margin: 3em 0 1.5em 0;
+}
+
+/* --- 注意書き（衝山不使用） --- */
 .notice-jp {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif !important;
   font-size: 20px;
   font-weight: bold;
   margin-top: 1.5em;
+  line-height: 1.4em;
 }
 
 .notice-en {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif !important;
   font-size: 18px;
   font-style: italic;
   font-weight: normal;
   color: #444;
   margin-bottom: 3em;
-}
-
-/* --- 区切り線 --- */
-.divider {
-  width: 100%;
-  height: 3px; /* 太さ3px */
-  background-color: #000;
-  margin: 3em 0 1.5em 0;
-  border: none;
+  line-height: 1.4em;
 }
 </style>
 </head>

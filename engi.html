@@ -2,126 +2,114 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>神社と湖 / The Shrine and the Lake</title>
+<title>神社神社（かみやしろじんじゃ） / Kamiyashiro Shrine</title>
 <style>
 @font-face {
   font-family: 'KozanBrush';
-  src: url('./衡山毛筆フォント.ttf') format('truetype');
+  src: url('衡山毛筆フォント.ttf') format('truetype');
 }
-
-body {
+html, body {
   margin: 0;
-  padding: 40px;
-  background: url('./WASHI.png') repeat;
+  padding: 0;
+}
+body {
+  background: url('WASHI.png') repeat;
+  background-attachment: scroll;
+  line-height: 1.6;
+}
+/* Japanese text */
+.jp {
   font-family: 'KozanBrush', serif;
-  line-height: 1.8;
-}
-
-h1, h2 {
-  font-weight: bold;
-}
-
-h1 {
-  font-size: 156%;
-  margin-bottom: 1em;
-}
-
-h2 {
-  font-size: 140%;
-  border-bottom: 1px solid #444;
-  padding-bottom: 6px;
-  margin-top: 2.5em;
-}
-
-p {
   font-size: 125%;
-  margin: 0.4em 0;
   font-weight: bold;
 }
-
+/* English text */
 .en {
-  font-family: serif;
-  font-style: italic;
-  font-weight: normal;
+  font-family: sans-serif;
   font-size: 100%;
-  color: #222;
+  font-style: italic;
+  color: #555;
+}
+h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  margin-top: 24px;
+}
+.container {
+  padding: 20px 24px 40px 24px;
 }
 </style>
 </head>
 <body>
+<div class="container">
 
-<!-- ページタイトル（指示追加事項） -->
-<h1>神社神社（かみやしろじんじゃ） / Kamiyashiro Shrine</h1>
-<p class="en">An Ancient Shrine of Second Life</p>
-
-<hr>
-
-
-<h1>神社と湖 / The Shrine and the Lake</h1>
-
-<h2>神社名</h2>
-<p>神社神社（かみやしろじんじゃ）</p>
-<p class="en">Kamiyashiro Shrine</p>
-
-<h2>湖名</h2>
-<p>影向の湖（ようごうのみずうみ）</p>
-<p class="en">Yōgō Lake (Lake of Divine Manifestation)</p>
-
-<h2>影向の湖の意味</h2>
-<p>影向とは、神仏が姿を現し、この世に兆しとして影を落とす現象を指す言葉である。</p>
-<p class="en">Yōgō refers to the phenomenon in which a deity manifests its presence by casting a sign or shadow into the mortal world.</p>
-
-<h2>創建</h2>
-<p>創建：約800年前にこの地に鎮座。</p>
+<h2 class="jp">創建 / Founding</h2>
+<p class="jp">創建：約800年前にこの地に鎮座。</p>
 <p class="en">Founded: Enshrined on this land approximately 800 years ago.</p>
 
-<h2>御祭神</h2>
-<p>御祭神：神社大神（かみやしろおおかみ）。</p>
-<p class="en">Enshrined Deity: Kamiyashiro Ōkami.</p>
+<h2 class="jp">御祭神 / Enshrined Deity</h2>
+<p class="jp">祭神：湖の守護神、水神（性別不特定）。</p>
+<p class="en">Deity: Guardian of the lake, water deity (gender unspecified).</p>
 
-<h2>御神体</h2>
-<p>御神体：湖中央の磐座岩と、そこより湧き出る御神水の湧水。</p>
-<p class="en">Sacred Object: The Iwakura rock at the center of the lake and the sacred spring flowing from it.</p>
+<h2 class="jp">御神体 / Sacred Object</h2>
+<p class="jp">御神体：湖中央の磐座岩と湧水。</p>
+<p class="en">Sacred Site: Rock (Iwakura) and spring in the center of the lake.</p>
 
-<h2>地理設定</h2>
-<p>影向の湖は複数のSIMにまたがって広がり、中心部に湧水が集まる凹地を形成している。</p>
-<p class="en">Yōgō Lake spans multiple SIMs, forming a central basin where spring water converges.</p>
+<h2 class="jp">地理設定 / Geographical Setting</h2>
+<p class="jp">湖は複数SIMにまたがり、中央に湧水が集まる凹地を形成する。</p>
+<p class="en">The lake spans multiple SIMs, with a central depression where spring water converges.</p>
 
-<p>湖の大部分はMawdrynおよびDavrosに位置し、次いでValeyardとFeneric、さらにNecrosとFeyadorにまたがる。</p>
-<p class="en">Most of the lake lies within Mawdryn and Davros, followed by Valeyard and Feneric, and further extends into Necros and Feyador.</p>
+<p class="jp">湖の深さは中心部で3～4m、岸寄りで1～2m。</p>
+<p class="en">Depth: 3–4 meters at the center, 1–2 meters near the shore.</p>
 
-<p>湖の水は北（Necros・Feyador）から南（Mawdryn・Davros）へと、極めて緩やかに流れている。</p>
-<p class="en">The water flows very gently from north (Necros and Feyador) to south (Mawdryn and Davros).</p>
+<p class="jp">湖の水位はSIM間で±0.1mの差があり、季節によって微妙に変化する。</p>
+<p class="en">Water level varies ±0.1 m between SIMs and subtly changes with seasons.</p>
 
-<h2>御神水の特徴</h2>
-<p>湧水はミネラルを含む軟水で、微量の鉄分により淡い赤褐色の光彩を帯びる。</p>
-<p class="en">The spring water is mineral-rich soft water, containing trace iron that gives it a faint reddish-brown shimmer.</p>
+<p class="jp">湖は北（Necros/Feyador）から南（Mawdryn/Davros）へ微流する。</p>
+<p class="en">Water flows slightly from north (Necros/Feyador) to south (Mawdryn/Davros).</p>
 
-<p>湧水地点の岩盤は局所的な微弱磁場を生じ、水面に独特の揺らぎをもたらす。</p>
-<p class="en">The bedrock at the spring generates a weak local magnetic field, producing distinctive ripples on the water surface.</p>
+<h2 class="jp">御神水の特徴 / Characteristics of the Sacred Water</h2>
+<p class="jp">湧水はミネラル豊富な軟水で、微量の鉄分を含み、淡い赤褐色の光彩を帯びる。</p>
+<p class="en">The spring water is mineral-rich soft water, containing trace iron, giving it a faint reddish-brown shimmer.</p>
 
-<p>水温は年間を通じて12〜14度で安定している。</p>
-<p class="en">The water temperature remains stable at 12–14°C throughout the year.</p>
+<p class="jp">湧水地点の岩盤は局所的な微弱磁場を発生させ、水面の揺らぎを生む。</p>
+<p class="en">The rock at the spring generates a weak local magnetic field, causing ripples on the water surface.</p>
 
-<h2>神話・伝承</h2>
-<p>この湖は、南の「生と再生」、中央の「影と記憶」、北の「死と霊性」の三つの気が交わる場と伝えられている。</p>
-<p class="en">The lake is said to be where three energies converge: life and rebirth in the south, shadow and memory at the center, and death and spirituality in the north.</p>
+<p class="jp">水温は年間を通して12〜14℃で安定している。</p>
+<p class="en">Water temperature remains stable at 12–14°C throughout the year.</p>
 
-<p>湖面に映る影は、神社大神が影向した兆しであるとされる。</p>
-<p class="en">Shadows reflected on the lake’s surface are regarded as signs of Kamiyashiro Ōkami’s manifestation.</p>
+<h2 class="jp">神話・伝承 / Myths and Lore</h2>
+<p class="jp">湖は三つの気（南：生と再生、中央：影と記憶、北：死と霊性）が交わる場所。</p>
+<p class="en">The lake is the convergence point of three energies (south: life and rebirth, center: shadow and memory, north: death and spirituality).</p>
 
-<p>磐座岩はこれらの気を束ねる楔であり、神社はその霊域を守るために建てられたとされる。</p>
-<p class="en">The Iwakura rock is believed to bind these energies, and the shrine was built to protect this sacred domain.</p>
+<p class="jp">湖面に映る影は神の姿の兆しとされる。</p>
+<p class="en">Reflections on the water surface are considered signs of the deity's presence.</p>
 
-<p>御神水に触れた者は、過去の記憶の影を垣間見ることがあると語り継がれている。</p>
-<p class="en">Those who touch the sacred water are said to glimpse shadows of past memories.</p>
+<p class="jp">磐座岩は気を束ねる楔とされ、神社はその上に建てられ、儀式で神の出現を観測する。</p>
+<p class="en">The rock is regarded as a wedge that binds these energies; the shrine is built above it, and rituals are performed to observe the deity's manifestation.</p>
 
-<h2>湖の物理的特徴</h2>
-<p>湖の深さは中心部で約3〜4メートル、岸辺では1〜2メートル程度である。</p>
-<p class="en">The depth is approximately 3–4 meters at the center and 1–2 meters near the shore.</p>
+<p class="jp">湖の水を手にすると、過去の記憶の影が微かに見えると伝えられる。</p>
+<p class="en">It is said that taking water from the lake allows one to faintly see shadows of past memories.</p>
 
-<p>水面の鏡映は常に微細に変化し、周囲の岩景と相まって神秘性を強めている。</p>
-<p class="en">The lake’s reflective surface constantly shifts subtly, enhancing its mystique in contrast with the surrounding rocks.</p>
+<h2 class="jp">湖の物理的特徴 / Physical Characteristics of the Lake</h2>
+<p class="jp">湖はSIM間にまたがる広域で、湧水は中心に集中する。</p>
+<p class="en">The lake spans across multiple SIMs, with spring water concentrated at the center.</p>
 
+<p class="jp">水面の鏡映像は常に微妙に変化し、周囲の岩とのコントラストで神秘性が増す。</p>
+<p class="en">The reflective surface of the lake subtly changes, enhancing the mystique against surrounding rocks.</p>
+
+<!-- 追加指定（既存縁起は変更せず、追加のみ） -->
+<h2 class="jp">正式名称 / Official Names</h2>
+<p class="jp">神社名：神社神社（かみやしろじんじゃ）</p>
+<p class="en">Shrine Name: Kamiyashiro Shrine</p>
+
+<p class="jp">湖名：影向の湖（ようごうのみずうみ）</p>
+<p class="en">Lake Name: Yōgō-no-Lake (Lake of Manifestation)</p>
+
+<h2 class="jp">影向の湖の意味 / Meaning of Yōgō-no-Lake</h2>
+<p class="jp">「影向」とは、神仏が人の世にその姿や気配を現すことを指す語である。本湖は、湖面に映る影や揺らぎを通じ、神の臨在が感得される場であることから、この名を持つ。</p>
+<p class="en">“Yōgō” refers to the manifestation of a deity or Buddha into the human realm. The lake bears this name because the deity’s presence is perceived through reflections and subtle movements upon its surface.</p>
+
+</div>
 </body>
 </html>

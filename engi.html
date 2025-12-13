@@ -43,6 +43,7 @@ h1 {
   margin-bottom: 0.5em;
 }
 
+/* --- h2 --- */
 h2 {
   font-size: 1.3365em; /* 1.485emの0.9倍 */
   border-bottom: 1px solid rgba(0,0,0,0.3);
@@ -55,11 +56,11 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: normal;
-  font-size: 0.8415em; /* 0.935emの0.9倍 */
+  font-size: 0.935em; /* h1 英文もここに統一 */
   color: #444;
   margin-top: 0.18em;
   margin-bottom: 1.1em;
-  line-height: 0.75735em; /* フォントサイズの90% */
+  line-height: 0.8415em; /* フォントサイズの90% */
 }
 
 /* --- サブタイトル（和文） --- */
@@ -74,13 +75,12 @@ h2 {
 <body>
 <div class="wrapper">
 
-<!-- h1 修正版 -->
+<!-- h1 修正版：英文を30％縮小前の大きさに戻す -->
 <h1>
   <span style="font-size:70%;">神社神社（かみやしろじんじゃ）</span> / 
-  <span class="en" style="font-size:233.3%; line-height:0.8415em;">Kamiyashiro Shrine</span>
+  <span class="en" style="font-size:0.935em; line-height:0.8415em;">Kamiyashiro Shrine</span>
 </h1>
 
-<!-- サブタイトル縮小 -->
 <p class="subtitle" style="font-size:1.2375em; line-height:1.11375em;">
 影向の湖を御神体とする古の神社<br>
 <span class="en" style="font-size:0.8415em; line-height:0.75735em;">
@@ -88,7 +88,6 @@ Kamiyashiro Shrine – An Ancient Shrine Enshrining Lake Yōgō
 </span>
 </p>
 
-<!-- h2 縮小 -->
 <h2 style="font-size:1.3365em;">神社と湖 <span class="en" style="font-size:0.8415em; line-height:0.75735em;">/ The Shrine and the Lake</span></h2>
 <p>
 神社神社は、湖そのものを神域とする古の神社（祠）である。

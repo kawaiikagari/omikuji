@@ -29,7 +29,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.25); /* 透明度25% */
+  background-color: rgba(255, 255, 255, 0.25); /* 背景を薄く覆う */
   z-index: 0;
   pointer-events: none;
 }
@@ -43,28 +43,15 @@ body::before {
   z-index: 1; /* 背景レイヤーより前に表示 */
 }
 
-/* --- h1 タイトル（サイズ変更なし） --- */
+/* --- h1 タイトル --- */
 h1.main-title {
   border-bottom: 2px solid #000;
   padding-bottom: 0.2em;
   margin-bottom: 0.5em;
 }
 
-h1.main-title .jp {
-  /* 既存サイズ維持 */
-}
-
-h1.main-title .en {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
-  font-weight: normal;
-  color: #444;
-  /* サイズは既存のまま */
-}
-
 /* --- h2 --- */
 h2 {
-  font-size: 1.3365em;
   border-bottom: 1px solid rgba(0,0,0,0.3);
   padding-bottom: 6px;
   margin-top: 2.42em;
@@ -75,7 +62,6 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: normal;
-  font-size: 0.8415em;
   color: #444;
   margin-top: 0.18em;
   margin-bottom: 1.1em;
@@ -84,9 +70,7 @@ h2 {
 
 /* --- サブタイトル（和文） --- */
 .subtitle {
-  font-size: 1.2375em;
   margin-bottom: 2em;
-  line-height: 1.11375em;
 }
 </style>
 </head>
@@ -94,7 +78,7 @@ h2 {
 <body>
 <div class="wrapper">
 
-<!-- h1 修正版（サイズ絶対固定） -->
+<!-- h1 タイトル -->
 <h1 class="main-title">
   <span class="jp">神社神社（かみやしろじんじゃ）</span> / <span class="en">Kamiyashiro Shrine</span>
 </h1>

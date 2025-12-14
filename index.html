@@ -185,14 +185,17 @@ if (!isTestMode) {
     }
 }
 
-const randomId = Math.floor(Math.random() * 50) + 1;
-
+// 修正済みランダム取得
 fetch('omikuji.xml')
     .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
     .then(str => {
         const xml = new DOMParser().parseFromString(str, "text/xml");
-        const item = xml.querySelector(`omikuji[id="${randomId}"]`);
-        if (!item) throw new Error('ID ' + randomId + ' なし');
+        const items = xml.querySelectorAll('omikuji');
+        if (!items.length) throw new Error('omikuji データなし');
+
+        // 件数に基づきランダム選択
+        const randomIndex = Math.floor(Math.random() * items.length);
+        const item = items[randomIndex];
 
         const rankEl = item.querySelector('rank');
         const rankJp = rankEl.getAttribute('jp') || rankEl.textContent.trim();
@@ -202,14 +205,13 @@ fetch('omikuji.xml')
         document.getElementById('title').textContent = item.querySelector('title_jp')?.textContent.trim() || '';
         document.getElementById('jp').textContent = item.querySelector('text_jp')?.textContent.trim() || '';
 
-        // ★ rank と title の文字サイズを0.9倍に変更
         document.getElementById('rank').style.fontSize = '54px';
         document.getElementById('title').style.fontSize = '36px';
 
         document.getElementById('enRank').textContent = rankEn;
         document.getElementById('enTitle').textContent = item.querySelector('title_en')?.textContent.trim() || '';
         document.getElementById('enText').textContent = item.querySelector('text_en')?.textContent.trim() || '';
-        document.getElementById('num').textContent = randomId;
+        document.getElementById('num').textContent = randomIndex + 1; // 1始まり表示
 
         if (!isTestMode) localStorage.setItem('omikuji_last', Date.now());
     })

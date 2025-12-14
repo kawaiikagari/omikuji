@@ -2,13 +2,14 @@
 <omikujis xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="omikuji.xsd">
 
+
   <!-- 1 -->
   <omikuji id="1">
     <rank jp="大吉">Daikichi</rank>
     <title_jp>大吉：天の恵み</title_jp>
     <title_en>Great Blessing：Heaven's Favor</title_en>
-    <text_jp>望み事：叶う。努力を怠らず、時来れば成就す。待人：来る。恋：実る。失せ物：出る。旅立ち：吉。商売：利あり。学問：精進せよ。病気：回復する。争い事：避けよ。</text_jp>
-    <text_en>Wish: Will come true. Work diligently; it will be fulfilled in time. Visitor: will come. Love: will succeed. Lost item: will be found. Travel: auspicious. Business: profitable. Studies: persevere. Illness: recovery. Conflicts: avoid.</text_en>
+    <text_jp>望み事：叶う。待人：来る。恋：実る。失せ物：出る。旅立ち：吉。商売：利あり。学問：精進せよ。病気：回復する。争い事：避けよ。</text_jp>
+    <text_en>Wish: Will come true. Visitor: will come. Love: will succeed. Lost item: will be found. Travel: auspicious. Business: profitable. Studies: persevere. Illness: recovery. Conflicts: avoid.</text_en>
   </omikuji>
 
   <!-- 2 -->
@@ -188,720 +189,719 @@
     <title_jp>小吉：新しき扉</title_jp>
     <title_en>Small Blessing：New Door</title_en>
     <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
-    <text_en>Wish: Gradually fulfilled. Visitor: comes. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 22 -->
   <omikuji id="22">
     <rank jp="吉">Kichi</rank>
-    <title_jp>吉：努力と忍耐</title_jp>
-    <title_en>Blessing：Effort and Patience</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Fulfilled by effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <title_jp>吉：喜びの日々</title_jp>
+    <title_en>Blessing：Joyful Days</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：精進。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 23 -->
   <omikuji id="23">
     <rank jp="吉">Kichi</rank>
-    <title_jp>吉：小さな喜び</title_jp>
-    <title_en>Blessing：Small Joys</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
-    <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <title_jp>吉：平穏の道</title_jp>
+    <title_en>Blessing：Path of Peace</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 24 -->
   <omikuji id="24">
-    <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：道は開ける</title_jp>
-    <title_en>Middle Blessing：Path Opens</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利益あり。学問：精進。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：忍耐の実</title_jp>
+    <title_en>Small Blessing：Fruit of Patience</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：慎重吉。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Fulfilled by effort. Visitor: arrives. Love: cautious good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 25 -->
   <omikuji id="25">
-    <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：心静かに</title_jp>
-    <title_en>Middle Blessing：Calm Heart</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重。商売：利益あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Will come true. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：小さな喜び</title_jp>
+    <title_en>Small Blessing：Small Joy</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：少しずつ吉。失せ物：出る。旅立ち：慎重。商売：利益あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: arrives. Love: gradually good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 26 -->
   <omikuji id="26">
-    <rank jp="大吉">Daikichi</rank>
-    <title_jp>大吉：福運満ちる</title_jp>
-    <title_en>Great Blessing：Full Fortune</title_en>
-    <text_jp>望み事：叶う。待人：早く来る。恋：実る。失せ物：出る。旅立ち：吉。商売：成功。学問：精進せよ。病気：回復。争い事：避けよ。</text_jp>
-    <text_en>Wish: Will come true. Visitor: arrives soon. Love: successful. Lost item: found. Travel: auspicious. Business: successful. Studies: persevere. Illness: recover. Conflicts: avoid.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：穏やかな運</title_jp>
+    <title_en>Middle Blessing：Calm Fortune</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：慎重に。商売：利益あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: be cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 27 -->
   <omikuji id="27">
-    <rank jp="大吉">Daikichi</rank>
-    <title_jp>大吉：喜び尽くす</title_jp>
-    <title_en>Great Blessing：Overflowing Joy</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：繁盛。学問：励め。病気：快復。争い事：避けよ。</text_jp>
-    <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: prosperous. Studies: focus. Illness: recover. Conflicts: avoid.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：努力は報われる</title_jp>
+    <title_en>Middle Blessing：Efforts Rewarded</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利益あり。学問：精進。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Fulfilled by effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 28 -->
   <omikuji id="28">
-    <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：静かなる進展</title_jp>
-    <title_en>Middle Blessing：Quiet Progress</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：慎重。商売：利益あり。学問：励め。病気：快復。争い事：注意。</text_jp>
-    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：少しずつ吉</title_jp>
+    <title_en>Small Blessing：Gradual Good</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 29 -->
   <omikuji id="29">
-    <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：助けの手</title_jp>
-    <title_en>Middle Blessing：Helping Hand</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：少しずつ吉。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Fulfilled with effort. Visitor: arrives. Love: gradually good. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：日々の努力</title_jp>
+    <title_en>Small Blessing：Daily Effort</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：慎重に。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Fulfilled by effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 30 -->
   <omikuji id="30">
-    <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：慎ましき幸運</title_jp>
-    <title_en>Small Blessing：Modest Fortune</title_en>
-    <text_jp>望み事：叶うかも。待人：来る。恋：控えめ吉。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Might come true. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉：平和の道</title_jp>
+    <title_en>Blessing：Path of Peace</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：穏やか吉。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：精進。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: arrives. Love: calmly good. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 31 -->
   <omikuji id="31">
-    <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：小さな喜び</title_jp>
-    <title_en>Small Blessing：Small Joy</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Fulfilled by effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉：慎ましき喜び</title_jp>
+    <title_en>Blessing：Modest Joy</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 32 -->
   <omikuji id="32">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：希望の光</title_jp>
-    <title_en>Blessing：Light of Hope</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：新たな始まり</title_jp>
+    <title_en>Small Blessing：New Beginning</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 33 -->
   <omikuji id="33">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：歩みを止めず</title_jp>
-    <title_en>Blessing：Keep Moving</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：精進。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：助けを得る</title_jp>
+    <title_en>Middle Blessing：Receiving Help</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利益あり。学問：精進。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 34 -->
   <omikuji id="34">
     <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：心静かに進め</title_jp>
-    <title_en>Middle Blessing：Proceed Calmly</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
-    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <title_jp>中吉：安定の幸</title_jp>
+    <title_en>Middle Blessing：Stable Fortune</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jtext_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 35 -->
   <omikuji id="35">
-    <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：助けあり</title_jp>
-    <title_en>Middle Blessing：Help Comes</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：慎重な一歩</title_jp>
+    <title_en>Small Blessing：Careful Step</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：慎重吉。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Fulfilled by effort. Visitor: arrives. Love: cautious good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 36 -->
   <omikuji id="36">
     <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：慎重の果実</title_jp>
-    <title_en>Small Blessing：Fruit of Caution</title_en>
-    <text_jp>望み事：叶うかも。待人：来る。恋：控えめ吉。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Might come true. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <title_jp>小吉：小さな幸運</title_jp>
+    <title_en>Small Blessing：Little Fortune</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：少しずつ吉。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: arrives. Love: gradually good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 37 -->
   <omikuji id="37">
-    <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：日々の喜び</title_jp>
-    <title_en>Small Blessing：Daily Joys</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：幸運の兆し</title_jp>
+    <title_en>Middle Blessing：Sign of Fortune</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利益あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 38 -->
   <omikuji id="38">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：心和らぐ</title_jp>
-    <title_en>Blessing：Peaceful Heart</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：恩恵受く</title_jp>
+    <title_en>Middle Blessing：Receiving Blessing</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：精進。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 39 -->
   <omikuji id="39">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：歩みを信じよ</title_jp>
-    <title_en>Blessing：Trust Your Steps</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
-    <text_en>Wish: Fulfilled by effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：静かなる運</title_jp>
+    <title_en>Small Blessing：Quiet Fortune</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 40 -->
   <omikuji id="40">
-    <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：慎み深き幸運</title_jp>
-    <title_en>Middle Blessing：Prudent Fortune</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：新しい芽</title_jp>
+    <title_en>Small Blessing：New Sprout</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：慎重に。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Fulfilled by effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
-
-</omikujis>
 
   <!-- 41 -->
   <omikuji id="41">
-    <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：控えめな幸運</title_jp>
-    <title_en>Small Blessing：Modest Fortune</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：日々の安泰</title_jp>
+    <title_en>Middle Blessing：Daily Stability</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利益あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 42 -->
   <omikuji id="42">
     <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：小さな喜び</title_jp>
-    <title_en>Small Blessing：Little Joy</title_en>
-    <text_jp>望み事：叶うかも。待人：来る。恋：順調。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
-    <text_en>Wish: Might come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <title_jp>小吉：静かな喜び</title_jp>
+    <title_en>Small Blessing：Quiet Joy</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 43 -->
   <omikuji id="43">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：明るい未来</title_jp>
-    <title_en>Blessing：Bright Future</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
-    <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：安らぎの道</title_jp>
+    <title_en>Middle Blessing：Path of Peace</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利益あり。学問：精進。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 44 -->
   <omikuji id="44">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：歩みを信じて</title_jp>
-    <title_en>Blessing：Trust Your Steps</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：小さな進歩</title_jp>
+    <title_en>Small Blessing：Little Progress</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 45 -->
   <omikuji id="45">
     <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：慎みの幸運</title_jp>
-    <title_en>Middle Blessing：Prudent Fortune</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
-    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <title_jp>中吉：幸運の兆</title_jp>
+    <title_en>Middle Blessing：Fortune Sign</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利益あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 46 -->
   <omikuji id="46">
-    <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：助けの手あり</title_jp>
-    <title_en>Middle Blessing：Help Comes</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：控えめの幸</title_jp>
+    <title_en>Small Blessing：Modest Fortune</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 47 -->
   <omikuji id="47">
-    <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：慎重に進め</title_jp>
-    <title_en>Small Blessing：Proceed Cautiously</title_en>
-    <text_jp>望み事：叶うかも。待人：来る。恋：控えめ吉。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Might come true. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：恩恵の日々</title_jp>
+    <title_en>Middle Blessing：Days of Favor</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利益あり。学問：精進。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 48 -->
   <omikuji id="48">
     <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：小さな幸せ</title_jp>
-    <title_en>Small Blessing：Little Happiness</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <title_jp>小吉：平穏の始まり</title_jp>
+    <title_en>Small Blessing：Start of Peace</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
     <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 49 -->
   <omikuji id="49">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：喜びの日々</title_jp>
-    <title_en>Blessing：Joyful Days</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：平和な日々</title_jp>
+    <title_en>Middle Blessing：Peaceful Days</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利益あり。学問：励め。病気：快復。争い事：注意。</text_jp>
     <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 50 -->
   <omikuji id="50">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：信念を貫け</title_jp>
-    <title_en>Blessing：Keep Your Faith</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
-    <text_en>Wish: Fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：控えめな日々</title_jp>
+    <title_en>Small Blessing：Modest Days</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 51 -->
   <omikuji id="51">
-    <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：安定した幸運</title_jp>
-    <title_en>Middle Blessing：Stable Fortune</title_en>
-    <text_jp>望み事：徐々に叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="大吉">Daikichi</rank>
+    <title_jp>大吉：幸運満ちる</title_jp>
+    <title_en>Great Blessing：Fortune Abounds</title_en>
+    <text_jp>望み事：叶う。待人：早く来る。恋：実る。失せ物：出る。旅立ち：吉。商売：成功。学問：精進せよ。病気：回復。争い事：避けよ。</text_jp>
+    <text_en>Wish: Will come true. Visitor: arrives soon. Love: successful. Lost item: found. Travel: auspicious. Business: successful. Studies: persevere. Illness: recover. Conflicts: avoid.</text_en>
   </omikuji>
 
   <!-- 52 -->
   <omikuji id="52">
     <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：助力に恵まれる</title_jp>
-    <title_en>Middle Blessing：Help Will Come</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：控えめ吉。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
-    <text_en>Wish: Fulfilled with effort. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <title_jp>中吉：安定の道</title_jp>
+    <title_en>Middle Blessing：Steady Path</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：慎重に。商売：利益あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: will come. Love: steady. Lost item: found. Travel: be cautious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 53 -->
   <omikuji id="53">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：運気上昇</title_jp>
-    <title_en>Blessing：Rising Fortune</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：小さな喜び</title_jp>
+    <title_en>Middle Blessing：Little Joys</title_en>
+    <text_jp>望み事：努力で実る。待人：来る。恋：少しずつ吉。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Succeeds with effort. Visitor: arrives. Love: gradually good. Lost item: found. Travel: auspicious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 54 -->
   <omikuji id="54">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：希望を忘れず</title_jp>
-    <title_en>Blessing：Keep Hope</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：慎ましき運</title_jp>
+    <title_en>Small Blessing：Modest Fortune</title_en>
+    <text_jp>望み事：叶うかも。待人：来る。恋：控えめ吉。失せ物：見つかる。旅立ち：慎重に。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Might come true. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 55 -->
   <omikuji id="55">
-    <rank jp="大吉">Daikichi</rank>
-    <title_jp>大吉：最高の幸運</title_jp>
-    <title_en>Great Blessing：Best Fortune</title_en>
-    <text_jp>望み事：必ず叶う。待人：来る。恋：順調。失せ物：すぐ見つかる。旅立ち：吉。商売：大きく利あり。学問：励め。病気：快復。争い事：避けよ。</text_jp>
-    <text_en>Wish: Will definitely come true. Visitor: arrives. Love: favorable. Lost item: immediately found. Travel: auspicious. Business: large profit. Studies: focus. Illness: recover. Conflicts: avoid.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：日々の努力</title_jp>
+    <title_en>Small Blessing：Daily Effort</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：慎重に。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Will succeed by effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 56 -->
   <omikuji id="56">
-    <rank jp="大吉">Daikichi</rank>
-    <title_jp>大吉：喜びあふれる日々</title_jp>
-    <title_en>Great Blessing：Joyful Days</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
-    <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉：平和の道</title_jp>
+    <title_en>Blessing：Path of Peace</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：穏やかに吉。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：精進せよ。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: calmly good. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 57 -->
   <omikuji id="57">
-    <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：穏やかな日々</title_jp>
-    <title_en>Small Blessing：Peaceful Days</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="凶">Kyo</rank>
+    <title_jp>凶：注意を要す</title_jp>
+    <title_en>Misfortune：Need Caution</title_en>
+    <text_jp>望み事：思い通りにならぬ。待人：遅れる。恋：注意。失せ物：出にくい。旅立ち：控えよ。商売：損あり。学問：努力せよ。病気：悪化注意。争い事：避けよ。</text_jp>
+    <text_en>Wish: Will not go as desired. Visitor: delayed. Love: be careful. Lost item: hard to find. Travel: refrain. Business: may lose. Studies: persevere. Illness: watch carefully. Conflicts: avoid.</text_en>
   </omikuji>
 
   <!-- 58 -->
   <omikuji id="58">
-    <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：慎み深く行動</title_jp>
-    <title_en>Small Blessing：Act Prudently</title_en>
-    <text_jp>望み事：叶うかも。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Might come true. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：助けの兆し</title_jp>
+    <title_en>Middle Blessing：Signs of Help</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 59 -->
   <omikuji id="59">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：幸運を信じて</title_jp>
-    <title_en>Blessing：Trust in Fortune</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: Will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：希望の光</title_jp>
+    <title_en>Small Blessing：Light of Hope</title_en>
+    <text_jp>望み事：叶うかも。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重に。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Might come true. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 60 -->
   <omikuji id="60">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：前向きに進め</title_jp>
-    <title_en>Blessing：Move Forward Positively</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
-    <text_en>Wish: Fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="大吉">Daikichi</rank>
+    <title_jp>大吉：幸運到来</title_jp>
+    <title_en>Great Blessing：Fortune Arrives</title_en>
+    <text_jp>望み事：願い叶う。待人：来る。恋：実る。失せ物：出る。旅立ち：吉。商売：成功。学問：精進せよ。病気：回復。争い事：避けよ。</text_jp>
+    <text_en>Wish: Will come true. Visitor: arrives. Love: successful. Lost item: found. Travel: auspicious. Business: successful. Studies: persevere. Illness: recover. Conflicts: avoid.</text_en>
   </omikuji>
 
   <!-- 61 -->
   <omikuji id="61">
-    <rank jp="凶">Kyo</rank>
-    <title_jp>凶：用心せよ</title_jp>
-    <title_en>Misfortune：Be Cautious</title_en>
-    <text_jp>望み事：控えよ。待人：来ず。恋：注意。失せ物：出にくい。旅立ち：慎重。商売：損。学問：努力せよ。病気：悪化注意。争い事：避けよ。</text_jp>
-    <text_en>Wish: refrain. Visitor: does not come. Love: be careful. Lost item: hard to find. Travel: cautious. Business: loss. Studies: work hard. Illness: may worsen. Conflicts: avoid.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：希望の道</title_jp>
+    <title_en>Middle Blessing：Path of Hope</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利益あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Will be fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 62 -->
   <omikuji id="62">
-    <rank jp="凶">Kyo</rank>
-    <title_jp>凶：慎重に</title_jp>
-    <title_en>Misfortune：Act Carefully</title_en>
-    <text_jp>望み事：叶いにくい。待人：遅れる。恋：注意。失せ物：出にくい。旅立ち：慎重。商売：損。学問：精進せよ。病気：悪化注意。争い事：避けよ。</text_jp>
-    <text_en>Wish: unlikely fulfilled. Visitor: delayed. Love: be careful. Lost item: hard to find. Travel: cautious. Business: loss. Studies: strive. Illness: may worsen. Conflicts: avoid.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：努力の先</title_jp>
+    <title_en>Small Blessing：After Effort</title_en>
+    <text_jp>望み事：努力次第で叶う。待人：遅れる。恋：控えめ吉。失せ物：見つかる。旅立ち：慎重に。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Depends on effort. Visitor: delayed. Love: modestly good. Lost item: found. Travel: be cautious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 63 -->
   <omikuji id="63">
-    <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：少しずつ進む</title_jp>
-    <title_en>Small Blessing：Gradual Progress</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉：穏やかな運</title_jp>
+    <title_en>Blessing：Calm Fortune</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：穏やかに吉。失せ物：出る。旅立ち：吉。商売：利あり。学問：精進せよ。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: calmly good. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 64 -->
   <omikuji id="64">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：努力が実る</title_jp>
-    <title_en>Blessing：Efforts Bear Fruit</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
-    <text_en>Wish: fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：平穏の兆し</title_jp>
+    <title_en>Middle Blessing：Signs of Peace</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 65 -->
   <omikuji id="65">
-    <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：援助あり</title_jp>
-    <title_en>Middle Blessing：Assistance Comes</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：慎ましき希望</title_jp>
+    <title_en>Small Blessing：Modest Hope</title_en>
+    <text_jp>望み事：叶うかも。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重に。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Might come true. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 66 -->
   <omikuji id="66">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：心正しく</title_jp>
-    <title_en>Blessing：Maintain Integrity</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：喜びの日々</title_jp>
+    <title_en>Middle Blessing：Joyful Days</title_en>
+    <text_jp>望み事：努力で実る。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利益あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Will succeed with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 67 -->
   <omikuji id="67">
     <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：控えめに進む</title_jp>
-    <title_en>Small Blessing：Advance Modestly</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: gradually fulfilled. Visitor: arrives. Love: modestly favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <title_jp>小吉：日々の心</title_jp>
+    <title_en>Small Blessing：Daily Mind</title_en>
+    <text_jp>望み事：努力次第で叶う。待人：来る。恋：控えめ吉。失せ物：見つかる。旅立ち：慎重に。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Depends on effort. Visitor: arrives. Love: modestly good. Lost item: found. Travel: be cautious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 68 -->
   <omikuji id="68">
     <rank jp="大吉">Daikichi</rank>
-    <title_jp>大吉：運気絶好調</title_jp>
-    <title_en>Great Blessing：Excellent Fortune</title_en>
-    <text_jp>望み事：必ず叶う。待人：来る。恋：順調。失せ物：すぐ見つかる。旅立ち：吉。商売：大きく利あり。学問：励め。病気：快復。争い事：避けよ。</text_jp>
-    <text_en>Wish: will definitely come true. Visitor: arrives. Love: favorable. Lost item: immediately found. Travel: auspicious. Business: large profit. Studies: focus. Illness: recover. Conflicts: avoid.</text_en>
+    <title_jp>大吉：万事好調</title_jp>
+    <title_en>Great Blessing：All Goes Well</title_en>
+    <text_jp>望み事：全て叶う。待人：早く来る。恋：実る。失せ物：出る。旅立ち：吉。商売：成功。学問：精進せよ。病気：回復。争い事：避けよ。</text_jp>
+    <text_en>Wish: Everything will come true. Visitor: comes soon. Love: successful. Lost item: found. Travel: auspicious. Business: successful. Studies: persevere. Illness: recover. Conflicts: avoid.</text_en>
   </omikuji>
 
   <!-- 69 -->
   <omikuji id="69">
-    <rank jp="凶">Kyo</rank>
-    <title_jp>凶：注意せよ</title_jp>
-    <title_en>Misfortune：Be Careful</title_en>
-    <text_jp>望み事：叶いにくい。待人：来ず。恋：注意。失せ物：出にくい。旅立ち：慎重。商売：損。学問：努力せよ。病気：悪化注意。争い事：避けよ。</text_jp>
-    <text_en>Wish: unlikely fulfilled. Visitor: does not come. Love: be careful. Lost item: hard to find. Travel: cautious. Business: loss. Studies: strive. Illness: may worsen. Conflicts: avoid.</text_en>
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉：安定した日々</title_jp>
+    <title_en>Blessing：Stable Days</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：穏やかに吉。失せ物：出る。旅立ち：吉。商売：利あり。学問：精進せよ。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: calmly good. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 70 -->
   <omikuji id="70">
     <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：協力得る</title_jp>
-    <title_en>Middle Blessing：Gain Cooperation</title_en>
+    <title_jp>中吉：安らぎの兆し</title_jp>
+    <title_en>Middle Blessing：Signs of Peace</title_en>
     <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <text_en>Wish: Fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 71 -->
   <omikuji id="71">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：運気上昇</title_jp>
-    <title_en>Blessing：Fortune Rising</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：控えめの幸運</title_jp>
+    <title_en>Small Blessing：Modest Fortune</title_en>
+    <text_jp>望み事：叶うかも。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重に。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Might come true. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 72 -->
   <omikuji id="72">
-    <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：穏やかに進む</title_jp>
-    <title_en>Small Blessing：Advance Calmly</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="凶">Kyo</rank>
+    <title_jp>凶：慎重を要す</title_jp>
+    <title_en>Misfortune：Need Caution</title_en>
+    <text_jp>望み事：思い通りにならぬ。待人：遅れる。恋：注意。失せ物：出にくい。旅立ち：控えよ。商売：損あり。学問：努力せよ。病気：悪化注意。争い事：避けよ。</text_jp>
+    <text_en>Wish: Will not go as desired. Visitor: delayed. Love: be careful. Lost item: hard to find. Travel: refrain. Business: may lose. Studies: persevere. Illness: watch carefully. Conflicts: avoid.</text_en>
   </omikuji>
 
   <!-- 73 -->
   <omikuji id="73">
-    <rank jp="凶">Kyo</rank>
-    <title_jp>凶：警戒せよ</title_jp>
-    <title_en>Misfortune：Be Alert</title_en>
-    <text_jp>望み事：控えよ。待人：来ず。恋：注意。失せ物：出にくい。旅立ち：慎重。商売：損。学問：精進せよ。病気：悪化注意。争い事：避けよ。</text_jp>
-    <text_en>Wish: refrain. Visitor: does not come. Love: be careful. Lost item: hard to find. Travel: cautious. Business: loss. Studies: strive. Illness: may worsen. Conflicts: avoid.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：喜びの兆し</title_jp>
+    <title_en>Middle Blessing：Signs of Joy</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 74 -->
   <omikuji id="74">
-    <rank jp="大吉">Daikichi</rank>
-    <title_jp>大吉：福運到来</title_jp>
-    <title_en>Great Blessing：Fortune Arrives</title_en>
-    <text_jp>望み事：必ず叶う。待人：来る。恋：順調。失せ物：すぐ見つかる。旅立ち：吉。商売：大きく利あり。学問：励め。病気：快復。争い事：避けよ。</text_jp>
-    <text_en>Wish: will definitely come true. Visitor: arrives. Love: favorable. Lost item: immediately found. Travel: auspicious. Business: large profit. Studies: focus. Illness: recover. Conflicts: avoid.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：日々の喜び</title_jp>
+    <title_en>Small Blessing：Daily Joy</title_en>
+    <text_jp>望み事：努力次第で叶う。待人：来る。恋：控えめ吉。失せ物：見つかる。旅立ち：慎重に。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Depends on effort. Visitor: arrives. Love: modestly good. Lost item: found. Travel: be cautious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 75 -->
   <omikuji id="75">
-    <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：吉兆あり</title_jp>
-    <title_en>Middle Blessing：Good Omen</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉：安定の兆し</title_jp>
+    <title_en>Blessing：Signs of Stability</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：穏やかに吉。失せ物：出る。旅立ち：吉。商売：利あり。学問：精進せよ。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: arrives. Love: calmly good. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
+
   <!-- 76 -->
   <omikuji id="76">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：運勢安定</title_jp>
-    <title_en>Blessing：Stable Fortune</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：慎重な歩み</title_jp>
+    <title_en>Middle Blessing：Careful Steps</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：慎重。商売：利益あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Fulfilled with effort. Visitor: will come. Love: favorable. Lost item: found. Travel: be cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 77 -->
   <omikuji id="77">
-    <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：徐々に吉</title_jp>
-    <title_en>Small Blessing：Gradually Good</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：助けあり</title_jp>
+    <title_en>Middle Blessing：Help Comes</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: will come. Love: modestly good. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 78 -->
   <omikuji id="78">
-    <rank jp="凶">Kyo</rank>
-    <title_jp>凶：警戒厳重</title_jp>
-    <title_en>Misfortune：High Alert</title_en>
-    <text_jp>望み事：叶いにくい。待人：来ず。恋：注意。失せ物：出にくい。旅立ち：慎重。商売：損。学問：努力せよ。病気：悪化注意。争い事：避けよ。</text_jp>
-    <text_en>Wish: unlikely fulfilled. Visitor: does not come. Love: be careful. Lost item: hard to find. Travel: cautious. Business: loss. Studies: strive. Illness: may worsen. Conflicts: avoid.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：静かな幸運</title_jp>
+    <title_en>Small Blessing：Quiet Fortune</title_en>
+    <text_jp>望み事：努力で叶うかも。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Might be fulfilled with effort. Visitor: arrives. Love: modestly good. Lost item: found. Travel: cautious. Business: profit possible. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 79 -->
   <omikuji id="79">
-    <rank jp="大吉">Daikichi</rank>
-    <title_jp>大吉：万事吉</title_jp>
-    <title_en>Great Blessing：Everything Auspicious</title_en>
-    <text_jp>望み事：必ず叶う。待人：来る。恋：順調。失せ物：すぐ見つかる。旅立ち：吉。商売：大きく利あり。学問：励め。病気：快復。争い事：避けよ。</text_jp>
-    <text_en>Wish: will definitely come true. Visitor: arrives. Love: favorable. Lost item: immediately found. Travel: auspicious. Business: large profit. Studies: focus. Illness: recover. Conflicts: avoid.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：日々の喜び</title_jp>
+    <title_en>Small Blessing：Daily Joy</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: will come. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 80 -->
   <omikuji id="80">
-    <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：吉運継続</title_jp>
-    <title_en>Middle Blessing：Fortune Continues</title_en>
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉：希望を持て</title_jp>
+    <title_en>Blessing：Keep Hope</title_en>
     <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <text_en>Wish: Fulfilled with effort. Visitor: will come. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 81 -->
   <omikuji id="81">
     <rank jp="吉">Kichi</rank>
-    <title_jp>吉：吉運到来</title_jp>
-    <title_en>Blessing：Good Fortune Arrives</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <title_jp>吉：平穏の道</title_jp>
+    <title_en>Blessing：Path of Peace</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：穏やかに吉。失せ物：見つかる。旅立ち：吉。商売：利益あり。学問：精進。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: will arrive. Love: calmly good. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 82 -->
   <omikuji id="82">
-    <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：注意しつつ進む</title_jp>
-    <title_en>Small Blessing：Proceed With Care</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: gradually fulfilled. Visitor: arrives. Love: modestly favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="凶">Kyo</rank>
+    <title_jp>凶：不運の日</title_jp>
+    <title_en>Bad Luck：Unfortunate Day</title_en>
+    <text_jp>望み事：難しい。待人：来ず。恋：控えめに。失せ物：出にくい。旅立ち：避けよ。商売：損あり。学問：努力せよ。病気：注意。争い事：避けよ。</text_jp>
+    <text_en>Wish: Difficult to achieve. Visitor: will not come. Love: be modest. Lost item: hard to find. Travel: avoid. Business: may lose. Studies: work hard. Illness: take care. Conflicts: avoid.</text_en>
   </omikuji>
 
   <!-- 83 -->
   <omikuji id="83">
     <rank jp="凶">Kyo</rank>
-    <title_jp>凶：慎重に過ごせ</title_jp>
-    <title_en>Misfortune：Be Cautious</title_en>
-    <text_jp>望み事：叶いにくい。待人：来ず。恋：注意。失せ物：出にくい。旅立ち：慎重。商売：損。学問：努力せよ。病気：悪化注意。争い事：避けよ。</text_jp>
-    <text_en>Wish: unlikely fulfilled. Visitor: does not come. Love: be careful. Lost item: hard to find. Travel: cautious. Business: loss. Studies: strive. Illness: may worsen. Conflicts: avoid.</text_en>
+    <title_jp>凶：控えめに進め</title_jp>
+    <title_en>Bad Luck：Proceed Cautiously</title_en>
+    <text_jp>望み事：叶いにくい。待人：遅れる。恋：控えめ吉。失せ物：出ず。旅立ち：慎重に。商売：利益薄。学問：努力せよ。病気：注意。争い事：避けよ。</text_jp>
+    <text_en>Wish: Hard to fulfill. Visitor: delayed. Love: modestly good. Lost item: will not appear. Travel: proceed cautiously. Business: little profit. Studies: work hard. Illness: take care. Conflicts: avoid.</text_en>
   </omikuji>
 
   <!-- 84 -->
   <omikuji id="84">
-    <rank jp="大吉">Daikichi</rank>
-    <title_jp>大吉：幸運絶好調</title_jp>
-    <title_en>Great Blessing：Excellent Luck</title_en>
-    <text_jp>望み事：必ず叶う。待人：来る。恋：順調。失せ物：すぐ見つかる。旅立ち：吉。商売：大きく利あり。学問：励め。病気：快復。争い事：避けよ。</text_jp>
-    <text_en>Wish: will definitely come true. Visitor: arrives. Love: favorable. Lost item: immediately found. Travel: auspicious. Business: large profit. Studies: focus. Illness: recover. Conflicts: avoid.</text_en>
+    <rank jp="大凶">Daikyo</rank>
+    <title_jp>大凶：最悪の運</title_jp>
+    <title_en>Great Curse：Worst Fortune</title_en>
+    <text_jp>望み事：叶わず。待人：来ず。恋：失せ物多し。失せ物：出ず。旅立ち：避けよ。商売：損多し。学問：進まず。病気：悪化。争い事：避けよ。</text_jp>
+    <text_en>Wish: Will not be fulfilled. Visitor: will not come. Love: misfortune. Lost item: not found. Travel: avoid. Business: heavy loss. Studies: do not progress. Illness: worsen. Conflicts: avoid.</text_en>
   </omikuji>
 
   <!-- 85 -->
   <omikuji id="85">
     <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：平穏吉</title_jp>
-    <title_en>Middle Blessing：Peaceful Fortune</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <title_jp>中吉：希望の光</title_jp>
+    <title_en>Middle Blessing：Light of Hope</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Fulfilled with effort. Visitor: will come. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 86 -->
   <omikuji id="86">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：運気良好</title_jp>
-    <title_en>Blessing：Good Fortune</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：穏やかな日々</title_jp>
+    <title_en>Small Blessing：Peaceful Days</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重。商売：利益あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: will come. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 87 -->
   <omikuji id="87">
-    <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：少しの吉</title_jp>
-    <title_en>Small Blessing：Minor Fortune</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉：運気上昇</title_jp>
+    <title_en>Blessing：Rising Luck</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：精進。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: will arrive. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 88 -->
   <omikuji id="88">
-    <rank jp="凶">Kyo</rank>
-    <title_jp>凶：用心深く</title_jp>
-    <title_en>Misfortune：Be Wary</title_en>
-    <text_jp>望み事：控えよ。待人：来ず。恋：注意。失せ物：出にくい。旅立ち：慎重。商売：損。学問：努力せよ。病気：悪化注意。争い事：避けよ。</text_jp>
-    <text_en>Wish: refrain. Visitor: does not come. Love: be careful. Lost item: hard to find. Travel: cautious. Business: loss. Studies: strive. Illness: may worsen. Conflicts: avoid.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：忍耐の実り</title_jp>
+    <title_en>Middle Blessing：Fruits of Patience</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重。商売：利益あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Fulfilled with effort. Visitor: will come. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 89 -->
   <omikuji id="89">
-    <rank jp="大吉">Daikichi</rank>
-    <title_jp>大吉：幸福到来</title_jp>
-    <title_en>Great Blessing：Happiness Arrives</title_en>
-    <text_jp>望み事：必ず叶う。待人：来る。恋：順調。失せ物：すぐ見つかる。旅立ち：吉。商売：大きく利あり。学問：励め。病気：快復。争い事：避けよ。</text_jp>
-    <text_en>Wish: will definitely come true. Visitor: arrives. Love: favorable. Lost item: immediately found. Travel: auspicious. Business: large profit. Studies: focus. Illness: recover. Conflicts: avoid.</text_en>
+    <rank jp="凶">Kyo</rank>
+    <title_jp>凶：注意の日</title_jp>
+    <title_en>Bad Luck：Day of Caution</title_en>
+    <text_jp>望み事：難しい。待人：来ず。恋：控えめ。失せ物：出にくい。旅立ち：避けよ。商売：損あり。学問：努力せよ。病気：注意。争い事：避けよ。</text_jp>
+    <text_en>Wish: Difficult to achieve. Visitor: will not come. Love: modest. Lost item: hard to find. Travel: avoid. Business: may lose. Studies: work hard. Illness: take care. Conflicts: avoid.</text_en>
   </omikuji>
 
   <!-- 90 -->
   <omikuji id="90">
-    <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：助けあり</title_jp>
-    <title_en>Middle Blessing：Receive Assistance</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉：喜びの日</title_jp>
+    <title_en>Blessing：Day of Joy</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：精進。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: will arrive. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 91 -->
   <omikuji id="91">
-    <rank jp="吉">Kichi</rank>
-    <title_jp>吉：順調吉</title_jp>
-    <title_en>Blessing：Smooth Fortune</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：努力の成果</title_jp>
+    <title_en>Middle Blessing：Reward of Effort</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：慎重。商売：利益あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Fulfilled with effort. Visitor: will come. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 92 -->
   <omikuji id="92">
     <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：控えめに吉</title_jp>
-    <title_en>Small Blessing：Moderate Good Fortune</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: gradually fulfilled. Visitor: arrives. Love: modestly favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <title_jp>小吉：穏やかな運</title_jp>
+    <title_en>Small Blessing：Calm Luck</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重。商売：利益あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: will come. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 93 -->
   <omikuji id="93">
-    <rank jp="凶">Kyo</rank>
-    <title_jp>凶：警戒を怠るな</title_jp>
-    <title_en>Misfortune：Do Not Neglect Caution</title_en>
-    <text_jp>望み事：叶いにくい。待人：来ず。恋：注意。失せ物：出にくい。旅立ち：慎重。商売：損。学問：努力せよ。病気：悪化注意。争い事：避けよ。</text_jp>
-    <text_en>Wish: unlikely fulfilled. Visitor: does not come. Love: be careful. Lost item: hard to find. Travel: cautious. Business: loss. Studies: strive. Illness: may worsen. Conflicts: avoid.</text_en>
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉：運気安定</title_jp>
+    <title_en>Blessing：Stable Luck</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：精進。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: will arrive. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 94 -->
   <omikuji id="94">
-    <rank jp="大吉">Daikichi</rank>
-    <title_jp>大吉：全て良し</title_jp>
-    <title_en>Great Blessing：All Good</title_en>
-    <text_jp>望み事：必ず叶う。待人：来る。恋：順調。失せ物：すぐ見つかる。旅立ち：吉。商売：大きく利あり。学問：励め。病気：快復。争い事：避けよ。</text_jp>
-    <text_en>Wish: will definitely come true. Visitor: arrives. Love: favorable. Lost item: immediately found. Travel: auspicious. Business: large profit. Studies: focus. Illness: recover. Conflicts: avoid.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：小さな幸運</title_jp>
+    <title_en>Middle Blessing：Small Fortune</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重。商売：利益あり。学問：励め。病気：回復。争い事：注意。</text_jp>
+    <text_en>Wish: Fulfilled with effort. Visitor: will come. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 95 -->
   <omikuji id="95">
-    <rank jp="中吉">Chukichi</rank>
-    <title_jp>中吉：吉運あり</title_jp>
-    <title_en>Middle Blessing：Fortune Present</title_en>
-    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: fulfilled with effort. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：控えめな喜び</title_jp>
+    <title_en>Small Blessing：Modest Joy</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: will come. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 96 -->
   <omikuji id="96">
     <rank jp="吉">Kichi</rank>
-    <title_jp>吉：運気良好</title_jp>
-    <title_en>Blessing：Good Fortune</title_en>
-    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：吉。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: will come true. Visitor: arrives. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <title_jp>吉：心安らぐ日</title_jp>
+    <title_en>Blessing：Peaceful Day</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：精進。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: will arrive. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 97 -->
   <omikuji id="97">
-    <rank jp="小吉">Shokichi</rank>
-    <title_jp>小吉：徐々に吉</title_jp>
-    <title_en>Small Blessing：Gradually Good</title_en>
-    <text_jp>望み事：少しずつ叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：慎重。商売：利あり。学問：励め。病気：回復。争い事：注意。</text_jp>
-    <text_en>Wish: gradually fulfilled. Visitor: arrives. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
+    <rank jp="凶">Kyo</rank>
+    <title_jp>凶：用心の日</title_jp>
+    <title_en>Bad Luck：Day to Be Cautious</title_en>
+    <text_jp>望み事：難しい。待人：来ず。恋：控えめ。失せ物：出にくい。旅立ち：避けよ。商売：損あり。学問：努力せよ。病気：注意。争い事：避けよ。</text_jp>
+    <text_en>Wish: Hard to achieve. Visitor: will not come. Love: modest. Lost item: hard to find. Travel: avoid. Business: may lose. Studies: work hard. Illness: take care. Conflicts: avoid.</text_en>
   </omikuji>
 
   <!-- 98 -->
   <omikuji id="98">
-    <rank jp="凶">Kyo</rank>
-    <title_jp>凶：十分注意</title_jp>
-    <title_en>Misfortune：Exercise Caution</title_en>
-    <text_jp>望み事：叶いにくい。待人：来ず。恋：注意。失せ物：出にくい。旅立ち：慎重。商売：損。学問：努力せよ。病気：悪化注意。争い事：避けよ。</text_jp>
-    <text_en>Wish: unlikely fulfilled. Visitor: does not come. Love: be careful. Lost item: hard to find. Travel: cautious. Business: loss. Studies: strive. Illness: may worsen. Conflicts: avoid.</text_en>
+    <rank jp="中吉">Chukichi</rank>
+    <title_jp>中吉：希望を忘れず</title_jp>
+    <title_en>Middle Blessing：Keep Hope</title_en>
+    <text_jp>望み事：努力で叶う。待人：来る。恋：順調。失せ物：出る。旅立ち：慎重。商売：利益あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Fulfilled with effort. Visitor: will come. Love: favorable. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 99 -->
   <omikuji id="99">
-    <rank jp="大凶">Daikyo</rank>
-    <title_jp>大凶：大いに警戒</title_jp>
-    <title_en>Great Misfortune：Extreme Caution</title_en>
-    <text_jp>望み事：叶わぬ。待人：来ず。恋：悪し。失せ物：出ず。旅立ち：避けよ。商売：損大。学問：注意。病気：悪化大。争い事：避けよ。</text_jp>
-    <text_en>Wish: will not be fulfilled. Visitor: does not come. Love: unfavorable. Lost item: not found. Travel: avoid. Business: large loss. Studies: be careful. Illness: may worsen severely. Conflicts: avoid.</text_en>
+    <rank jp="小吉">Shokichi</rank>
+    <title_jp>小吉：平穏な日</title_jp>
+    <title_en>Small Blessing：Peaceful Day</title_en>
+    <text_jp>望み事：少しずつ叶う。待人：来る。恋：控えめ吉。失せ物：出る。旅立ち：慎重。商売：利あり。学問：励め。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Gradually fulfilled. Visitor: will come. Love: modestly good. Lost item: found. Travel: cautious. Business: profit. Studies: focus. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
 
   <!-- 100 -->
   <omikuji id="100">
-    <rank jp="大吉">Daikichi</rank>
-    <title_jp>大吉：絶好調</title_jp>
-    <title_en>Great Blessing：Excellent Fortune</title_en>
-    <text_jp>望み事：必ず叶う。待人：来る。恋：順調。失せ物：すぐ見つかる。旅立ち：吉。商売：大きく利あり。学問：励め。病気：快復。争い事：避けよ。</text_jp>
-    <text_en>Wish: will definitely come true. Visitor: arrives. Love: favorable. Lost item: immediately found. Travel: auspicious. Business: large profit. Studies: focus. Illness: recover. Conflicts: avoid.</text_en>
+    <rank jp="吉">Kichi</rank>
+    <title_jp>吉：幸運の日</title_jp>
+    <title_en>Blessing：Fortunate Day</title_en>
+    <text_jp>望み事：叶う。待人：来る。恋：順調。失せ物：見つかる。旅立ち：吉。商売：利あり。学問：精進。病気：快復。争い事：注意。</text_jp>
+    <text_en>Wish: Will come true. Visitor: will arrive. Love: favorable. Lost item: found. Travel: auspicious. Business: profit. Studies: persevere. Illness: recover. Conflicts: be careful.</text_en>
   </omikuji>
-</omikujis>
+
 
 </omikujis>

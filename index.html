@@ -158,7 +158,6 @@ if (!isTestMode) {
     if (lastTime && (now - lastTime) < cooldown) {
         const wait = Math.ceil((cooldown - (now - lastTime)) / 60000);
 
-        // 待機中は御神籤テーブルと番号を非表示
         document.querySelector('table.omikuji').style.display = 'none';
         document.querySelector('.footer').style.display = 'none';
 
@@ -202,6 +201,11 @@ fetch('omikuji.xml')
         document.getElementById('rank').textContent = rankJp;
         document.getElementById('title').textContent = item.querySelector('title_jp')?.textContent.trim() || '';
         document.getElementById('jp').textContent = item.querySelector('text_jp')?.textContent.trim() || '';
+
+        // ★ rank と title の文字サイズを0.9倍に変更
+        document.getElementById('rank').style.fontSize = '54px';
+        document.getElementById('title').style.fontSize = '36px';
+
         document.getElementById('enRank').textContent = rankEn;
         document.getElementById('enTitle').textContent = item.querySelector('title_en')?.textContent.trim() || '';
         document.getElementById('enText').textContent = item.querySelector('text_en')?.textContent.trim() || '';
